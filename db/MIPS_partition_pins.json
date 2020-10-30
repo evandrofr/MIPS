@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ULAout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
