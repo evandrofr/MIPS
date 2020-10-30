@@ -8,20 +8,20 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/borg/intelFPGA_lite/20.1/Projetos/MIPS/simulation/qsim
+d/home/borg/intelFPGA_lite/20.1/Projetos/MIPS/simulation/qsim
 Efdmips
-Z1 w1604070332
-Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
-Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
-Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
-Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
-Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 16
-R0
+Z0 w1604071669
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 20
+Z10 d/home/borg/Documents/MIPS/simulation/qsim
 Z11 8MIPS.vho
 Z12 FMIPS.vho
 l0
@@ -30,15 +30,16 @@ Vd:X1k3Hi8E7FMajT]W1NG1
 !s100 I9^RQd>c^[gb:VIiRQMb>1
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1604070333
+Z14 !s110 1604071670
 !i10b 1
-Z15 !s108 1604070333.000000
+Z15 !s108 1604071670.000000
 Z16 !s90 -work|work|MIPS.vho|
 Z17 !s107 MIPS.vho|
 !i113 1
 Z18 o-work work
 Z19 tExplicit 1 CvgOpt 0
 Astructure
+R1
 R2
 R3
 R4
@@ -47,13 +48,12 @@ R6
 R7
 R8
 R9
-R10
 DEx4 work 6 fdmips 0 22 d:X1k3Hi8E7FMajT]W1NG1
-!i122 16
-l179
-L82 1385
-VkaQA>fm:ZRiCLkVc6In:Y0
-!s100 ga28_:YTL9I5TS[f[`_:91
+!i122 20
+l282
+L82 2460
+VLPIo:WbOz;4TePi?N:]a63
+!s100 d<_CCRleS@^dQ9mf[@[SB2
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Efdmips_vhd_vec_tst
-Z20 w1604070329
+Z20 w1604071667
+R7
 R8
-R9
-!i122 17
-R0
-Z21 8Waveform7.vwf.vht
-Z22 FWaveform7.vwf.vht
+!i122 21
+R10
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
 l0
 L32 1
 VKPmPFcZ15`:7Tn0VP<U]e2
@@ -81,27 +81,27 @@ R13
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform7.vwf.vht|
-!s107 Waveform7.vwf.vht|
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
 !i113 1
 R18
 R19
 Afdmips_arch
+R7
 R8
-R9
-Z24 DEx4 work 18 fdmips_vhd_vec_tst 0 22 KPmPFcZ15`:7Tn0VP<U]e2
-!i122 17
+Z25 DEx4 work 18 fdmips_vhd_vec_tst 0 22 KPmPFcZ15`:7Tn0VP<U]e2
+!i122 21
 l45
-Z25 L34 31
-VgHm:`mkR02;ClAoOn_@I62
-!s100 znAhO=d5[jAIoPX53HJX93
+L34 35
+V96hENkha0igETG57W]ZFA2
+!s100 6I:K3n?LVfBd2T7S45On11
 R13
 32
 R14
 !i10b 1
 R15
 R23
-Z26 !s107 Waveform7.vwf.vht|
+R24
 !i113 1
 R18
 R19

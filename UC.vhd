@@ -7,6 +7,7 @@ ENTITY UC IS
     opCode          : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
     funct           : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
     palavraControle : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	 
   );
 END ENTITY;
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Fri Oct 30 12:02:59 2020
+Fri Oct 30 12:25:53 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -16,19 +16,18 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |FDMIPS
- 12. Parameter Settings for User Entity Instance: registradorGenerico:PC
- 13. Parameter Settings for User Entity Instance: ROMMIPS:ROM
- 14. Parameter Settings for User Entity Instance: somaConstante:somaUm
- 15. Parameter Settings for User Entity Instance: bancoRegistradores:BancoRegistradores
- 16. Parameter Settings for User Entity Instance: ULA:ULA
- 17. Port Connectivity Checks: "UC:UC"
- 18. Port Connectivity Checks: "ULA:ULA"
- 19. Port Connectivity Checks: "ROMMIPS:ROM"
- 20. Port Connectivity Checks: "registradorGenerico:PC"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |FDMIPS
+ 13. Parameter Settings for User Entity Instance: registradorGenerico:PC
+ 14. Parameter Settings for User Entity Instance: ROMMIPS:ROM
+ 15. Parameter Settings for User Entity Instance: somaConstante:somaUm
+ 16. Parameter Settings for User Entity Instance: bancoRegistradores:BancoRegistradores
+ 17. Parameter Settings for User Entity Instance: ULA:ULA
+ 18. Port Connectivity Checks: "ROMMIPS:ROM"
+ 19. Port Connectivity Checks: "registradorGenerico:PC"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -55,13 +54,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 30 12:02:59 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 30 12:25:53 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; FDMIPS                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 8                                           ;
+; Total registers                 ; 10                                          ;
 ; Total pins                      ; 33                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -181,59 +180,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/bancoRegistradores.vhd  ;         ;
-; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ROMMIPS.vhd             ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/registradorGenerico.vhd ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ULA.vhd                 ;         ;
-; FDMIPS.vhd                       ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd              ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/somaConstante.vhd       ;         ;
-; UC.vhd                           ; yes             ; User VHDL File  ; /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/UC.vhd                  ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/bancoRegistradores.vhd  ;         ;
+; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/ROMMIPS.vhd             ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/registradorGenerico.vhd ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/ULA.vhd                 ;         ;
+; FDMIPS.vhd                       ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/FDMIPS.vhd              ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/somaConstante.vhd       ;         ;
+; UC.vhd                           ; yes             ; User VHDL File  ; /home/borg/Documents/MIPS/UC.vhd                  ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 21        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 41        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 1         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 40        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 8         ;
-;                                             ;           ;
-; I/O pins                                    ; 33        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 8         ;
-; Total fan-out                               ; 136       ;
-; Average fan-out                             ; 1.18      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 45                   ;
+;                                             ;                      ;
+; Combinational ALUT usage for logic          ; 89                   ;
+;     -- 7 input functions                    ; 0                    ;
+;     -- 6 input functions                    ; 1                    ;
+;     -- 5 input functions                    ; 8                    ;
+;     -- 4 input functions                    ; 7                    ;
+;     -- <=3 input functions                  ; 73                   ;
+;                                             ;                      ;
+; Dedicated logic registers                   ; 10                   ;
+;                                             ;                      ;
+; I/O pins                                    ; 33                   ;
+;                                             ;                      ;
+; Total DSP Blocks                            ; 0                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; ROMMIPS:ROM|memROM~2 ;
+; Maximum fan-out                             ; 36                   ;
+; Total fan-out                               ; 312                  ;
+; Average fan-out                             ; 1.89                 ;
++---------------------------------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name         ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+---------------------+--------------+
-; |FDMIPS                     ; 41 (0)              ; 8 (0)                     ; 0                 ; 0          ; 33   ; 0            ; |FDMIPS                        ; FDMIPS              ; work         ;
-;    |ROMMIPS:ROM|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM            ; ROMMIPS             ; work         ;
-;    |ULA:ULA|                ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                ; ULA                 ; work         ;
-;    |registradorGenerico:PC| ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC ; registradorGenerico ; work         ;
-;    |somaConstante:somaUm|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaUm   ; somaConstante       ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name         ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
+; |FDMIPS                                    ; 89 (0)              ; 10 (0)                    ; 0                 ; 0          ; 33   ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
+;    |ROMMIPS:ROM|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
+;    |ULA:ULA|                               ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
+;    |bancoRegistradores:BancoRegistradores| ; 7 (7)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
+;    |registradorGenerico:PC|                ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC                ; registradorGenerico ; work         ;
+;    |somaConstante:somaUm|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaUm                  ; somaConstante       ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1138,136 +1138,134 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoRegistradores:BancoRegistradores|registrador~1059 ; Lost fanout                            ;
 ; bancoRegistradores:BancoRegistradores|registrador~1060 ; Lost fanout                            ;
 ; bancoRegistradores:BancoRegistradores|registrador~1061 ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~101  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~325  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~357  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~100  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~324  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~356  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~99   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~323  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~355  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~98   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~322  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~354  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~97   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~321  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~353  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~96   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~320  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~352  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~95   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~319  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~351  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~94   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~318  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~350  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~93   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~317  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~349  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~92   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~316  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~348  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~91   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~315  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~347  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~90   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~314  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~346  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~89   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~313  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~345  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~88   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~312  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~344  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~87   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~311  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~343  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~86   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~310  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~342  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~85   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~309  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~341  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~84   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~308  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~340  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~83   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~307  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~339  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~82   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~306  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~338  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~81   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~305  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~337  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~80   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~304  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~336  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~79   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~303  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~335  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~78   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~302  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~334  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~77   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~301  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~333  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~76   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~300  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~332  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~75   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~299  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~331  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~74   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~298  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~330  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~73   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~297  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~329  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~72   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~296  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~328  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~71   ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~295  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~327  ; Stuck at GND due to stuck port data_in ;
 ; bancoRegistradores:BancoRegistradores|registrador~70   ; Stuck at GND due to stuck port data_in ;
 ; bancoRegistradores:BancoRegistradores|registrador~294  ; Stuck at GND due to stuck port data_in ;
 ; bancoRegistradores:BancoRegistradores|registrador~326  ; Stuck at GND due to stuck port data_in ;
-; bancoRegistradores:BancoRegistradores|registrador~69   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~68   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~67   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~66   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~65   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~64   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~63   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~62   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~61   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~60   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~59   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~58   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~57   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~56   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~55   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~54   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~53   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~52   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~51   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~50   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~49   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~48   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~47   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~46   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~45   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~44   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~43   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~42   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~41   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~40   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~39   ; Lost fanout                            ;
-; bancoRegistradores:BancoRegistradores|registrador~38   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~71   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~295  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~327  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~72   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~296  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~328  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~73   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~297  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~329  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~74   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~298  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~330  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~75   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~299  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~331  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~76   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~300  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~332  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~77   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~301  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~333  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~78   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~302  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~334  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~79   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~303  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~335  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~80   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~304  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~336  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~81   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~305  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~337  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~82   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~306  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~338  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~83   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~307  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~339  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~84   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~308  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~340  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~85   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~309  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~341  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~86   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~310  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~342  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~87   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~311  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~343  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~88   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~312  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~344  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~89   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~313  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~345  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~90   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~314  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~346  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~91   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~315  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~347  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~92   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~316  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~348  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~93   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~317  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~349  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~94   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~318  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~350  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~95   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~319  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~351  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~96   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~320  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~352  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~97   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~321  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~353  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~98   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~322  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~354  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~99   ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~323  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~355  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~100  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~324  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~356  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~101  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~325  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:BancoRegistradores|registrador~357  ; Stuck at GND due to stuck port data_in ;
 ; registradorGenerico:PC|DOUT[8..31]                     ; Lost fanout                            ;
-; Total Number of Removed Registers = 1048               ;                                        ;
+; bancoRegistradores:BancoRegistradores|registrador~41   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~42   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~43   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~44   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~45   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~46   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~47   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~48   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~49   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~50   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~51   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~52   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~53   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~54   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~55   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~56   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~57   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~58   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~59   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~60   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~61   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~62   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~63   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~64   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~65   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~66   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~67   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~68   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~69   ; Lost fanout                            ;
+; bancoRegistradores:BancoRegistradores|registrador~38   ; Lost fanout                            ;
+; Total Number of Removed Registers = 1046               ;                                        ;
 +--------------------------------------------------------+----------------------------------------+
 
 
@@ -1276,57 +1274,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------+---------------------------+------------------------------------------------------+
 ; Register name                                        ; Reason for Removal        ; Registers Removed due to This Register               ;
 +------------------------------------------------------+---------------------------+------------------------------------------------------+
-; bancoRegistradores:BancoRegistradores|registrador~82 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~50 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~70 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~38 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~71 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~39 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~72 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~40 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~73 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~41 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
 ; bancoRegistradores:BancoRegistradores|registrador~74 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~42 ;
 ;                                                      ; due to stuck port data_in ;                                                      ;
 ; bancoRegistradores:BancoRegistradores|registrador~75 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~43 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~76 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~44 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~77 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~45 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~78 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~46 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~79 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~47 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~80 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~48 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~81 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~49 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~95 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~63 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~83 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~51 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~84 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~52 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~85 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~53 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~86 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~54 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~87 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~55 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~88 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~56 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~89 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~57 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~90 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~58 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~91 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~59 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~92 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~60 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~93 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~61 ;
-;                                                      ; due to stuck port data_in ;                                                      ;
-; bancoRegistradores:BancoRegistradores|registrador~94 ; Stuck at GND              ; bancoRegistradores:BancoRegistradores|registrador~62 ;
 ;                                                      ; due to stuck port data_in ;                                                      ;
 +------------------------------------------------------+---------------------------+------------------------------------------------------+
 
@@ -1336,14 +1286,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
+; Total registers                              ; 10    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ULA:ULA|saida[15]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -1414,24 +1373,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UC:UC"                                                                                               ;
-+-----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                  ; Type   ; Severity ; Details                                                                             ;
-+-----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; palavracontrole[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------+
-; Port Connectivity Checks: "ULA:ULA"       ;
-+---------+-------+----------+--------------+
-; Port    ; Type  ; Severity ; Details      ;
-+---------+-------+----------+--------------+
-; seletor ; Input ; Info     ; Stuck at GND ;
-+---------+-------+----------+--------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ROMMIPS:ROM"                                                                               ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1456,20 +1397,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 8                           ;
+; arriav_ff             ; 10                          ;
+;     ENA               ; 2                           ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 41                          ;
-;     arith             ; 39                          ;
-;         0 data inputs ; 29                          ;
-;         1 data inputs ; 9                           ;
+; arriav_lcell_comb     ; 89                          ;
+;     arith             ; 40                          ;
+;         1 data inputs ; 35                          ;
 ;         2 data inputs ; 1                           ;
-;     normal            ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 2                           ;
+;     normal            ; 49                          ;
 ;         1 data inputs ; 1                           ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 6                           ;
 ;         6 data inputs ; 1                           ;
 ; boundary_port         ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 3.80                        ;
+; Max LUT depth         ; 7.20                        ;
+; Average LUT depth     ; 5.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1478,7 +1426,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1488,58 +1436,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 30 12:02:45 2020
+    Info: Processing started: Fri Oct 30 12:25:39 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file DE0_CV_golden_top.v
-    Info (12023): Found entity 1: DE0_CV_golden_top File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/DE0_CV_golden_top.v Line: 54
+    Info (12023): Found entity 1: DE0_CV_golden_top File: /home/borg/Documents/MIPS/DE0_CV_golden_top.v Line: 54
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/bancoRegistradores.vhd Line: 30
-    Info (12023): Found entity 1: bancoRegistradores File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/bancoRegistradores.vhd Line: 7
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/borg/Documents/MIPS/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: /home/borg/Documents/MIPS/bancoRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ROMMIPS.vhd
-    Info (12022): Found design unit 1: ROMMIPS-assincrona File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ROMMIPS.vhd Line: 16
-    Info (12023): Found entity 1: ROMMIPS File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ROMMIPS.vhd Line: 6
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: /home/borg/Documents/MIPS/ROMMIPS.vhd Line: 16
+    Info (12023): Found entity 1: ROMMIPS File: /home/borg/Documents/MIPS/ROMMIPS.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file RAMMIPS.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/RAMMIPS.vhd Line: 19
-    Info (12023): Found entity 1: RAMMIPS File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/RAMMIPS.vhd Line: 6
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/borg/Documents/MIPS/RAMMIPS.vhd Line: 19
+    Info (12023): Found entity 1: RAMMIPS File: /home/borg/Documents/MIPS/RAMMIPS.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/borg/Documents/MIPS/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/borg/Documents/MIPS/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ULA.vhd Line: 18
-    Info (12023): Found entity 1: ULA File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: ULA-comportamento File: /home/borg/Documents/MIPS/ULA.vhd Line: 18
+    Info (12023): Found entity 1: ULA File: /home/borg/Documents/MIPS/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file FDMIPS.vhd
-    Info (12022): Found design unit 1: FDMIPS-comportamento File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 23
-    Info (12023): Found entity 1: FDMIPS File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: FDMIPS-comportamento File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 23
+    Info (12023): Found entity 1: FDMIPS File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/somaConstante.vhd Line: 16
-    Info (12023): Found entity 1: somaConstante File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/borg/Documents/MIPS/somaConstante.vhd Line: 16
+    Info (12023): Found entity 1: somaConstante File: /home/borg/Documents/MIPS/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file UC.vhd
-    Info (12022): Found design unit 1: UC-comportamento File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/UC.vhd Line: 13
-    Info (12023): Found entity 1: UC File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/UC.vhd Line: 5
+    Info (12022): Found design unit 1: UC-comportamento File: /home/borg/Documents/MIPS/UC.vhd Line: 14
+    Info (12023): Found entity 1: UC File: /home/borg/Documents/MIPS/UC.vhd Line: 5
 Info (12127): Elaborating entity "FDMIPS" for the top level hierarchy
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 42
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 54
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaUm" File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 65
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 75
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 91
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/FDMIPS.vhd Line: 102
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 42
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 54
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaUm" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 65
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 75
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 91
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 102
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "bancoRegistradores:BancoRegistradores|registrador" is uninferred due to asynchronous read logic File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/bancoRegistradores.vhd Line: 56
-    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: /home/borg/intelFPGA_lite/20.1/Projetos/MIPS/ROMMIPS.vhd Line: 39
+    Info (276007): RAM logic "bancoRegistradores:BancoRegistradores|registrador" is uninferred due to asynchronous read logic File: /home/borg/Documents/MIPS/bancoRegistradores.vhd Line: 56
+    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: /home/borg/Documents/MIPS/ROMMIPS.vhd Line: 39
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 952 registers lost all their fanouts during netlist optimizations.
+Info (17049): 950 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 41 logic cells
+    Info (21061): Implemented 89 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 516 megabytes
-    Info: Processing ended: Fri Oct 30 12:02:59 2020
+    Info: Processing ended: Fri Oct 30 12:25:53 2020
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 

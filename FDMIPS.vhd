@@ -96,7 +96,7 @@ architecture comportamento of FDMIPS is
             entradaA  => RegAUlaASignal,
             entradaB  => RegBUlaBSignal,
             saida     => ULARegsSignal,
-            seletor   => "000"--operacoes
+            seletor   => operacoes
         );
 		  
 	UC : ENTITY work.UC
