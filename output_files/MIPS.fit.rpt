@@ -1,6 +1,6 @@
 Fitter report for MIPS
-Fri Oct 30 12:26:27 2020
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Thu Nov 05 15:07:20 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -44,9 +44,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -56,23 +56,22 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Oct 30 12:26:27 2020       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Fitter Status                   ; Successful - Thu Nov 05 15:07:20 2020       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; FDMIPS                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 46 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 13                                          ;
+; Total registers                 ; 12                                          ;
 ; Total pins                      ; 33 / 224 ( 15 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -87,64 +86,64 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Settings                                                                                                                                    ;
-+--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
-; Option                                                             ; Setting                               ; Default Value                         ;
-+--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
-; Device                                                             ; 5CEBA4F23C7                           ;                                       ;
-; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
-; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
-; Device I/O Standard                                                ; 2.5 V                                 ;                                       ;
-; Fitter Effort                                                      ; Standard Fit                          ; Auto Fit                              ;
-; Use smart compilation                                              ; Off                                   ; Off                                   ;
-; Enable parallel Assembler and Timing Analyzer during compilation   ; On                                    ; On                                    ;
-; Enable compact report table                                        ; Off                                   ; Off                                   ;
-; Router Timing Optimization Level                                   ; Normal                                ; Normal                                ;
-; Perform Clocking Topology Analysis During Routing                  ; Off                                   ; Off                                   ;
-; Placement Effort Multiplier                                        ; 1.0                                   ; 1.0                                   ;
-; Device initialization clock source                                 ; INIT_INTOSC                           ; INIT_INTOSC                           ;
-; Optimize Hold Timing                                               ; All Paths                             ; All Paths                             ;
-; Optimize Multi-Corner Timing                                       ; On                                    ; On                                    ;
-; Auto RAM to MLAB Conversion                                        ; On                                    ; On                                    ;
-; Equivalent RAM and MLAB Power Up                                   ; Auto                                  ; Auto                                  ;
-; Equivalent RAM and MLAB Paused Read Capabilities                   ; Care                                  ; Care                                  ;
-; Power Optimization During Fitting                                  ; Normal compilation                    ; Normal compilation                    ;
-; SSN Optimization                                                   ; Off                                   ; Off                                   ;
-; Optimize Timing                                                    ; Normal compilation                    ; Normal compilation                    ;
-; Optimize Timing for ECOs                                           ; Off                                   ; Off                                   ;
-; Regenerate Full Fit Report During ECO Compiles                     ; Off                                   ; Off                                   ;
-; Optimize IOC Register Placement for Timing                         ; Normal                                ; Normal                                ;
-; Final Placement Optimizations                                      ; Automatically                         ; Automatically                         ;
-; Fitter Aggressive Routability Optimizations                        ; Automatically                         ; Automatically                         ;
-; Fitter Initial Placement Seed                                      ; 1                                     ; 1                                     ;
-; Periphery to Core Placement and Routing Optimization               ; Off                                   ; Off                                   ;
-; Weak Pull-Up Resistor                                              ; Off                                   ; Off                                   ;
-; Enable Bus-Hold Circuitry                                          ; Off                                   ; Off                                   ;
-; Auto Packed Registers                                              ; Auto                                  ; Auto                                  ;
-; Auto Delay Chains                                                  ; On                                    ; On                                    ;
-; Auto Delay Chains for High Fanout Input Pins                       ; Off                                   ; Off                                   ;
-; Treat Bidirectional Pin as Output Pin                              ; Off                                   ; Off                                   ;
-; Perform Physical Synthesis for Combinational Logic for Fitting     ; Off                                   ; Off                                   ;
-; Perform Physical Synthesis for Combinational Logic for Performance ; Off                                   ; Off                                   ;
-; Perform Register Duplication for Performance                       ; Off                                   ; Off                                   ;
-; Perform Register Retiming for Performance                          ; Off                                   ; Off                                   ;
-; Perform Asynchronous Signal Pipelining                             ; Off                                   ; Off                                   ;
-; Physical Synthesis Effort Level                                    ; Normal                                ; Normal                                ;
-; Logic Cell Insertion - Logic Duplication                           ; Auto                                  ; Auto                                  ;
-; Auto Register Duplication                                          ; Auto                                  ; Auto                                  ;
-; Auto Global Clock                                                  ; On                                    ; On                                    ;
-; Auto Global Register Control Signals                               ; On                                    ; On                                    ;
-; Reserve all unused pins                                            ; As input tri-stated with weak pull-up ; As input tri-stated with weak pull-up ;
-; Synchronizer Identification                                        ; Auto                                  ; Auto                                  ;
-; Enable Beneficial Skew Optimization                                ; On                                    ; On                                    ;
-; Optimize Design for Metastability                                  ; On                                    ; On                                    ;
-; Active Serial clock source                                         ; FREQ_100MHz                           ; FREQ_100MHz                           ;
-; Force Fitter to Avoid Periphery Placement Warnings                 ; Off                                   ; Off                                   ;
-; Clamping Diode                                                     ; Off                                   ; Off                                   ;
-; Enable input tri-state on active configuration pins in user mode   ; Off                                   ; Off                                   ;
-; Advanced Physical Optimization                                     ; On                                    ; On                                    ;
-+--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                                            ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Option                                                                     ; Setting                               ; Default Value                         ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Device                                                                     ; 5CEBA4F23C7                           ;                                       ;
+; Minimum Core Junction Temperature                                          ; 0                                     ;                                       ;
+; Maximum Core Junction Temperature                                          ; 85                                    ;                                       ;
+; Device I/O Standard                                                        ; 2.5 V                                 ;                                       ;
+; Fitter Effort                                                              ; Standard Fit                          ; Auto Fit                              ;
+; Use smart compilation                                                      ; Off                                   ; Off                                   ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
+; Enable compact report table                                                ; Off                                   ; Off                                   ;
+; Router Timing Optimization Level                                           ; Normal                                ; Normal                                ;
+; Perform Clocking Topology Analysis During Routing                          ; Off                                   ; Off                                   ;
+; Placement Effort Multiplier                                                ; 1.0                                   ; 1.0                                   ;
+; Device initialization clock source                                         ; INIT_INTOSC                           ; INIT_INTOSC                           ;
+; Optimize Hold Timing                                                       ; All Paths                             ; All Paths                             ;
+; Optimize Multi-Corner Timing                                               ; On                                    ; On                                    ;
+; Auto RAM to MLAB Conversion                                                ; On                                    ; On                                    ;
+; Equivalent RAM and MLAB Power Up                                           ; Auto                                  ; Auto                                  ;
+; Equivalent RAM and MLAB Paused Read Capabilities                           ; Care                                  ; Care                                  ;
+; Power Optimization During Fitting                                          ; Normal compilation                    ; Normal compilation                    ;
+; SSN Optimization                                                           ; Off                                   ; Off                                   ;
+; Optimize Timing                                                            ; Normal compilation                    ; Normal compilation                    ;
+; Optimize Timing for ECOs                                                   ; Off                                   ; Off                                   ;
+; Regenerate Full Fit Report During ECO Compiles                             ; Off                                   ; Off                                   ;
+; Optimize IOC Register Placement for Timing                                 ; Normal                                ; Normal                                ;
+; Final Placement Optimizations                                              ; Automatically                         ; Automatically                         ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                         ; Automatically                         ;
+; Fitter Initial Placement Seed                                              ; 1                                     ; 1                                     ;
+; Periphery to Core Placement and Routing Optimization                       ; Off                                   ; Off                                   ;
+; Weak Pull-Up Resistor                                                      ; Off                                   ; Off                                   ;
+; Enable Bus-Hold Circuitry                                                  ; Off                                   ; Off                                   ;
+; Auto Packed Registers                                                      ; Auto                                  ; Auto                                  ;
+; Auto Delay Chains                                                          ; On                                    ; On                                    ;
+; Auto Delay Chains for High Fanout Input Pins                               ; Off                                   ; Off                                   ;
+; Treat Bidirectional Pin as Output Pin                                      ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Fitting             ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                                   ; Off                                   ;
+; Perform Register Duplication for Performance                               ; Off                                   ; Off                                   ;
+; Perform Register Retiming for Performance                                  ; Off                                   ; Off                                   ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                                   ; Off                                   ;
+; Physical Synthesis Effort Level                                            ; Normal                                ; Normal                                ;
+; Logic Cell Insertion - Logic Duplication                                   ; Auto                                  ; Auto                                  ;
+; Auto Register Duplication                                                  ; Auto                                  ; Auto                                  ;
+; Auto Global Clock                                                          ; On                                    ; On                                    ;
+; Auto Global Register Control Signals                                       ; On                                    ; On                                    ;
+; Reserve all unused pins                                                    ; As input tri-stated with weak pull-up ; As input tri-stated with weak pull-up ;
+; Synchronizer Identification                                                ; Auto                                  ; Auto                                  ;
+; Enable Beneficial Skew Optimization                                        ; On                                    ; On                                    ;
+; Optimize Design for Metastability                                          ; On                                    ; On                                    ;
+; Active Serial clock source                                                 ; FREQ_100MHz                           ; FREQ_100MHz                           ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                                   ; Off                                   ;
+; Clamping Diode                                                             ; Off                                   ; Off                                   ;
+; Enable input tri-state on active configuration pins in user mode           ; Off                                   ; Off                                   ;
+; Advanced Physical Optimization                                             ; On                                    ; On                                    ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
 +------------------------------------------+
@@ -153,16 +152,14 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.4%      ;
-;     Processor 4            ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -173,7 +170,6 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------+------------------+-----------------------+
 ; clk~inputCLKENA0               ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                          ;                  ;                       ;
 ; registradorGenerico:PC|DOUT[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; registradorGenerico:PC|DOUT[4]~DUPLICATE ;                  ;                       ;
-; registradorGenerico:PC|DOUT[6] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; registradorGenerico:PC|DOUT[6]~DUPLICATE ;                  ;                       ;
 ; registradorGenerico:PC|DOUT[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; registradorGenerico:PC|DOUT[7]~DUPLICATE ;                  ;                       ;
 +--------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------+------------------+-----------------------+
 
@@ -636,7 +632,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin.
+The pin-out file can be found in C:/Users/rodri/OneDrive/Área de Trabalho/MIPS/output_files/MIPS.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -646,12 +642,12 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 46 / 18,480        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 46                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 46 / 18,480        ; < 1 % ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 47 / 18,480        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 5                  ;       ;
 ;         [b] ALMs used for LUT logic                         ; 41                 ;       ;
-;         [c] ALMs used for registers                         ; 0                  ;       ;
+;         [c] ALMs used for registers                         ; 1                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 18,480         ; 0 %   ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -660,8 +656,8 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 7 / 1,848          ; < 1 % ;
-;     -- Logic LABs                                           ; 7                  ;       ;
+; Total LABs:  partially or completely used                   ; 8 / 1,848          ; < 1 % ;
+;     -- Logic LABs                                           ; 8                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 90                 ;       ;
@@ -672,13 +668,13 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ;     -- <=3 input functions                                  ; 74                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 13                 ;       ;
+; Dedicated logic registers                                   ; 12                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 10 / 36,960        ; < 1 % ;
-;         -- Secondary logic registers                        ; 3 / 36,960         ; < 1 % ;
+;         -- Secondary logic registers                        ; 2 / 36,960         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 10                 ;       ;
-;         -- Routing optimization registers                   ; 3                  ;       ;
+;         -- Routing optimization registers                   ; 2                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 33 / 224           ; 15 %  ;
@@ -705,10 +701,10 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.4% / 0.6% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.4% / 0.4% / 0.3% ;       ;
 ; Maximum fan-out                                             ; 36                 ;       ;
 ; Highest non-global fan-out                                  ; 36                 ;       ;
-; Total fan-out                                               ; 319                ;       ;
+; Total fan-out                                               ; 317                ;       ;
 ; Average fan-out                                             ; 1.88               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
@@ -720,12 +716,12 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 46 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 46                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 46 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 47 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 5                    ; 0                              ;
 ;         [b] ALMs used for LUT logic                         ; 41                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 1                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -734,8 +730,8 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 7 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 7                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 8 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 8                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 90                   ; 0                              ;
@@ -752,10 +748,10 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 10 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 3 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 2 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 10                   ; 0                              ;
-;         -- Routing optimization registers                   ; 3                    ; 0                              ;
+;         -- Routing optimization registers                   ; 2                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -772,7 +768,7 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 319                  ; 0                              ;
+;     -- Total Connections                                    ; 317                  ; 0                              ;
 ;     -- Registered Connections                               ; 55                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -805,7 +801,7 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk  ; M16   ; 5B       ; 54           ; 18           ; 60           ; 13                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clk  ; M16   ; 5B       ; 54           ; 18           ; 60           ; 12                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -814,38 +810,38 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; ULAout[0]  ; W9    ; 3A       ; 11           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[10] ; M6    ; 3A       ; 14           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[11] ; V10   ; 3B       ; 16           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[12] ; P7    ; 3A       ; 14           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[0]  ; V6    ; 3A       ; 12           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[10] ; Y9    ; 3B       ; 23           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[11] ; AB8   ; 3B       ; 19           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[12] ; T9    ; 3B       ; 19           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; ULAout[13] ; U6    ; 3A       ; 12           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[14] ; U11   ; 3B       ; 24           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[15] ; Y9    ; 3B       ; 23           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[16] ; AA8   ; 3B       ; 19           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[17] ; P12   ; 3B       ; 24           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[18] ; T10   ; 3B       ; 23           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[19] ; M9    ; 3B       ; 22           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[1]  ; V6    ; 3A       ; 12           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[20] ; AB7   ; 3B       ; 18           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[21] ; AA10  ; 3B       ; 22           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[22] ; AA7   ; 3B       ; 18           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[23] ; T9    ; 3B       ; 19           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[24] ; Y10   ; 3B       ; 23           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[25] ; M8    ; 3B       ; 22           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[26] ; U10   ; 3B       ; 19           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[27] ; AB8   ; 3B       ; 19           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[28] ; P8    ; 3B       ; 18           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[29] ; R9    ; 3B       ; 23           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[2]  ; T8    ; 3A       ; 12           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[30] ; N8    ; 3B       ; 18           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[31] ; AA9   ; 3B       ; 22           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[3]  ; P6    ; 3A       ; 11           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[4]  ; R7    ; 3A       ; 14           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[5]  ; V9    ; 3B       ; 16           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[6]  ; AB6   ; 3B       ; 16           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[7]  ; M7    ; 3A       ; 14           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[8]  ; T7    ; 3A       ; 12           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ULAout[9]  ; AB5   ; 3B       ; 16           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[14] ; U12   ; 3B       ; 24           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[15] ; V9    ; 3B       ; 16           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[16] ; M8    ; 3B       ; 22           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[17] ; U11   ; 3B       ; 24           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[18] ; AA10  ; 3B       ; 22           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[19] ; AA9   ; 3B       ; 22           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[1]  ; W9    ; 3A       ; 11           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[20] ; P7    ; 3A       ; 14           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[21] ; P8    ; 3B       ; 18           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[22] ; N8    ; 3B       ; 18           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[23] ; V10   ; 3B       ; 16           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[24] ; AB7   ; 3B       ; 18           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[25] ; R7    ; 3A       ; 14           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[26] ; M6    ; 3A       ; 14           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[27] ; AA7   ; 3B       ; 18           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[28] ; AB6   ; 3B       ; 16           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[29] ; M7    ; 3A       ; 14           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[2]  ; R12   ; 3B       ; 24           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[30] ; AB5   ; 3B       ; 16           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[31] ; M9    ; 3B       ; 22           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[3]  ; T7    ; 3A       ; 12           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[4]  ; T10   ; 3B       ; 23           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[5]  ; T8    ; 3A       ; 12           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[6]  ; AA8   ; 3B       ; 19           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[7]  ; Y10   ; 3B       ; 23           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[8]  ; U10   ; 3B       ; 19           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ULAout[9]  ; R9    ; 3B       ; 23           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -855,8 +851,8 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
 +----------+------------------+---------------+--------------+---------------+
 ; 2A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 3A       ; 10 / 16 ( 63 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 22 / 32 ( 69 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 9 / 16 ( 56 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 23 / 32 ( 72 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -898,10 +894,10 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; AA4      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; AA5      ; 53         ; 3A       ; ^AS_DATA2, DATA2                ;        ;              ;           ; Weak Pull Up ;                 ; --       ; On           ;
 ; AA6      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
-; AA7      ; 79         ; 3B       ; ULAout[22]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; AA8      ; 82         ; 3B       ; ULAout[16]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; AA9      ; 89         ; 3B       ; ULAout[31]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; AA10     ; 87         ; 3B       ; ULAout[21]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AA7      ; 79         ; 3B       ; ULAout[27]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AA8      ; 82         ; 3B       ; ULAout[6]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AA9      ; 89         ; 3B       ; ULAout[19]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AA10     ; 87         ; 3B       ; ULAout[18]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; AA11     ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; AA12     ; 105        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; AA13     ; 113        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
@@ -918,10 +914,10 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; AB2      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; AB3      ; 55         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;           ; Weak Pull Up ;                 ; --       ; On           ;
 ; AB4      ; 57         ; 3A       ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;           ; Weak Pull Up ;                 ; --       ; On           ;
-; AB5      ; 76         ; 3B       ; ULAout[9]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; AB6      ; 74         ; 3B       ; ULAout[6]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; AB7      ; 81         ; 3B       ; ULAout[20]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; AB8      ; 84         ; 3B       ; ULAout[27]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AB5      ; 76         ; 3B       ; ULAout[30]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AB6      ; 74         ; 3B       ; ULAout[28]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AB7      ; 81         ; 3B       ; ULAout[24]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; AB8      ; 84         ; 3B       ; ULAout[11]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; AB9      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; AB10     ; 98         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; AB11     ; 100        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
@@ -1161,10 +1157,10 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; M3       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; M4       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; M5       ; 48         ; 3A       ; #TDO                            ; output ;              ;           ; --           ;                 ; --       ; --           ;
-; M6       ; 70         ; 3A       ; ULAout[10]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; M7       ; 72         ; 3A       ; ULAout[7]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; M8       ; 86         ; 3B       ; ULAout[25]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; M9       ; 88         ; 3B       ; ULAout[19]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; M6       ; 70         ; 3A       ; ULAout[26]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; M7       ; 72         ; 3A       ; ULAout[29]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; M8       ; 86         ; 3B       ; ULAout[16]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; M9       ; 88         ; 3B       ; ULAout[31]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; M10      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; M11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V      ; --           ;                 ; --       ; --           ;
 ; M12      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
@@ -1185,7 +1181,7 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; N5       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; N6       ; 64         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; N7       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
-; N8       ; 80         ; 3B       ; ULAout[30]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; N8       ; 80         ; 3B       ; ULAout[22]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; N9       ; 104        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; N10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V      ; --           ;                 ; --       ; --           ;
 ; N11      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
@@ -1205,13 +1201,13 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; P3       ;            ; --       ; VCC                             ; power  ;              ; 1.1V      ; --           ;                 ; --       ; --           ;
 ; P4       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; P5       ; 50         ; 3A       ; #TMS                            ; input  ;              ;           ; --           ;                 ; --       ; --           ;
-; P6       ; 62         ; 3A       ; ULAout[3]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; P7       ; 73         ; 3A       ; ULAout[12]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; P8       ; 78         ; 3B       ; ULAout[28]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; P6       ; 62         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
+; P7       ; 73         ; 3A       ; ULAout[20]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; P8       ; 78         ; 3B       ; ULAout[21]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; P9       ; 102        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; P10      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; P11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V      ; --           ;                 ; --       ; --           ;
-; P12      ; 97         ; 3B       ; ULAout[17]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; P12      ; 97         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; P13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V      ; --           ;                 ; --       ; --           ;
 ; P14      ; 142        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; P15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V      ; --           ;                 ; --       ; --           ;
@@ -1228,12 +1224,12 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; R4       ; 49         ; 3A       ; ^nCSO, DATA4                    ;        ;              ;           ; Weak Pull Up ;                 ; --       ; On           ;
 ; R5       ; 60         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; R6       ; 58         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
-; R7       ; 71         ; 3A       ; ULAout[4]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; R7       ; 71         ; 3A       ; ULAout[25]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; R8       ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
-; R9       ; 93         ; 3B       ; ULAout[29]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; R9       ; 93         ; 3B       ; ULAout[9]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; R10      ; 99         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; R11      ; 101        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
-; R12      ; 95         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
+; R12      ; 95         ; 3B       ; ULAout[2]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; R13      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; R14      ; 144        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; R15      ; 161        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Row I/O      ;                 ; no       ; On           ;
@@ -1250,10 +1246,10 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; T4       ; 51         ; 3A       ; ^AS_DATA3, DATA3                ;        ;              ;           ; Weak Pull Up ;                 ; --       ; On           ;
 ; T5       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; T6       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
-; T7       ; 66         ; 3A       ; ULAout[8]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; T8       ; 68         ; 3A       ; ULAout[2]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; T9       ; 83         ; 3B       ; ULAout[23]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; T10      ; 91         ; 3B       ; ULAout[18]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; T7       ; 66         ; 3A       ; ULAout[3]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; T8       ; 68         ; 3A       ; ULAout[5]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; T9       ; 83         ; 3B       ; ULAout[12]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; T10      ; 91         ; 3B       ; ULAout[4]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; T11      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; T12      ; 110        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; T13      ; 112        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
@@ -1275,9 +1271,9 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; U7       ; 59         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; U8       ; 61         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; U9       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
-; U10      ; 85         ; 3B       ; ULAout[26]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; U11      ; 94         ; 3B       ; ULAout[14]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; U12      ; 96         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
+; U10      ; 85         ; 3B       ; ULAout[8]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; U11      ; 94         ; 3B       ; ULAout[17]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; U12      ; 96         ; 3B       ; ULAout[14]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; U13      ; 109        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; U14      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; U15      ; 128        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
@@ -1293,11 +1289,11 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; V3       ; 56         ; 3A       ; ^DCLK                           ;        ;              ;           ; Weak Pull Up ;                 ; --       ; On           ;
 ; V4       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; V5       ; 52         ; 3A       ; #TCK                            ; input  ;              ;           ; --           ;                 ; --       ; --           ;
-; V6       ; 69         ; 3A       ; ULAout[1]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; V6       ; 69         ; 3A       ; ULAout[0]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; V7       ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; V8       ;            ; --       ; VCCPGM                          ; power  ;              ; 3.0V/3.3V ; --           ;                 ; --       ; --           ;
-; V9       ; 75         ; 3B       ; ULAout[5]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; V10      ; 77         ; 3B       ; ULAout[11]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; V9       ; 75         ; 3B       ; ULAout[15]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; V10      ; 77         ; 3B       ; ULAout[23]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; V11      ;            ;          ; NC                              ;        ;              ;           ; --           ;                 ; --       ; --           ;
 ; V12      ;            ;          ; GND                             ; gnd    ;              ;           ; --           ;                 ; --       ; --           ;
 ; V13      ; 107        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
@@ -1318,7 +1314,7 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; W6       ;            ; 3A       ; VCCPD3A                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; W7       ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; W8       ; 63         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
-; W9       ; 65         ; 3A       ; ULAout[0]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; W9       ; 65         ; 3A       ; ULAout[1]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; W10      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; W11      ;            ; 3B, 4A   ; VCCPD3B4A                       ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
 ; W12      ;            ; 3B, 4A   ; VCCPD3B4A                       ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
@@ -1340,8 +1336,8 @@ The pin-out file can be found in /home/borg/Documents/MIPS/output_files/MIPS.pin
 ; Y6       ;            ;          ; NC                              ;        ;              ;           ; --           ;                 ; --       ; --           ;
 ; Y7       ;            ; 3A       ; VREFB3AN0                       ; power  ;              ;           ; --           ;                 ; --       ; --           ;
 ; Y8       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
-; Y9       ; 92         ; 3B       ; ULAout[15]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
-; Y10      ; 90         ; 3B       ; ULAout[24]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; Y9       ; 92         ; 3B       ; ULAout[10]                      ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
+; Y10      ; 90         ; 3B       ; ULAout[7]                       ; output ; 2.5 V        ;           ; Column I/O   ; N               ; no       ; Off          ;
 ; Y11      ; 103        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;           ; Column I/O   ;                 ; no       ; On           ;
 ; Y12      ;            ; 3B       ; VREFB3BN0                       ; power  ;              ;           ; --           ;                 ; --       ; --           ;
 ; Y13      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 2.5V      ; --           ;                 ; --       ; --           ;
@@ -1436,12 +1432,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name         ; Library Name ;
 +--------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
-; |FDMIPS                                    ; 45.5 (0.5)           ; 45.5 (0.5)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 90 (1)              ; 13 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 33   ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
-;    |ROMMIPS:ROM|                           ; 3.2 (3.2)            ; 3.2 (3.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
-;    |ULA:ULA|                               ; 33.5 (33.5)          ; 33.5 (33.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 67 (67)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
-;    |bancoRegistradores:BancoRegistradores| ; 3.8 (3.8)            ; 4.2 (4.2)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
-;    |registradorGenerico:PC|                ; 2.4 (2.4)            ; 2.5 (2.5)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 11 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC                ; registradorGenerico ; work         ;
-;    |somaConstante:somaUm|                  ; 1.6 (1.6)            ; 1.6 (1.6)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaUm                  ; somaConstante       ; work         ;
+; |FDMIPS                                    ; 45.5 (0.5)           ; 46.0 (0.5)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 90 (1)              ; 12 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 33   ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
+;    |ROMMIPS:ROM|                           ; 3.5 (3.5)            ; 3.7 (3.7)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
+;    |ULA:ULA|                               ; 33.0 (33.0)          ; 33.0 (33.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 67 (67)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
+;    |bancoRegistradores:BancoRegistradores| ; 3.8 (3.8)            ; 4.7 (4.7)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
+;    |registradorGenerico:PC|                ; 2.4 (2.4)            ; 2.4 (2.4)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC                ; registradorGenerico ; work         ;
+;    |somaConstante:somaUm|                  ; 1.7 (1.7)            ; 1.7 (1.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaUm                  ; somaConstante       ; work         ;
 +--------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1501,8 +1497,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                 ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; ROMMIPS:ROM|memROM~2 ; LABCELL_X16_Y3_N6 ; 36      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                  ; PIN_M16           ; 13      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; ROMMIPS:ROM|memROM~2 ; LABCELL_X14_Y2_N6 ; 36      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                  ; PIN_M16           ; 12      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
 +----------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1511,7 +1507,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_M16  ; 13      ; Global Clock         ; GCLK10           ; --                        ;
+; clk  ; PIN_M16  ; 12      ; Global Clock         ; GCLK10           ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1520,20 +1516,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Routing Resource Type        ; Usage                  ;
 +------------------------------+------------------------+
-; Block interconnects          ; 90 / 140,056 ( < 1 % ) ;
+; Block interconnects          ; 89 / 140,056 ( < 1 % ) ;
 ; C12 interconnects            ; 0 / 6,048 ( 0 % )      ;
-; C2 interconnects             ; 22 / 54,648 ( < 1 % )  ;
-; C4 interconnects             ; 19 / 25,920 ( < 1 % )  ;
+; C2 interconnects             ; 17 / 54,648 ( < 1 % )  ;
+; C4 interconnects             ; 17 / 25,920 ( < 1 % )  ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )         ;
 ; Direct links                 ; 37 / 140,056 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )         ;
-; Local interconnects          ; 18 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 20 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
-; R14 interconnects            ; 1 / 5,984 ( < 1 % )    ;
-; R14/C12 interconnect drivers ; 1 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 43 / 60,192 ( < 1 % )  ;
+; R14 interconnects            ; 0 / 5,984 ( 0 % )      ;
+; R14/C12 interconnect drivers ; 0 / 9,504 ( 0 % )      ;
+; R3 interconnects             ; 41 / 60,192 ( < 1 % )  ;
 ; R6 interconnects             ; 6 / 127,072 ( < 1 % )  ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )      ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )      ;
@@ -1558,33 +1554,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 ; Status       ; ID        ; Category                          ; Rule Description                                                                   ; Severity ; Information                                                              ; Area                ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
-; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.  ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
 ; Inapplicable ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available. ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
+; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.  ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
 ; Inapplicable ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available. ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                   ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O                 ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O                 ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                  ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                     ; Critical ; No reserved LogicLock region found.                                      ; I/O                 ;                   ;
-; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.             ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                         ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                     ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                     ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
-; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.      ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
-; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                      ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
-; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
-; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                    ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                         ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
-; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                      ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
-; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                          ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
-; Pass         ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                            ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Pass         ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                          ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                      ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                         ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
+; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                    ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
+; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                      ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
+; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.      ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                     ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
+; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                     ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                         ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.             ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
 ; Inapplicable ; IO_000034 ; SI Related Distance Checks        ; Single-ended outputs should be 0 LAB row(s) away from a differential I/O.          ; High     ; No Differential I/O Standard assignments found.                          ; I/O                 ;                   ;
 ; ----         ; ----      ; Disclaimer                        ; OCT rules are checked but not reported.                                            ; None     ; ----                                                                     ; On Chip Termination ;                   ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
@@ -1592,47 +1588,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                              ;
-+--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
-; Pin/Rules          ; IO_000002    ; IO_000001    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000034    ;
-+--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 33        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 32           ; 0            ; 33        ; 33        ; 0            ;
-; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
-; Total Inapplicable ; 33           ; 33           ; 33           ; 33           ; 33           ; 0         ; 33           ; 33           ; 33           ; 33           ; 33           ; 33           ; 33           ; 1            ; 33           ; 33           ; 33           ; 33           ; 1            ; 33           ; 33           ; 33           ; 33           ; 1            ; 33           ; 0         ; 0         ; 33           ;
-; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
-; ULAout[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[3]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[4]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[5]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[6]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[7]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[8]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[9]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[10]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[11]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[12]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[13]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[14]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[15]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[16]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[17]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[18]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[19]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[20]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[21]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[22]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[23]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[24]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[25]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[26]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[27]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[28]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[29]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[30]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; ULAout[31]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
-+--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 33        ; 0            ; 0            ; 33        ; 33        ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Inapplicable ; 33           ; 33           ; 33           ; 33           ; 33           ; 0         ; 33           ; 33           ; 0         ; 0         ; 33           ; 1            ; 33           ; 33           ; 33           ; 33           ; 1            ; 33           ; 33           ; 33           ; 33           ; 1            ; 33           ; 33           ; 33           ; 33           ; 33           ; 33           ;
+; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; ULAout[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[3]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[4]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[5]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[6]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[7]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[8]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[9]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[10]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[11]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[12]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[13]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[14]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[15]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[16]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[17]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[18]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[19]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[20]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[21]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[22]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[23]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[24]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[25]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[26]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[27]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[28]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[29]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[30]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ULAout[31]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -1686,7 +1682,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk             ; clk                  ; 1.2               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
+This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -1694,11 +1690,11 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------+------------------------------------------------------+-------------------+
 ; Source Register                ; Destination Register                                 ; Delay Added in ns ;
 +--------------------------------+------------------------------------------------------+-------------------+
-; registradorGenerico:PC|DOUT[7] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.291             ;
-; registradorGenerico:PC|DOUT[2] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.235             ;
-; registradorGenerico:PC|DOUT[4] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.199             ;
-; registradorGenerico:PC|DOUT[5] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.196             ;
-; registradorGenerico:PC|DOUT[3] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.099             ;
+; registradorGenerico:PC|DOUT[7] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.293             ;
+; registradorGenerico:PC|DOUT[2] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.236             ;
+; registradorGenerico:PC|DOUT[4] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.198             ;
+; registradorGenerico:PC|DOUT[5] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.195             ;
+; registradorGenerico:PC|DOUT[3] ; bancoRegistradores:BancoRegistradores|registrador~39 ; 0.114             ;
 +--------------------------------+------------------------------------------------------+-------------------+
 Note: This table only shows the top 5 path(s) that have the largest delay added for hold.
 
@@ -1707,7 +1703,7 @@ Note: This table only shows the top 5 path(s) that have the largest delay added 
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1930,11 +1926,11 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'MIPS.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MIPS.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
     Info (332127): Assuming a default timing requirement
 Info (332111): Found 1 clocks
@@ -1943,32 +1939,32 @@ Info (332111): Found 1 clocks
     Info (332111):    1.000          clk
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 0.49 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /home/borg/Documents/MIPS/output_files/MIPS.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/rodri/OneDrive/Área de Trabalho/MIPS/output_files/MIPS.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 214 warnings
-    Info: Peak virtual memory: 1575 megabytes
-    Info: Processing ended: Fri Oct 30 12:26:27 2020
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:54
+    Info: Peak virtual memory: 5976 megabytes
+    Info: Processing ended: Thu Nov 05 15:07:21 2020
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:53
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/borg/Documents/MIPS/output_files/MIPS.fit.smsg.
+The suppressed messages can be found in C:/Users/rodri/OneDrive/Área de Trabalho/MIPS/output_files/MIPS.fit.smsg.
 
 

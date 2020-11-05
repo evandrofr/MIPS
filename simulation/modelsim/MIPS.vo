@@ -1,6 +1,6 @@
-// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
-// and other software and tools, and any partner logic 
+// and other software and tools, and its AMPP partner logic 
 // functions, and any output files from any of the foregoing 
 // (including device programming or simulation files), and any 
 // associated documentation or information are expressly subject 
@@ -10,14 +10,13 @@
 // agreement, including, without limitation, that your use is for
 // the sole purpose of programming logic devices manufactured by
 // Intel and sold by Intel or its authorized distributors.  Please
-// refer to the applicable agreement for further details, at
-// https://fpgasoftware.intel.com/eula.
+// refer to the applicable agreement for further details.
 
 // VENDOR "Altera"
 // PROGRAM "Quartus Prime"
-// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
-// DATE "10/30/2020 12:26:45"
+// DATE "11/05/2020 15:07:45"
 
 // 
 // Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -36,38 +35,38 @@ input 	clk;
 output 	[31:0] ULAout;
 
 // Design Ports Information
-// ULAout[0]	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[1]	=>  Location: PIN_V6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[2]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[3]	=>  Location: PIN_P6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[4]	=>  Location: PIN_R7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[5]	=>  Location: PIN_V9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[6]	=>  Location: PIN_AB6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[7]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[8]	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[9]	=>  Location: PIN_AB5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[10]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[11]	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[12]	=>  Location: PIN_P7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[0]	=>  Location: PIN_V6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[1]	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[2]	=>  Location: PIN_R12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[3]	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[4]	=>  Location: PIN_T10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[5]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[6]	=>  Location: PIN_AA8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[7]	=>  Location: PIN_Y10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[8]	=>  Location: PIN_U10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[9]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[10]	=>  Location: PIN_Y9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[11]	=>  Location: PIN_AB8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[12]	=>  Location: PIN_T9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // ULAout[13]	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[14]	=>  Location: PIN_U11,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[15]	=>  Location: PIN_Y9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[16]	=>  Location: PIN_AA8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[17]	=>  Location: PIN_P12,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[18]	=>  Location: PIN_T10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[19]	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[20]	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[21]	=>  Location: PIN_AA10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[22]	=>  Location: PIN_AA7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[23]	=>  Location: PIN_T9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[24]	=>  Location: PIN_Y10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[25]	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[26]	=>  Location: PIN_U10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[27]	=>  Location: PIN_AB8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[28]	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[29]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[30]	=>  Location: PIN_N8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ULAout[31]	=>  Location: PIN_AA9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[14]	=>  Location: PIN_U12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[15]	=>  Location: PIN_V9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[16]	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[17]	=>  Location: PIN_U11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[18]	=>  Location: PIN_AA10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[19]	=>  Location: PIN_AA9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[20]	=>  Location: PIN_P7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[21]	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[22]	=>  Location: PIN_N8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[23]	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[24]	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[25]	=>  Location: PIN_R7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[26]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[27]	=>  Location: PIN_AA7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[28]	=>  Location: PIN_AB6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[29]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[30]	=>  Location: PIN_AB5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAout[31]	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
@@ -95,30 +94,29 @@ wire \somaUm|Add0~22 ;
 wire \somaUm|Add0~17_sumout ;
 wire \somaUm|Add0~18 ;
 wire \somaUm|Add0~13_sumout ;
-wire \PC|DOUT[4]~DUPLICATE_q ;
-wire \ROM|memROM~1_combout ;
-wire \ROM|memROM~3_combout ;
 wire \somaUm|Add0~14 ;
 wire \somaUm|Add0~5_sumout ;
-wire \BancoRegistradores|registrador~1062_combout ;
 wire \somaUm|Add0~6 ;
 wire \somaUm|Add0~1_sumout ;
 wire \PC|DOUT[7]~DUPLICATE_q ;
-wire \PC|DOUT[6]~DUPLICATE_q ;
-wire \ROM|memROM~2_combout ;
+wire \PC|DOUT[4]~DUPLICATE_q ;
+wire \ROM|memROM~1_combout ;
 wire \ROM|memROM~0_combout ;
-wire \BancoRegistradores|registrador~1064_combout ;
 wire \BancoRegistradores|registrador~1063_combout ;
+wire \ROM|memROM~3_combout ;
+wire \BancoRegistradores|registrador~1062_combout ;
+wire \BancoRegistradores|registrador~1064_combout ;
 wire \ROM|memROM~4_combout ;
 wire \ROM|memROM~5_combout ;
 wire \ULA|Add0~130_cout ;
 wire \ULA|Add0~1_sumout ;
+wire \ROM|memROM~2_combout ;
 wire \ULA|saida[0]~0_combout ;
-wire \BancoRegistradores|saidaA[1]~0_combout ;
 wire \ROM|memROM~6_combout ;
 wire \ULA|saida~32_combout ;
 wire \BancoRegistradores|registrador~39_q ;
 wire \BancoRegistradores|registrador~1065_combout ;
+wire \BancoRegistradores|saidaA[1]~0_combout ;
 wire \ULA|Add0~2 ;
 wire \ULA|Add0~5_sumout ;
 wire \ULA|saida[1]~1_combout ;
@@ -219,7 +217,7 @@ wire \ULA|saida[31]~31_combout ;
 wire [31:0] \PC|DOUT ;
 
 
-// Location: IOOBUF_X11_Y0_N36
+// Location: IOOBUF_X12_Y0_N36
 cyclonev_io_obuf \ULAout[0]~output (
 	.i(\ULA|saida[0]~0_combout ),
 	.oe(vcc),
@@ -235,7 +233,7 @@ defparam \ULAout[0]~output .open_drain_output = "false";
 defparam \ULAout[0]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X12_Y0_N36
+// Location: IOOBUF_X11_Y0_N36
 cyclonev_io_obuf \ULAout[1]~output (
 	.i(\ULA|saida[1]~1_combout ),
 	.oe(vcc),
@@ -251,7 +249,7 @@ defparam \ULAout[1]~output .open_drain_output = "false";
 defparam \ULAout[1]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X12_Y0_N2
+// Location: IOOBUF_X24_Y0_N53
 cyclonev_io_obuf \ULAout[2]~output (
 	.i(\ULA|saida[2]~2_combout ),
 	.oe(vcc),
@@ -267,7 +265,7 @@ defparam \ULAout[2]~output .open_drain_output = "false";
 defparam \ULAout[2]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X11_Y0_N19
+// Location: IOOBUF_X12_Y0_N19
 cyclonev_io_obuf \ULAout[3]~output (
 	.i(\ULA|saida[3]~3_combout ),
 	.oe(vcc),
@@ -283,7 +281,7 @@ defparam \ULAout[3]~output .open_drain_output = "false";
 defparam \ULAout[3]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X14_Y0_N53
+// Location: IOOBUF_X23_Y0_N59
 cyclonev_io_obuf \ULAout[4]~output (
 	.i(\ULA|saida[4]~4_combout ),
 	.oe(vcc),
@@ -299,7 +297,7 @@ defparam \ULAout[4]~output .open_drain_output = "false";
 defparam \ULAout[4]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y0_N59
+// Location: IOOBUF_X12_Y0_N2
 cyclonev_io_obuf \ULAout[5]~output (
 	.i(\ULA|saida[5]~5_combout ),
 	.oe(vcc),
@@ -315,7 +313,7 @@ defparam \ULAout[5]~output .open_drain_output = "false";
 defparam \ULAout[5]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y0_N93
+// Location: IOOBUF_X19_Y0_N53
 cyclonev_io_obuf \ULAout[6]~output (
 	.i(\ULA|saida[6]~6_combout ),
 	.oe(vcc),
@@ -331,7 +329,7 @@ defparam \ULAout[6]~output .open_drain_output = "false";
 defparam \ULAout[6]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X14_Y0_N2
+// Location: IOOBUF_X23_Y0_N93
 cyclonev_io_obuf \ULAout[7]~output (
 	.i(\ULA|saida[7]~7_combout ),
 	.oe(vcc),
@@ -347,7 +345,7 @@ defparam \ULAout[7]~output .open_drain_output = "false";
 defparam \ULAout[7]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X12_Y0_N19
+// Location: IOOBUF_X19_Y0_N2
 cyclonev_io_obuf \ULAout[8]~output (
 	.i(\ULA|saida[8]~8_combout ),
 	.oe(vcc),
@@ -363,7 +361,7 @@ defparam \ULAout[8]~output .open_drain_output = "false";
 defparam \ULAout[8]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y0_N76
+// Location: IOOBUF_X23_Y0_N42
 cyclonev_io_obuf \ULAout[9]~output (
 	.i(\ULA|saida[9]~9_combout ),
 	.oe(vcc),
@@ -379,7 +377,7 @@ defparam \ULAout[9]~output .open_drain_output = "false";
 defparam \ULAout[9]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X14_Y0_N19
+// Location: IOOBUF_X23_Y0_N76
 cyclonev_io_obuf \ULAout[10]~output (
 	.i(\ULA|saida[10]~10_combout ),
 	.oe(vcc),
@@ -395,7 +393,7 @@ defparam \ULAout[10]~output .open_drain_output = "false";
 defparam \ULAout[10]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y0_N42
+// Location: IOOBUF_X19_Y0_N36
 cyclonev_io_obuf \ULAout[11]~output (
 	.i(\ULA|saida[11]~11_combout ),
 	.oe(vcc),
@@ -411,7 +409,7 @@ defparam \ULAout[11]~output .open_drain_output = "false";
 defparam \ULAout[11]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X14_Y0_N36
+// Location: IOOBUF_X19_Y0_N19
 cyclonev_io_obuf \ULAout[12]~output (
 	.i(\ULA|saida[12]~12_combout ),
 	.oe(vcc),
@@ -443,7 +441,7 @@ defparam \ULAout[13]~output .open_drain_output = "false";
 defparam \ULAout[13]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X24_Y0_N19
+// Location: IOOBUF_X24_Y0_N2
 cyclonev_io_obuf \ULAout[14]~output (
 	.i(\ULA|saida[14]~14_combout ),
 	.oe(vcc),
@@ -459,7 +457,7 @@ defparam \ULAout[14]~output .open_drain_output = "false";
 defparam \ULAout[14]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X23_Y0_N76
+// Location: IOOBUF_X16_Y0_N59
 cyclonev_io_obuf \ULAout[15]~output (
 	.i(\ULA|saida[15]~15_combout ),
 	.oe(vcc),
@@ -475,7 +473,7 @@ defparam \ULAout[15]~output .open_drain_output = "false";
 defparam \ULAout[15]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X19_Y0_N53
+// Location: IOOBUF_X22_Y0_N19
 cyclonev_io_obuf \ULAout[16]~output (
 	.i(\ULA|saida[16]~16_combout ),
 	.oe(vcc),
@@ -491,7 +489,7 @@ defparam \ULAout[16]~output .open_drain_output = "false";
 defparam \ULAout[16]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X24_Y0_N36
+// Location: IOOBUF_X24_Y0_N19
 cyclonev_io_obuf \ULAout[17]~output (
 	.i(\ULA|saida[17]~17_combout ),
 	.oe(vcc),
@@ -507,7 +505,7 @@ defparam \ULAout[17]~output .open_drain_output = "false";
 defparam \ULAout[17]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X23_Y0_N59
+// Location: IOOBUF_X22_Y0_N53
 cyclonev_io_obuf \ULAout[18]~output (
 	.i(\ULA|saida[18]~18_combout ),
 	.oe(vcc),
@@ -523,7 +521,7 @@ defparam \ULAout[18]~output .open_drain_output = "false";
 defparam \ULAout[18]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X22_Y0_N2
+// Location: IOOBUF_X22_Y0_N36
 cyclonev_io_obuf \ULAout[19]~output (
 	.i(\ULA|saida[19]~19_combout ),
 	.oe(vcc),
@@ -539,7 +537,7 @@ defparam \ULAout[19]~output .open_drain_output = "false";
 defparam \ULAout[19]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X18_Y0_N36
+// Location: IOOBUF_X14_Y0_N36
 cyclonev_io_obuf \ULAout[20]~output (
 	.i(\ULA|saida[20]~20_combout ),
 	.oe(vcc),
@@ -555,7 +553,7 @@ defparam \ULAout[20]~output .open_drain_output = "false";
 defparam \ULAout[20]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X22_Y0_N53
+// Location: IOOBUF_X18_Y0_N19
 cyclonev_io_obuf \ULAout[21]~output (
 	.i(\ULA|saida[21]~21_combout ),
 	.oe(vcc),
@@ -571,7 +569,7 @@ defparam \ULAout[21]~output .open_drain_output = "false";
 defparam \ULAout[21]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X18_Y0_N53
+// Location: IOOBUF_X18_Y0_N2
 cyclonev_io_obuf \ULAout[22]~output (
 	.i(\ULA|saida[22]~22_combout ),
 	.oe(vcc),
@@ -587,7 +585,7 @@ defparam \ULAout[22]~output .open_drain_output = "false";
 defparam \ULAout[22]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X19_Y0_N19
+// Location: IOOBUF_X16_Y0_N42
 cyclonev_io_obuf \ULAout[23]~output (
 	.i(\ULA|saida[23]~23_combout ),
 	.oe(vcc),
@@ -603,7 +601,7 @@ defparam \ULAout[23]~output .open_drain_output = "false";
 defparam \ULAout[23]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X23_Y0_N93
+// Location: IOOBUF_X18_Y0_N36
 cyclonev_io_obuf \ULAout[24]~output (
 	.i(\ULA|saida[24]~24_combout ),
 	.oe(vcc),
@@ -619,7 +617,7 @@ defparam \ULAout[24]~output .open_drain_output = "false";
 defparam \ULAout[24]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X22_Y0_N19
+// Location: IOOBUF_X14_Y0_N53
 cyclonev_io_obuf \ULAout[25]~output (
 	.i(\ULA|saida[25]~25_combout ),
 	.oe(vcc),
@@ -635,7 +633,7 @@ defparam \ULAout[25]~output .open_drain_output = "false";
 defparam \ULAout[25]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X19_Y0_N2
+// Location: IOOBUF_X14_Y0_N19
 cyclonev_io_obuf \ULAout[26]~output (
 	.i(\ULA|saida[26]~26_combout ),
 	.oe(vcc),
@@ -651,7 +649,7 @@ defparam \ULAout[26]~output .open_drain_output = "false";
 defparam \ULAout[26]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X19_Y0_N36
+// Location: IOOBUF_X18_Y0_N53
 cyclonev_io_obuf \ULAout[27]~output (
 	.i(\ULA|saida[27]~27_combout ),
 	.oe(vcc),
@@ -667,7 +665,7 @@ defparam \ULAout[27]~output .open_drain_output = "false";
 defparam \ULAout[27]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X18_Y0_N19
+// Location: IOOBUF_X16_Y0_N93
 cyclonev_io_obuf \ULAout[28]~output (
 	.i(\ULA|saida[28]~28_combout ),
 	.oe(vcc),
@@ -683,7 +681,7 @@ defparam \ULAout[28]~output .open_drain_output = "false";
 defparam \ULAout[28]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X23_Y0_N42
+// Location: IOOBUF_X14_Y0_N2
 cyclonev_io_obuf \ULAout[29]~output (
 	.i(\ULA|saida[29]~29_combout ),
 	.oe(vcc),
@@ -699,7 +697,7 @@ defparam \ULAout[29]~output .open_drain_output = "false";
 defparam \ULAout[29]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X18_Y0_N2
+// Location: IOOBUF_X16_Y0_N76
 cyclonev_io_obuf \ULAout[30]~output (
 	.i(\ULA|saida[30]~30_combout ),
 	.oe(vcc),
@@ -715,7 +713,7 @@ defparam \ULAout[30]~output .open_drain_output = "false";
 defparam \ULAout[30]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X22_Y0_N36
+// Location: IOOBUF_X22_Y0_N2
 cyclonev_io_obuf \ULAout[31]~output (
 	.i(\ULA|saida[31]~31_combout ),
 	.oe(vcc),
@@ -756,7 +754,26 @@ defparam \clk~inputCLKENA0 .ena_register_power_up = "high";
 defparam \clk~inputCLKENA0 .test_syn = "high";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N0
+// Location: FF_X14_Y2_N49
+dffeas \PC|DOUT[7] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\somaUm|Add0~1_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PC|DOUT [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PC|DOUT[7] .is_wysiwyg = "true";
+defparam \PC|DOUT[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X14_Y2_N54
 cyclonev_lcell_comb \PC|DOUT[0]~0 (
 // Equation(s):
 // \PC|DOUT[0]~0_combout  = !\PC|DOUT [0]
@@ -780,7 +797,7 @@ defparam \PC|DOUT[0]~0 .lut_mask = 64'hFF00FF00FF00FF00;
 defparam \PC|DOUT[0]~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N2
+// Location: FF_X14_Y2_N56
 dffeas \PC|DOUT[0] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\PC|DOUT[0]~0_combout ),
@@ -799,16 +816,16 @@ defparam \PC|DOUT[0] .is_wysiwyg = "true";
 defparam \PC|DOUT[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N30
+// Location: LABCELL_X14_Y2_N30
 cyclonev_lcell_comb \somaUm|Add0~25 (
 // Equation(s):
-// \somaUm|Add0~25_sumout  = SUM(( \PC|DOUT [0] ) + ( \PC|DOUT [1] ) + ( !VCC ))
-// \somaUm|Add0~26  = CARRY(( \PC|DOUT [0] ) + ( \PC|DOUT [1] ) + ( !VCC ))
+// \somaUm|Add0~25_sumout  = SUM(( \PC|DOUT [1] ) + ( \PC|DOUT [0] ) + ( !VCC ))
+// \somaUm|Add0~26  = CARRY(( \PC|DOUT [1] ) + ( \PC|DOUT [0] ) + ( !VCC ))
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\PC|DOUT [1]),
-	.datad(!\PC|DOUT [0]),
+	.datac(!\PC|DOUT [0]),
+	.datad(!\PC|DOUT [1]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -824,7 +841,7 @@ defparam \somaUm|Add0~25 .lut_mask = 64'h0000F0F0000000FF;
 defparam \somaUm|Add0~25 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N26
+// Location: FF_X14_Y2_N2
 dffeas \PC|DOUT[1] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -843,7 +860,7 @@ defparam \PC|DOUT[1] .is_wysiwyg = "true";
 defparam \PC|DOUT[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N33
+// Location: LABCELL_X14_Y2_N33
 cyclonev_lcell_comb \somaUm|Add0~9 (
 // Equation(s):
 // \somaUm|Add0~9_sumout  = SUM(( \PC|DOUT [2] ) + ( GND ) + ( \somaUm|Add0~26  ))
@@ -868,7 +885,7 @@ defparam \somaUm|Add0~9 .lut_mask = 64'h0000FFFF000000FF;
 defparam \somaUm|Add0~9 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N35
+// Location: FF_X14_Y2_N35
 dffeas \PC|DOUT[2] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\somaUm|Add0~9_sumout ),
@@ -887,7 +904,7 @@ defparam \PC|DOUT[2] .is_wysiwyg = "true";
 defparam \PC|DOUT[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N36
+// Location: LABCELL_X14_Y2_N36
 cyclonev_lcell_comb \somaUm|Add0~21 (
 // Equation(s):
 // \somaUm|Add0~21_sumout  = SUM(( \PC|DOUT [3] ) + ( GND ) + ( \somaUm|Add0~10  ))
@@ -912,7 +929,7 @@ defparam \somaUm|Add0~21 .lut_mask = 64'h0000FFFF000000FF;
 defparam \somaUm|Add0~21 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N38
+// Location: FF_X14_Y2_N38
 dffeas \PC|DOUT[3] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\somaUm|Add0~21_sumout ),
@@ -931,7 +948,7 @@ defparam \PC|DOUT[3] .is_wysiwyg = "true";
 defparam \PC|DOUT[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N39
+// Location: LABCELL_X14_Y2_N39
 cyclonev_lcell_comb \somaUm|Add0~17 (
 // Equation(s):
 // \somaUm|Add0~17_sumout  = SUM(( \PC|DOUT [4] ) + ( GND ) + ( \somaUm|Add0~22  ))
@@ -956,7 +973,7 @@ defparam \somaUm|Add0~17 .lut_mask = 64'h0000FFFF000000FF;
 defparam \somaUm|Add0~17 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N40
+// Location: FF_X14_Y2_N40
 dffeas \PC|DOUT[4] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\somaUm|Add0~17_sumout ),
@@ -975,7 +992,7 @@ defparam \PC|DOUT[4] .is_wysiwyg = "true";
 defparam \PC|DOUT[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N42
+// Location: LABCELL_X14_Y2_N42
 cyclonev_lcell_comb \somaUm|Add0~13 (
 // Equation(s):
 // \somaUm|Add0~13_sumout  = SUM(( \PC|DOUT [5] ) + ( GND ) + ( \somaUm|Add0~18  ))
@@ -1000,7 +1017,7 @@ defparam \somaUm|Add0~13 .lut_mask = 64'h0000FFFF000000FF;
 defparam \somaUm|Add0~13 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N44
+// Location: FF_X14_Y2_N44
 dffeas \PC|DOUT[5] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\somaUm|Add0~13_sumout ),
@@ -1019,74 +1036,7 @@ defparam \PC|DOUT[5] .is_wysiwyg = "true";
 defparam \PC|DOUT[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N41
-dffeas \PC|DOUT[4]~DUPLICATE (
-	.clk(\clk~inputCLKENA0_outclk ),
-	.d(\somaUm|Add0~17_sumout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\PC|DOUT[4]~DUPLICATE_q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \PC|DOUT[4]~DUPLICATE .is_wysiwyg = "true";
-defparam \PC|DOUT[4]~DUPLICATE .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X16_Y3_N15
-cyclonev_lcell_comb \ROM|memROM~1 (
-// Equation(s):
-// \ROM|memROM~1_combout  = ( \PC|DOUT[4]~DUPLICATE_q  & ( (!\PC|DOUT [2] & (!\PC|DOUT [5] & !\PC|DOUT [3])) ) ) # ( !\PC|DOUT[4]~DUPLICATE_q  & ( !\PC|DOUT [5] ) )
-
-	.dataa(!\PC|DOUT [2]),
-	.datab(!\PC|DOUT [5]),
-	.datac(gnd),
-	.datad(!\PC|DOUT [3]),
-	.datae(gnd),
-	.dataf(!\PC|DOUT[4]~DUPLICATE_q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\ROM|memROM~1_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \ROM|memROM~1 .extended_lut = "off";
-defparam \ROM|memROM~1 .lut_mask = 64'hCCCCCCCC88008800;
-defparam \ROM|memROM~1 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X16_Y3_N12
-cyclonev_lcell_comb \ROM|memROM~3 (
-// Equation(s):
-// \ROM|memROM~3_combout  = ( \PC|DOUT[4]~DUPLICATE_q  & ( (!\PC|DOUT [5] & (!\PC|DOUT [2] & !\PC|DOUT [3])) ) ) # ( !\PC|DOUT[4]~DUPLICATE_q  & ( (!\PC|DOUT [5] & !\PC|DOUT [2]) ) )
-
-	.dataa(gnd),
-	.datab(!\PC|DOUT [5]),
-	.datac(!\PC|DOUT [2]),
-	.datad(!\PC|DOUT [3]),
-	.datae(gnd),
-	.dataf(!\PC|DOUT[4]~DUPLICATE_q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\ROM|memROM~3_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \ROM|memROM~3 .extended_lut = "off";
-defparam \ROM|memROM~3 .lut_mask = 64'hC0C0C0C0C000C000;
-defparam \ROM|memROM~3 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X16_Y3_N45
+// Location: LABCELL_X14_Y2_N45
 cyclonev_lcell_comb \somaUm|Add0~5 (
 // Equation(s):
 // \somaUm|Add0~5_sumout  = SUM(( \PC|DOUT [6] ) + ( GND ) + ( \somaUm|Add0~14  ))
@@ -1111,7 +1061,7 @@ defparam \somaUm|Add0~5 .lut_mask = 64'h0000FFFF000000FF;
 defparam \somaUm|Add0~5 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N46
+// Location: FF_X14_Y2_N47
 dffeas \PC|DOUT[6] (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\somaUm|Add0~5_sumout ),
@@ -1130,50 +1080,7 @@ defparam \PC|DOUT[6] .is_wysiwyg = "true";
 defparam \PC|DOUT[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N3
-cyclonev_lcell_comb \BancoRegistradores|registrador~1062 (
-// Equation(s):
-// \BancoRegistradores|registrador~1062_combout  = ( !\PC|DOUT [6] & ( (\ROM|memROM~3_combout ) # (\ROM|memROM~1_combout ) ) )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\ROM|memROM~1_combout ),
-	.datad(!\ROM|memROM~3_combout ),
-	.datae(gnd),
-	.dataf(!\PC|DOUT [6]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\BancoRegistradores|registrador~1062_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \BancoRegistradores|registrador~1062 .extended_lut = "off";
-defparam \BancoRegistradores|registrador~1062 .lut_mask = 64'h0FFF0FFF00000000;
-defparam \BancoRegistradores|registrador~1062 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X16_Y3_N50
-dffeas \PC|DOUT[7] (
-	.clk(\clk~inputCLKENA0_outclk ),
-	.d(\somaUm|Add0~1_sumout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\PC|DOUT [7]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \PC|DOUT[7] .is_wysiwyg = "true";
-defparam \PC|DOUT[7] .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X16_Y3_N48
+// Location: LABCELL_X14_Y2_N48
 cyclonev_lcell_comb \somaUm|Add0~1 (
 // Equation(s):
 // \somaUm|Add0~1_sumout  = SUM(( \PC|DOUT [7] ) + ( GND ) + ( \somaUm|Add0~6  ))
@@ -1197,7 +1104,7 @@ defparam \somaUm|Add0~1 .lut_mask = 64'h0000FFFF000000FF;
 defparam \somaUm|Add0~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N49
+// Location: FF_X14_Y2_N50
 dffeas \PC|DOUT[7]~DUPLICATE (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\somaUm|Add0~1_sumout ),
@@ -1216,10 +1123,10 @@ defparam \PC|DOUT[7]~DUPLICATE .is_wysiwyg = "true";
 defparam \PC|DOUT[7]~DUPLICATE .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N47
-dffeas \PC|DOUT[6]~DUPLICATE (
+// Location: FF_X14_Y2_N41
+dffeas \PC|DOUT[4]~DUPLICATE (
 	.clk(\clk~inputCLKENA0_outclk ),
-	.d(\somaUm|Add0~5_sumout ),
+	.d(\somaUm|Add0~17_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -1228,48 +1135,48 @@ dffeas \PC|DOUT[6]~DUPLICATE (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\PC|DOUT[6]~DUPLICATE_q ),
+	.q(\PC|DOUT[4]~DUPLICATE_q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \PC|DOUT[6]~DUPLICATE .is_wysiwyg = "true";
-defparam \PC|DOUT[6]~DUPLICATE .power_up = "low";
+defparam \PC|DOUT[4]~DUPLICATE .is_wysiwyg = "true";
+defparam \PC|DOUT[4]~DUPLICATE .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N6
-cyclonev_lcell_comb \ROM|memROM~2 (
+// Location: LABCELL_X14_Y2_N21
+cyclonev_lcell_comb \ROM|memROM~1 (
 // Equation(s):
-// \ROM|memROM~2_combout  = ( !\PC|DOUT[6]~DUPLICATE_q  & ( !\PC|DOUT [7] & ( (!\PC|DOUT [5] & ((!\PC|DOUT[4]~DUPLICATE_q ) # ((!\PC|DOUT [2] & !\PC|DOUT [3])))) ) ) )
+// \ROM|memROM~1_combout  = ( \PC|DOUT [2] & ( (!\PC|DOUT [5] & !\PC|DOUT[4]~DUPLICATE_q ) ) ) # ( !\PC|DOUT [2] & ( (!\PC|DOUT [5] & ((!\PC|DOUT [3]) # (!\PC|DOUT[4]~DUPLICATE_q ))) ) )
 
-	.dataa(!\PC|DOUT [2]),
-	.datab(!\PC|DOUT[4]~DUPLICATE_q ),
-	.datac(!\PC|DOUT [3]),
-	.datad(!\PC|DOUT [5]),
-	.datae(!\PC|DOUT[6]~DUPLICATE_q ),
-	.dataf(!\PC|DOUT [7]),
+	.dataa(!\PC|DOUT [3]),
+	.datab(!\PC|DOUT [5]),
+	.datac(!\PC|DOUT[4]~DUPLICATE_q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\PC|DOUT [2]),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\ROM|memROM~2_combout ),
+	.combout(\ROM|memROM~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \ROM|memROM~2 .extended_lut = "off";
-defparam \ROM|memROM~2 .lut_mask = 64'hEC00000000000000;
-defparam \ROM|memROM~2 .shared_arith = "off";
+defparam \ROM|memROM~1 .extended_lut = "off";
+defparam \ROM|memROM~1 .lut_mask = 64'hC8C8C8C8C0C0C0C0;
+defparam \ROM|memROM~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N27
+// Location: LABCELL_X14_Y2_N3
 cyclonev_lcell_comb \ROM|memROM~0 (
 // Equation(s):
-// \ROM|memROM~0_combout  = ( \PC|DOUT [2] & ( (!\PC|DOUT [4] & (!\PC|DOUT [5] & (!\PC|DOUT[6]~DUPLICATE_q  & !\PC|DOUT[7]~DUPLICATE_q ))) ) )
+// \ROM|memROM~0_combout  = ( !\PC|DOUT [6] & ( (\PC|DOUT [2] & (!\PC|DOUT[4]~DUPLICATE_q  & (!\PC|DOUT [5] & !\PC|DOUT[7]~DUPLICATE_q ))) ) )
 
-	.dataa(!\PC|DOUT [4]),
-	.datab(!\PC|DOUT [5]),
-	.datac(!\PC|DOUT[6]~DUPLICATE_q ),
+	.dataa(!\PC|DOUT [2]),
+	.datab(!\PC|DOUT[4]~DUPLICATE_q ),
+	.datac(!\PC|DOUT [5]),
 	.datad(!\PC|DOUT[7]~DUPLICATE_q ),
-	.datae(gnd),
-	.dataf(!\PC|DOUT [2]),
+	.datae(!\PC|DOUT [6]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1279,45 +1186,21 @@ cyclonev_lcell_comb \ROM|memROM~0 (
 	.shareout());
 // synopsys translate_off
 defparam \ROM|memROM~0 .extended_lut = "off";
-defparam \ROM|memROM~0 .lut_mask = 64'h0000000080008000;
+defparam \ROM|memROM~0 .lut_mask = 64'h4000000040000000;
 defparam \ROM|memROM~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N54
-cyclonev_lcell_comb \BancoRegistradores|registrador~1064 (
-// Equation(s):
-// \BancoRegistradores|registrador~1064_combout  = ( \ROM|memROM~3_combout  ) # ( !\ROM|memROM~3_combout  & ( ((!\ROM|memROM~1_combout ) # (\PC|DOUT[6]~DUPLICATE_q )) # (\PC|DOUT [7]) ) )
-
-	.dataa(!\PC|DOUT [7]),
-	.datab(!\ROM|memROM~1_combout ),
-	.datac(gnd),
-	.datad(!\PC|DOUT[6]~DUPLICATE_q ),
-	.datae(gnd),
-	.dataf(!\ROM|memROM~3_combout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\BancoRegistradores|registrador~1064_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \BancoRegistradores|registrador~1064 .extended_lut = "off";
-defparam \BancoRegistradores|registrador~1064 .lut_mask = 64'hDDFFDDFFFFFFFFFF;
-defparam \BancoRegistradores|registrador~1064 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X17_Y3_N48
+// Location: LABCELL_X16_Y2_N48
 cyclonev_lcell_comb \BancoRegistradores|registrador~1063 (
 // Equation(s):
-// \BancoRegistradores|registrador~1063_combout  = ( \ROM|memROM~1_combout  & ( (!\ROM|memROM~0_combout  & ((\PC|DOUT[7]~DUPLICATE_q ) # (\PC|DOUT [6]))) ) ) # ( !\ROM|memROM~1_combout  & ( !\ROM|memROM~0_combout  ) )
+// \BancoRegistradores|registrador~1063_combout  = (!\ROM|memROM~0_combout  & (((!\ROM|memROM~1_combout ) # (\PC|DOUT[7]~DUPLICATE_q )) # (\PC|DOUT [6])))
 
-	.dataa(gnd),
-	.datab(!\ROM|memROM~0_combout ),
-	.datac(!\PC|DOUT [6]),
+	.dataa(!\PC|DOUT [6]),
+	.datab(!\ROM|memROM~1_combout ),
+	.datac(!\ROM|memROM~0_combout ),
 	.datad(!\PC|DOUT[7]~DUPLICATE_q ),
 	.datae(gnd),
-	.dataf(!\ROM|memROM~1_combout ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1327,21 +1210,93 @@ cyclonev_lcell_comb \BancoRegistradores|registrador~1063 (
 	.shareout());
 // synopsys translate_off
 defparam \BancoRegistradores|registrador~1063 .extended_lut = "off";
-defparam \BancoRegistradores|registrador~1063 .lut_mask = 64'hCCCCCCCC0CCC0CCC;
+defparam \BancoRegistradores|registrador~1063 .lut_mask = 64'hD0F0D0F0D0F0D0F0;
 defparam \BancoRegistradores|registrador~1063 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N36
-cyclonev_lcell_comb \ROM|memROM~4 (
+// Location: LABCELL_X14_Y2_N18
+cyclonev_lcell_comb \ROM|memROM~3 (
 // Equation(s):
-// \ROM|memROM~4_combout  = ( !\PC|DOUT [6] & ( \ROM|memROM~1_combout  ) )
+// \ROM|memROM~3_combout  = ( \PC|DOUT[4]~DUPLICATE_q  & ( (!\PC|DOUT [3] & (!\PC|DOUT [5] & !\PC|DOUT [2])) ) ) # ( !\PC|DOUT[4]~DUPLICATE_q  & ( (!\PC|DOUT [5] & !\PC|DOUT [2]) ) )
 
-	.dataa(gnd),
-	.datab(!\ROM|memROM~1_combout ),
-	.datac(gnd),
+	.dataa(!\PC|DOUT [3]),
+	.datab(!\PC|DOUT [5]),
+	.datac(!\PC|DOUT [2]),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\PC|DOUT [6]),
+	.dataf(!\PC|DOUT[4]~DUPLICATE_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\ROM|memROM~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \ROM|memROM~3 .extended_lut = "off";
+defparam \ROM|memROM~3 .lut_mask = 64'hC0C0C0C080808080;
+defparam \ROM|memROM~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y2_N27
+cyclonev_lcell_comb \BancoRegistradores|registrador~1062 (
+// Equation(s):
+// \BancoRegistradores|registrador~1062_combout  = ( \ROM|memROM~3_combout  & ( !\PC|DOUT [6] ) ) # ( !\ROM|memROM~3_combout  & ( (\ROM|memROM~1_combout  & !\PC|DOUT [6]) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\ROM|memROM~1_combout ),
+	.datad(!\PC|DOUT [6]),
+	.datae(gnd),
+	.dataf(!\ROM|memROM~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\BancoRegistradores|registrador~1062_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \BancoRegistradores|registrador~1062 .extended_lut = "off";
+defparam \BancoRegistradores|registrador~1062 .lut_mask = 64'h0F000F00FF00FF00;
+defparam \BancoRegistradores|registrador~1062 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y2_N54
+cyclonev_lcell_comb \BancoRegistradores|registrador~1064 (
+// Equation(s):
+// \BancoRegistradores|registrador~1064_combout  = ( \ROM|memROM~1_combout  & ( ((\PC|DOUT[7]~DUPLICATE_q ) # (\PC|DOUT [6])) # (\ROM|memROM~3_combout ) ) ) # ( !\ROM|memROM~1_combout  )
+
+	.dataa(gnd),
+	.datab(!\ROM|memROM~3_combout ),
+	.datac(!\PC|DOUT [6]),
+	.datad(!\PC|DOUT[7]~DUPLICATE_q ),
+	.datae(gnd),
+	.dataf(!\ROM|memROM~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\BancoRegistradores|registrador~1064_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \BancoRegistradores|registrador~1064 .extended_lut = "off";
+defparam \BancoRegistradores|registrador~1064 .lut_mask = 64'hFFFFFFFF3FFF3FFF;
+defparam \BancoRegistradores|registrador~1064 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y2_N36
+cyclonev_lcell_comb \ROM|memROM~4 (
+// Equation(s):
+// \ROM|memROM~4_combout  = ( \ROM|memROM~1_combout  & ( !\PC|DOUT [6] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PC|DOUT [6]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\ROM|memROM~1_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1351,21 +1306,21 @@ cyclonev_lcell_comb \ROM|memROM~4 (
 	.shareout());
 // synopsys translate_off
 defparam \ROM|memROM~4 .extended_lut = "off";
-defparam \ROM|memROM~4 .lut_mask = 64'h3333333300000000;
+defparam \ROM|memROM~4 .lut_mask = 64'h00000000F0F0F0F0;
 defparam \ROM|memROM~4 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N9
+// Location: LABCELL_X16_Y2_N9
 cyclonev_lcell_comb \ROM|memROM~5 (
 // Equation(s):
-// \ROM|memROM~5_combout  = ( \PC|DOUT [6] ) # ( !\PC|DOUT [6] & ( !\ROM|memROM~3_combout  ) )
+// \ROM|memROM~5_combout  = ( \ROM|memROM~3_combout  & ( \PC|DOUT [6] ) ) # ( !\ROM|memROM~3_combout  )
 
-	.dataa(gnd),
+	.dataa(!\PC|DOUT [6]),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\ROM|memROM~3_combout ),
+	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\PC|DOUT [6]),
+	.dataf(!\ROM|memROM~3_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1375,17 +1330,17 @@ cyclonev_lcell_comb \ROM|memROM~5 (
 	.shareout());
 // synopsys translate_off
 defparam \ROM|memROM~5 .extended_lut = "off";
-defparam \ROM|memROM~5 .lut_mask = 64'hFF00FF00FFFFFFFF;
+defparam \ROM|memROM~5 .lut_mask = 64'hFFFFFFFF55555555;
 defparam \ROM|memROM~5 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N0
+// Location: LABCELL_X17_Y2_N0
 cyclonev_lcell_comb \ULA|Add0~130 (
 // Equation(s):
 // \ULA|Add0~130_cout  = CARRY(( VCC ) + ( ((!\ROM|memROM~4_combout ) # (!\ROM|memROM~5_combout )) # (\PC|DOUT[7]~DUPLICATE_q ) ) + ( !VCC ))
 
-	.dataa(!\PC|DOUT[7]~DUPLICATE_q ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\PC|DOUT[7]~DUPLICATE_q ),
 	.datac(!\ROM|memROM~4_combout ),
 	.datad(gnd),
 	.datae(gnd),
@@ -1399,22 +1354,22 @@ cyclonev_lcell_comb \ULA|Add0~130 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~130 .extended_lut = "off";
-defparam \ULA|Add0~130 .lut_mask = 64'h0000000A0000FFFF;
+defparam \ULA|Add0~130 .lut_mask = 64'h0000000C0000FFFF;
 defparam \ULA|Add0~130 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N3
+// Location: LABCELL_X17_Y2_N3
 cyclonev_lcell_comb \ULA|Add0~1 (
 // Equation(s):
-// \ULA|Add0~1_sumout  = SUM(( !\BancoRegistradores|registrador~1064_combout  $ (\BancoRegistradores|registrador~1063_combout ) ) + ( (!\PC|DOUT[7]~DUPLICATE_q  & \BancoRegistradores|registrador~1062_combout ) ) + ( \ULA|Add0~130_cout  ))
-// \ULA|Add0~2  = CARRY(( !\BancoRegistradores|registrador~1064_combout  $ (\BancoRegistradores|registrador~1063_combout ) ) + ( (!\PC|DOUT[7]~DUPLICATE_q  & \BancoRegistradores|registrador~1062_combout ) ) + ( \ULA|Add0~130_cout  ))
+// \ULA|Add0~1_sumout  = SUM(( (!\PC|DOUT[7]~DUPLICATE_q  & \BancoRegistradores|registrador~1062_combout ) ) + ( !\BancoRegistradores|registrador~1063_combout  $ (\BancoRegistradores|registrador~1064_combout ) ) + ( \ULA|Add0~130_cout  ))
+// \ULA|Add0~2  = CARRY(( (!\PC|DOUT[7]~DUPLICATE_q  & \BancoRegistradores|registrador~1062_combout ) ) + ( !\BancoRegistradores|registrador~1063_combout  $ (\BancoRegistradores|registrador~1064_combout ) ) + ( \ULA|Add0~130_cout  ))
 
-	.dataa(!\PC|DOUT[7]~DUPLICATE_q ),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(gnd),
+	.datab(!\PC|DOUT[7]~DUPLICATE_q ),
 	.datac(!\BancoRegistradores|registrador~1063_combout ),
-	.datad(gnd),
+	.datad(!\BancoRegistradores|registrador~1062_combout ),
 	.datae(gnd),
-	.dataf(!\BancoRegistradores|registrador~1062_combout ),
+	.dataf(!\BancoRegistradores|registrador~1064_combout ),
 	.datag(gnd),
 	.cin(\ULA|Add0~130_cout ),
 	.sharein(gnd),
@@ -1424,22 +1379,46 @@ cyclonev_lcell_comb \ULA|Add0~1 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~1 .extended_lut = "off";
-defparam \ULA|Add0~1 .lut_mask = 64'h0000FF550000C3C3;
+defparam \ULA|Add0~1 .lut_mask = 64'h00000FF0000000CC;
 defparam \ULA|Add0~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N6
+// Location: LABCELL_X14_Y2_N6
+cyclonev_lcell_comb \ROM|memROM~2 (
+// Equation(s):
+// \ROM|memROM~2_combout  = ( !\PC|DOUT [6] & ( !\PC|DOUT[7]~DUPLICATE_q  & ( (!\PC|DOUT [5] & ((!\PC|DOUT[4]~DUPLICATE_q ) # ((!\PC|DOUT [2] & !\PC|DOUT [3])))) ) ) )
+
+	.dataa(!\PC|DOUT [2]),
+	.datab(!\PC|DOUT[4]~DUPLICATE_q ),
+	.datac(!\PC|DOUT [3]),
+	.datad(!\PC|DOUT [5]),
+	.datae(!\PC|DOUT [6]),
+	.dataf(!\PC|DOUT[7]~DUPLICATE_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\ROM|memROM~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \ROM|memROM~2 .extended_lut = "off";
+defparam \ROM|memROM~2 .lut_mask = 64'hEC00000000000000;
+defparam \ROM|memROM~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y2_N24
 cyclonev_lcell_comb \ULA|saida[0]~0 (
 // Equation(s):
-// \ULA|saida[0]~0_combout  = ( \ULA|Add0~1_sumout  & ( (((\BancoRegistradores|registrador~1062_combout  & !\PC|DOUT[7]~DUPLICATE_q )) # (\ROM|memROM~0_combout )) # (\ROM|memROM~2_combout ) ) ) # ( !\ULA|Add0~1_sumout  & ( (!\ROM|memROM~2_combout  & 
-// (((\BancoRegistradores|registrador~1062_combout  & !\PC|DOUT[7]~DUPLICATE_q )) # (\ROM|memROM~0_combout ))) ) )
+// \ULA|saida[0]~0_combout  = ( \BancoRegistradores|registrador~1062_combout  & ( (!\ROM|memROM~2_combout  & (((!\PC|DOUT[7]~DUPLICATE_q ) # (\ROM|memROM~0_combout )))) # (\ROM|memROM~2_combout  & (\ULA|Add0~1_sumout )) ) ) # ( 
+// !\BancoRegistradores|registrador~1062_combout  & ( (!\ROM|memROM~2_combout  & ((\ROM|memROM~0_combout ))) # (\ROM|memROM~2_combout  & (\ULA|Add0~1_sumout )) ) )
 
-	.dataa(!\BancoRegistradores|registrador~1062_combout ),
-	.datab(!\PC|DOUT[7]~DUPLICATE_q ),
-	.datac(!\ROM|memROM~2_combout ),
-	.datad(!\ROM|memROM~0_combout ),
+	.dataa(!\ULA|Add0~1_sumout ),
+	.datab(!\ROM|memROM~2_combout ),
+	.datac(!\ROM|memROM~0_combout ),
+	.datad(!\PC|DOUT[7]~DUPLICATE_q ),
 	.datae(gnd),
-	.dataf(!\ULA|Add0~1_sumout ),
+	.dataf(!\BancoRegistradores|registrador~1062_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1449,45 +1428,21 @@ cyclonev_lcell_comb \ULA|saida[0]~0 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[0]~0 .extended_lut = "off";
-defparam \ULA|saida[0]~0 .lut_mask = 64'h40F040F04FFF4FFF;
+defparam \ULA|saida[0]~0 .lut_mask = 64'h1D1D1D1DDD1DDD1D;
 defparam \ULA|saida[0]~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N54
-cyclonev_lcell_comb \BancoRegistradores|saidaA[1]~0 (
-// Equation(s):
-// \BancoRegistradores|saidaA[1]~0_combout  = ( \ROM|memROM~1_combout  & ( (\ROM|memROM~3_combout  & (!\PC|DOUT[7]~DUPLICATE_q  & !\PC|DOUT [6])) ) )
-
-	.dataa(!\ROM|memROM~3_combout ),
-	.datab(!\PC|DOUT[7]~DUPLICATE_q ),
-	.datac(!\PC|DOUT [6]),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\ROM|memROM~1_combout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\BancoRegistradores|saidaA[1]~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \BancoRegistradores|saidaA[1]~0 .extended_lut = "off";
-defparam \BancoRegistradores|saidaA[1]~0 .lut_mask = 64'h0000000040404040;
-defparam \BancoRegistradores|saidaA[1]~0 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X16_Y3_N24
+// Location: LABCELL_X14_Y2_N15
 cyclonev_lcell_comb \ROM|memROM~6 (
 // Equation(s):
-// \ROM|memROM~6_combout  = ( !\PC|DOUT [5] & ( (!\PC|DOUT [4] & \PC|DOUT [2]) ) )
+// \ROM|memROM~6_combout  = ( \PC|DOUT [2] & ( (!\PC|DOUT [5] & !\PC|DOUT [4]) ) )
 
-	.dataa(!\PC|DOUT [4]),
+	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\PC|DOUT [2]),
-	.datad(gnd),
+	.datac(!\PC|DOUT [5]),
+	.datad(!\PC|DOUT [4]),
 	.datae(gnd),
-	.dataf(!\PC|DOUT [5]),
+	.dataf(!\PC|DOUT [2]),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1497,20 +1452,20 @@ cyclonev_lcell_comb \ROM|memROM~6 (
 	.shareout());
 // synopsys translate_off
 defparam \ROM|memROM~6 .extended_lut = "off";
-defparam \ROM|memROM~6 .lut_mask = 64'h0A0A0A0A00000000;
+defparam \ROM|memROM~6 .lut_mask = 64'h00000000F000F000;
 defparam \ROM|memROM~6 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N18
+// Location: LABCELL_X14_Y2_N24
 cyclonev_lcell_comb \ULA|saida~32 (
 // Equation(s):
-// \ULA|saida~32_combout  = ( \ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (!\PC|DOUT [7] & !\PC|DOUT[6]~DUPLICATE_q )) ) ) # ( !\ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (\ROM|memROM~3_combout  & (!\PC|DOUT [7] & !\PC|DOUT[6]~DUPLICATE_q 
-// ))) ) )
+// \ULA|saida~32_combout  = ( \ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (!\PC|DOUT[7]~DUPLICATE_q  & !\PC|DOUT [6])) ) ) # ( !\ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (\ROM|memROM~3_combout  & (!\PC|DOUT[7]~DUPLICATE_q  & !\PC|DOUT 
+// [6]))) ) )
 
 	.dataa(!\ROM|memROM~1_combout ),
 	.datab(!\ROM|memROM~3_combout ),
-	.datac(!\PC|DOUT [7]),
-	.datad(!\PC|DOUT[6]~DUPLICATE_q ),
+	.datac(!\PC|DOUT[7]~DUPLICATE_q ),
+	.datad(!\PC|DOUT [6]),
 	.datae(gnd),
 	.dataf(!\ROM|memROM~6_combout ),
 	.datag(gnd),
@@ -1526,7 +1481,7 @@ defparam \ULA|saida~32 .lut_mask = 64'h1000100050005000;
 defparam \ULA|saida~32 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N19
+// Location: FF_X14_Y2_N26
 dffeas \BancoRegistradores|registrador~39 (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ULA|saida~32_combout ),
@@ -1545,15 +1500,15 @@ defparam \BancoRegistradores|registrador~39 .is_wysiwyg = "true";
 defparam \BancoRegistradores|registrador~39 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N57
+// Location: LABCELL_X14_Y2_N12
 cyclonev_lcell_comb \BancoRegistradores|registrador~1065 (
 // Equation(s):
-// \BancoRegistradores|registrador~1065_combout  = ( \BancoRegistradores|registrador~39_q  & ( (!\ROM|memROM~0_combout  & (((!\ROM|memROM~1_combout ) # (\PC|DOUT[6]~DUPLICATE_q )) # (\PC|DOUT [7]))) ) )
+// \BancoRegistradores|registrador~1065_combout  = ( \BancoRegistradores|registrador~39_q  & ( (!\ROM|memROM~0_combout  & (((!\ROM|memROM~1_combout ) # (\PC|DOUT [6])) # (\PC|DOUT [7]))) ) )
 
-	.dataa(!\PC|DOUT [7]),
-	.datab(!\ROM|memROM~1_combout ),
-	.datac(!\ROM|memROM~0_combout ),
-	.datad(!\PC|DOUT[6]~DUPLICATE_q ),
+	.dataa(!\ROM|memROM~0_combout ),
+	.datab(!\PC|DOUT [7]),
+	.datac(!\ROM|memROM~1_combout ),
+	.datad(!\PC|DOUT [6]),
 	.datae(gnd),
 	.dataf(!\BancoRegistradores|registrador~39_q ),
 	.datag(gnd),
@@ -1565,24 +1520,48 @@ cyclonev_lcell_comb \BancoRegistradores|registrador~1065 (
 	.shareout());
 // synopsys translate_off
 defparam \BancoRegistradores|registrador~1065 .extended_lut = "off";
-defparam \BancoRegistradores|registrador~1065 .lut_mask = 64'h00000000D0F0D0F0;
+defparam \BancoRegistradores|registrador~1065 .lut_mask = 64'h00000000A2AAA2AA;
 defparam \BancoRegistradores|registrador~1065 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N6
+// Location: LABCELL_X16_Y2_N30
+cyclonev_lcell_comb \BancoRegistradores|saidaA[1]~0 (
+// Equation(s):
+// \BancoRegistradores|saidaA[1]~0_combout  = ( !\PC|DOUT[7]~DUPLICATE_q  & ( \ROM|memROM~1_combout  & ( (\ROM|memROM~3_combout  & !\PC|DOUT [6]) ) ) )
+
+	.dataa(gnd),
+	.datab(!\ROM|memROM~3_combout ),
+	.datac(!\PC|DOUT [6]),
+	.datad(gnd),
+	.datae(!\PC|DOUT[7]~DUPLICATE_q ),
+	.dataf(!\ROM|memROM~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\BancoRegistradores|saidaA[1]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \BancoRegistradores|saidaA[1]~0 .extended_lut = "off";
+defparam \BancoRegistradores|saidaA[1]~0 .lut_mask = 64'h0000000030300000;
+defparam \BancoRegistradores|saidaA[1]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X17_Y2_N6
 cyclonev_lcell_comb \ULA|Add0~5 (
 // Equation(s):
-// \ULA|Add0~5_sumout  = SUM(( \BancoRegistradores|saidaA[1]~0_combout  ) + ( !\BancoRegistradores|registrador~1064_combout  $ (((!\ROM|memROM~2_combout  & ((!\ROM|memROM~0_combout ) # (!\BancoRegistradores|registrador~1065_combout ))) # 
-// (\ROM|memROM~2_combout  & (!\ROM|memROM~0_combout  & !\BancoRegistradores|registrador~1065_combout )))) ) + ( \ULA|Add0~2  ))
-// \ULA|Add0~6  = CARRY(( \BancoRegistradores|saidaA[1]~0_combout  ) + ( !\BancoRegistradores|registrador~1064_combout  $ (((!\ROM|memROM~2_combout  & ((!\ROM|memROM~0_combout ) # (!\BancoRegistradores|registrador~1065_combout ))) # (\ROM|memROM~2_combout  & 
-// (!\ROM|memROM~0_combout  & !\BancoRegistradores|registrador~1065_combout )))) ) + ( \ULA|Add0~2  ))
+// \ULA|Add0~5_sumout  = SUM(( !\BancoRegistradores|registrador~1064_combout  $ (((!\ROM|memROM~2_combout  & ((!\ROM|memROM~0_combout ) # (!\BancoRegistradores|registrador~1065_combout ))) # (\ROM|memROM~2_combout  & (!\ROM|memROM~0_combout  & 
+// !\BancoRegistradores|registrador~1065_combout )))) ) + ( \BancoRegistradores|saidaA[1]~0_combout  ) + ( \ULA|Add0~2  ))
+// \ULA|Add0~6  = CARRY(( !\BancoRegistradores|registrador~1064_combout  $ (((!\ROM|memROM~2_combout  & ((!\ROM|memROM~0_combout ) # (!\BancoRegistradores|registrador~1065_combout ))) # (\ROM|memROM~2_combout  & (!\ROM|memROM~0_combout  & 
+// !\BancoRegistradores|registrador~1065_combout )))) ) + ( \BancoRegistradores|saidaA[1]~0_combout  ) + ( \ULA|Add0~2  ))
 
 	.dataa(!\BancoRegistradores|registrador~1064_combout ),
 	.datab(!\ROM|memROM~2_combout ),
 	.datac(!\ROM|memROM~0_combout ),
-	.datad(!\BancoRegistradores|saidaA[1]~0_combout ),
+	.datad(!\BancoRegistradores|registrador~1065_combout ),
 	.datae(gnd),
-	.dataf(!\BancoRegistradores|registrador~1065_combout ),
+	.dataf(!\BancoRegistradores|saidaA[1]~0_combout ),
 	.datag(gnd),
 	.cin(\ULA|Add0~2 ),
 	.sharein(gnd),
@@ -1592,21 +1571,21 @@ cyclonev_lcell_comb \ULA|Add0~5 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~5 .extended_lut = "off";
-defparam \ULA|Add0~5 .lut_mask = 64'h0000A995000000FF;
+defparam \ULA|Add0~5 .lut_mask = 64'h0000FF000000566A;
 defparam \ULA|Add0~5 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N39
+// Location: LABCELL_X16_Y2_N45
 cyclonev_lcell_comb \ULA|saida[1]~1 (
 // Equation(s):
-// \ULA|saida[1]~1_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~5_sumout )
+// \ULA|saida[1]~1_combout  = ( \ULA|Add0~5_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\ULA|Add0~5_sumout ),
-	.datae(gnd),
-	.dataf(gnd),
+	.datad(gnd),
+	.datae(!\ULA|Add0~5_sumout ),
+	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1616,20 +1595,19 @@ cyclonev_lcell_comb \ULA|saida[1]~1 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[1]~1 .extended_lut = "off";
-defparam \ULA|saida[1]~1 .lut_mask = 64'h0055005500550055;
+defparam \ULA|saida[1]~1 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[1]~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N21
+// Location: LABCELL_X14_Y2_N27
 cyclonev_lcell_comb \ULA|saida~33 (
 // Equation(s):
-// \ULA|saida~33_combout  = ( \ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (!\ROM|memROM~3_combout  & (!\PC|DOUT[6]~DUPLICATE_q  & !\PC|DOUT[7]~DUPLICATE_q ))) ) ) # ( !\ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (!\PC|DOUT[6]~DUPLICATE_q  & 
-// !\PC|DOUT[7]~DUPLICATE_q )) ) )
+// \ULA|saida~33_combout  = ( \ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (!\ROM|memROM~3_combout  & (!\PC|DOUT [6] & !\PC|DOUT [7]))) ) ) # ( !\ROM|memROM~6_combout  & ( (\ROM|memROM~1_combout  & (!\PC|DOUT [6] & !\PC|DOUT [7])) ) )
 
 	.dataa(!\ROM|memROM~1_combout ),
 	.datab(!\ROM|memROM~3_combout ),
-	.datac(!\PC|DOUT[6]~DUPLICATE_q ),
-	.datad(!\PC|DOUT[7]~DUPLICATE_q ),
+	.datac(!\PC|DOUT [6]),
+	.datad(!\PC|DOUT [7]),
 	.datae(gnd),
 	.dataf(!\ROM|memROM~6_combout ),
 	.datag(gnd),
@@ -1645,7 +1623,7 @@ defparam \ULA|saida~33 .lut_mask = 64'h5000500040004000;
 defparam \ULA|saida~33 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X16_Y3_N22
+// Location: FF_X14_Y2_N28
 dffeas \BancoRegistradores|registrador~40 (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ULA|saida~33_combout ),
@@ -1664,18 +1642,17 @@ defparam \BancoRegistradores|registrador~40 .is_wysiwyg = "true";
 defparam \BancoRegistradores|registrador~40 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X16_Y3_N3
+// Location: LABCELL_X14_Y2_N57
 cyclonev_lcell_comb \BancoRegistradores|registrador~1066 (
 // Equation(s):
-// \BancoRegistradores|registrador~1066_combout  = ( \PC|DOUT [7] & ( (\BancoRegistradores|registrador~40_q  & !\ROM|memROM~0_combout ) ) ) # ( !\PC|DOUT [7] & ( (\BancoRegistradores|registrador~40_q  & (!\ROM|memROM~0_combout  & ((!\ROM|memROM~1_combout ) # 
-// (\PC|DOUT[6]~DUPLICATE_q )))) ) )
+// \BancoRegistradores|registrador~1066_combout  = ( \BancoRegistradores|registrador~40_q  & ( (!\ROM|memROM~0_combout  & ((!\ROM|memROM~1_combout ) # ((\PC|DOUT [6]) # (\PC|DOUT[7]~DUPLICATE_q )))) ) )
 
 	.dataa(!\ROM|memROM~1_combout ),
-	.datab(!\BancoRegistradores|registrador~40_q ),
-	.datac(!\ROM|memROM~0_combout ),
-	.datad(!\PC|DOUT[6]~DUPLICATE_q ),
+	.datab(!\PC|DOUT[7]~DUPLICATE_q ),
+	.datac(!\PC|DOUT [6]),
+	.datad(!\ROM|memROM~0_combout ),
 	.datae(gnd),
-	.dataf(!\PC|DOUT [7]),
+	.dataf(!\BancoRegistradores|registrador~40_q ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1685,21 +1662,21 @@ cyclonev_lcell_comb \BancoRegistradores|registrador~1066 (
 	.shareout());
 // synopsys translate_off
 defparam \BancoRegistradores|registrador~1066 .extended_lut = "off";
-defparam \BancoRegistradores|registrador~1066 .lut_mask = 64'h2030203030303030;
+defparam \BancoRegistradores|registrador~1066 .lut_mask = 64'h00000000BF00BF00;
 defparam \BancoRegistradores|registrador~1066 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N45
+// Location: LABCELL_X16_Y2_N51
 cyclonev_lcell_comb \BancoRegistradores|saidaA[2]~1 (
 // Equation(s):
-// \BancoRegistradores|saidaA[2]~1_combout  = ( !\PC|DOUT [6] & ( (!\ROM|memROM~3_combout  & (!\PC|DOUT[7]~DUPLICATE_q  & \ROM|memROM~1_combout )) ) )
+// \BancoRegistradores|saidaA[2]~1_combout  = ( !\ROM|memROM~3_combout  & ( (!\PC|DOUT [6] & (\ROM|memROM~1_combout  & !\PC|DOUT[7]~DUPLICATE_q )) ) )
 
-	.dataa(!\ROM|memROM~3_combout ),
-	.datab(!\PC|DOUT[7]~DUPLICATE_q ),
-	.datac(!\ROM|memROM~1_combout ),
-	.datad(gnd),
+	.dataa(!\PC|DOUT [6]),
+	.datab(!\ROM|memROM~1_combout ),
+	.datac(gnd),
+	.datad(!\PC|DOUT[7]~DUPLICATE_q ),
 	.datae(gnd),
-	.dataf(!\PC|DOUT [6]),
+	.dataf(!\ROM|memROM~3_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1709,11 +1686,11 @@ cyclonev_lcell_comb \BancoRegistradores|saidaA[2]~1 (
 	.shareout());
 // synopsys translate_off
 defparam \BancoRegistradores|saidaA[2]~1 .extended_lut = "off";
-defparam \BancoRegistradores|saidaA[2]~1 .lut_mask = 64'h0808080800000000;
+defparam \BancoRegistradores|saidaA[2]~1 .lut_mask = 64'h2200220000000000;
 defparam \BancoRegistradores|saidaA[2]~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N9
+// Location: LABCELL_X17_Y2_N9
 cyclonev_lcell_comb \ULA|Add0~9 (
 // Equation(s):
 // \ULA|Add0~9_sumout  = SUM(( !\BancoRegistradores|registrador~1064_combout  $ (((!\ROM|memROM~0_combout  & (!\ROM|memROM~2_combout )) # (\ROM|memROM~0_combout  & ((!\BancoRegistradores|registrador~1066_combout ))))) ) + ( 
@@ -1740,17 +1717,17 @@ defparam \ULA|Add0~9 .lut_mask = 64'h0000FF000000656A;
 defparam \ULA|Add0~9 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N42
+// Location: MLABCELL_X18_Y2_N36
 cyclonev_lcell_comb \ULA|saida[2]~2 (
 // Equation(s):
-// \ULA|saida[2]~2_combout  = (\ULA|Add0~9_sumout  & \ROM|memROM~2_combout )
+// \ULA|saida[2]~2_combout  = ( \ULA|Add0~9_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\ULA|Add0~9_sumout ),
-	.datad(!\ROM|memROM~2_combout ),
+	.datab(!\ROM|memROM~2_combout ),
+	.datac(gnd),
+	.datad(gnd),
 	.datae(gnd),
-	.dataf(gnd),
+	.dataf(!\ULA|Add0~9_sumout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1760,18 +1737,18 @@ cyclonev_lcell_comb \ULA|saida[2]~2 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[2]~2 .extended_lut = "off";
-defparam \ULA|saida[2]~2 .lut_mask = 64'h000F000F000F000F;
+defparam \ULA|saida[2]~2 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[2]~2 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N12
+// Location: LABCELL_X17_Y2_N12
 cyclonev_lcell_comb \ULA|Add0~13 (
 // Equation(s):
 // \ULA|Add0~13_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~10  ))
 // \ULA|Add0~14  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~10  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -1785,18 +1762,18 @@ cyclonev_lcell_comb \ULA|Add0~13 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~13 .extended_lut = "off";
-defparam \ULA|Add0~13 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~13 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~13 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N51
+// Location: LABCELL_X16_Y2_N3
 cyclonev_lcell_comb \ULA|saida[3]~3 (
 // Equation(s):
 // \ULA|saida[3]~3_combout  = ( \ULA|Add0~13_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\ROM|memROM~2_combout ),
 	.datad(gnd),
 	.datae(gnd),
 	.dataf(!\ULA|Add0~13_sumout ),
@@ -1809,18 +1786,18 @@ cyclonev_lcell_comb \ULA|saida[3]~3 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[3]~3 .extended_lut = "off";
-defparam \ULA|saida[3]~3 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[3]~3 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[3]~3 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N15
+// Location: LABCELL_X17_Y2_N15
 cyclonev_lcell_comb \ULA|Add0~17 (
 // Equation(s):
 // \ULA|Add0~17_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~14  ))
 // \ULA|Add0~18  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~14  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -1834,21 +1811,21 @@ cyclonev_lcell_comb \ULA|Add0~17 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~17 .extended_lut = "off";
-defparam \ULA|Add0~17 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~17 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~17 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N0
+// Location: MLABCELL_X18_Y2_N30
 cyclonev_lcell_comb \ULA|saida[4]~4 (
 // Equation(s):
-// \ULA|saida[4]~4_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~17_sumout )
+// \ULA|saida[4]~4_combout  = ( \ULA|Add0~17_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
-	.datac(!\ULA|Add0~17_sumout ),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
+	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(gnd),
+	.dataf(!\ULA|Add0~17_sumout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1858,18 +1835,18 @@ cyclonev_lcell_comb \ULA|saida[4]~4 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[4]~4 .extended_lut = "off";
-defparam \ULA|saida[4]~4 .lut_mask = 64'h0505050505050505;
+defparam \ULA|saida[4]~4 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[4]~4 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N18
+// Location: LABCELL_X17_Y2_N18
 cyclonev_lcell_comb \ULA|Add0~21 (
 // Equation(s):
 // \ULA|Add0~21_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~18  ))
 // \ULA|Add0~22  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~18  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -1883,21 +1860,21 @@ cyclonev_lcell_comb \ULA|Add0~21 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~21 .extended_lut = "off";
-defparam \ULA|Add0~21 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~21 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~21 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N57
+// Location: LABCELL_X16_Y2_N21
 cyclonev_lcell_comb \ULA|saida[5]~5 (
 // Equation(s):
-// \ULA|saida[5]~5_combout  = (\ULA|Add0~21_sumout  & \ROM|memROM~2_combout )
+// \ULA|saida[5]~5_combout  = ( \ULA|Add0~21_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\ULA|Add0~21_sumout ),
-	.datad(!\ROM|memROM~2_combout ),
+	.datac(!\ROM|memROM~2_combout ),
+	.datad(gnd),
 	.datae(gnd),
-	.dataf(gnd),
+	.dataf(!\ULA|Add0~21_sumout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1907,18 +1884,18 @@ cyclonev_lcell_comb \ULA|saida[5]~5 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[5]~5 .extended_lut = "off";
-defparam \ULA|saida[5]~5 .lut_mask = 64'h000F000F000F000F;
+defparam \ULA|saida[5]~5 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[5]~5 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N21
+// Location: LABCELL_X17_Y2_N21
 cyclonev_lcell_comb \ULA|Add0~25 (
 // Equation(s):
 // \ULA|Add0~25_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~22  ))
 // \ULA|Add0~26  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~22  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -1932,21 +1909,21 @@ cyclonev_lcell_comb \ULA|Add0~25 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~25 .extended_lut = "off";
-defparam \ULA|Add0~25 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~25 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~25 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N24
+// Location: MLABCELL_X18_Y2_N15
 cyclonev_lcell_comb \ULA|saida[6]~6 (
 // Equation(s):
-// \ULA|saida[6]~6_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~25_sumout )
+// \ULA|saida[6]~6_combout  = ( \ULA|Add0~25_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\ULA|Add0~25_sumout ),
+	.datac(gnd),
 	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
+	.datae(!\ULA|Add0~25_sumout ),
+	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1956,18 +1933,18 @@ cyclonev_lcell_comb \ULA|saida[6]~6 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[6]~6 .extended_lut = "off";
-defparam \ULA|saida[6]~6 .lut_mask = 64'h0505050505050505;
+defparam \ULA|saida[6]~6 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[6]~6 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N24
+// Location: LABCELL_X17_Y2_N24
 cyclonev_lcell_comb \ULA|Add0~29 (
 // Equation(s):
 // \ULA|Add0~29_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~26  ))
 // \ULA|Add0~30  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~26  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -1981,17 +1958,17 @@ cyclonev_lcell_comb \ULA|Add0~29 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~29 .extended_lut = "off";
-defparam \ULA|Add0~29 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~29 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~29 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N27
+// Location: MLABCELL_X18_Y2_N42
 cyclonev_lcell_comb \ULA|saida[7]~7 (
 // Equation(s):
 // \ULA|saida[7]~7_combout  = ( \ULA|Add0~29_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2005,18 +1982,18 @@ cyclonev_lcell_comb \ULA|saida[7]~7 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[7]~7 .extended_lut = "off";
-defparam \ULA|saida[7]~7 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[7]~7 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[7]~7 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N27
+// Location: LABCELL_X17_Y2_N27
 cyclonev_lcell_comb \ULA|Add0~33 (
 // Equation(s):
 // \ULA|Add0~33_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~30  ))
 // \ULA|Add0~34  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~30  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2030,21 +2007,21 @@ cyclonev_lcell_comb \ULA|Add0~33 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~33 .extended_lut = "off";
-defparam \ULA|Add0~33 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~33 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~33 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N18
+// Location: MLABCELL_X18_Y2_N48
 cyclonev_lcell_comb \ULA|saida[8]~8 (
 // Equation(s):
-// \ULA|saida[8]~8_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~33_sumout )
+// \ULA|saida[8]~8_combout  = ( \ULA|Add0~33_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\ULA|Add0~33_sumout ),
+	.datac(gnd),
 	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
+	.datae(!\ULA|Add0~33_sumout ),
+	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2054,18 +2031,18 @@ cyclonev_lcell_comb \ULA|saida[8]~8 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[8]~8 .extended_lut = "off";
-defparam \ULA|saida[8]~8 .lut_mask = 64'h0505050505050505;
+defparam \ULA|saida[8]~8 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[8]~8 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N30
+// Location: LABCELL_X17_Y2_N30
 cyclonev_lcell_comb \ULA|Add0~37 (
 // Equation(s):
 // \ULA|Add0~37_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~34  ))
 // \ULA|Add0~38  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~34  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2079,17 +2056,17 @@ cyclonev_lcell_comb \ULA|Add0~37 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~37 .extended_lut = "off";
-defparam \ULA|Add0~37 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~37 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~37 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N21
+// Location: MLABCELL_X18_Y2_N45
 cyclonev_lcell_comb \ULA|saida[9]~9 (
 // Equation(s):
 // \ULA|saida[9]~9_combout  = ( \ULA|Add0~37_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2103,18 +2080,18 @@ cyclonev_lcell_comb \ULA|saida[9]~9 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[9]~9 .extended_lut = "off";
-defparam \ULA|saida[9]~9 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[9]~9 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[9]~9 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N33
+// Location: LABCELL_X17_Y2_N33
 cyclonev_lcell_comb \ULA|Add0~41 (
 // Equation(s):
 // \ULA|Add0~41_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~38  ))
 // \ULA|Add0~42  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~38  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2128,21 +2105,21 @@ cyclonev_lcell_comb \ULA|Add0~41 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~41 .extended_lut = "off";
-defparam \ULA|Add0~41 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~41 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~41 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N12
+// Location: MLABCELL_X18_Y2_N6
 cyclonev_lcell_comb \ULA|saida[10]~10 (
 // Equation(s):
-// \ULA|saida[10]~10_combout  = ( \ULA|Add0~41_sumout  & ( \ROM|memROM~2_combout  ) )
+// \ULA|saida[10]~10_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~41_sumout )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
-	.datad(gnd),
+	.datad(!\ULA|Add0~41_sumout ),
 	.datae(gnd),
-	.dataf(!\ULA|Add0~41_sumout ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2152,18 +2129,18 @@ cyclonev_lcell_comb \ULA|saida[10]~10 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[10]~10 .extended_lut = "off";
-defparam \ULA|saida[10]~10 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[10]~10 .lut_mask = 64'h0033003300330033;
 defparam \ULA|saida[10]~10 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N36
+// Location: LABCELL_X17_Y2_N36
 cyclonev_lcell_comb \ULA|Add0~45 (
 // Equation(s):
 // \ULA|Add0~45_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~42  ))
 // \ULA|Add0~46  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~42  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2177,21 +2154,21 @@ cyclonev_lcell_comb \ULA|Add0~45 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~45 .extended_lut = "off";
-defparam \ULA|Add0~45 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~45 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~45 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N15
+// Location: MLABCELL_X18_Y2_N9
 cyclonev_lcell_comb \ULA|saida[11]~11 (
 // Equation(s):
-// \ULA|saida[11]~11_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~45_sumout )
+// \ULA|saida[11]~11_combout  = ( \ULA|Add0~45_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
-	.datac(!\ULA|Add0~45_sumout ),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
+	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(gnd),
+	.dataf(!\ULA|Add0~45_sumout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2201,18 +2178,18 @@ cyclonev_lcell_comb \ULA|saida[11]~11 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[11]~11 .extended_lut = "off";
-defparam \ULA|saida[11]~11 .lut_mask = 64'h0505050505050505;
+defparam \ULA|saida[11]~11 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[11]~11 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N39
+// Location: LABCELL_X17_Y2_N39
 cyclonev_lcell_comb \ULA|Add0~49 (
 // Equation(s):
 // \ULA|Add0~49_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~46  ))
 // \ULA|Add0~50  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~46  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2226,17 +2203,17 @@ cyclonev_lcell_comb \ULA|Add0~49 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~49 .extended_lut = "off";
-defparam \ULA|Add0~49 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~49 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~49 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N30
+// Location: MLABCELL_X18_Y2_N0
 cyclonev_lcell_comb \ULA|saida[12]~12 (
 // Equation(s):
 // \ULA|saida[12]~12_combout  = ( \ULA|Add0~49_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2250,18 +2227,18 @@ cyclonev_lcell_comb \ULA|saida[12]~12 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[12]~12 .extended_lut = "off";
-defparam \ULA|saida[12]~12 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[12]~12 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[12]~12 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N42
+// Location: LABCELL_X17_Y2_N42
 cyclonev_lcell_comb \ULA|Add0~53 (
 // Equation(s):
 // \ULA|Add0~53_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~50  ))
 // \ULA|Add0~54  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~50  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2275,21 +2252,21 @@ cyclonev_lcell_comb \ULA|Add0~53 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~53 .extended_lut = "off";
-defparam \ULA|Add0~53 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~53 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~53 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X17_Y3_N33
+// Location: LABCELL_X16_Y2_N12
 cyclonev_lcell_comb \ULA|saida[13]~13 (
 // Equation(s):
-// \ULA|saida[13]~13_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~53_sumout )
+// \ULA|saida[13]~13_combout  = ( \ULA|Add0~53_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\ULA|Add0~53_sumout ),
+	.datac(gnd),
 	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
+	.datae(!\ULA|Add0~53_sumout ),
+	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2299,18 +2276,18 @@ cyclonev_lcell_comb \ULA|saida[13]~13 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[13]~13 .extended_lut = "off";
-defparam \ULA|saida[13]~13 .lut_mask = 64'h0505050505050505;
+defparam \ULA|saida[13]~13 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[13]~13 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N45
+// Location: LABCELL_X17_Y2_N45
 cyclonev_lcell_comb \ULA|Add0~57 (
 // Equation(s):
 // \ULA|Add0~57_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~54  ))
 // \ULA|Add0~58  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~54  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2324,18 +2301,18 @@ cyclonev_lcell_comb \ULA|Add0~57 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~57 .extended_lut = "off";
-defparam \ULA|Add0~57 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~57 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~57 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y3_N36
+// Location: MLABCELL_X18_Y2_N57
 cyclonev_lcell_comb \ULA|saida[14]~14 (
 // Equation(s):
 // \ULA|saida[14]~14_combout  = ( \ULA|Add0~57_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
-	.datab(!\ROM|memROM~2_combout ),
-	.datac(gnd),
+	.datab(gnd),
+	.datac(!\ROM|memROM~2_combout ),
 	.datad(gnd),
 	.datae(gnd),
 	.dataf(!\ULA|Add0~57_sumout ),
@@ -2348,18 +2325,18 @@ cyclonev_lcell_comb \ULA|saida[14]~14 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[14]~14 .extended_lut = "off";
-defparam \ULA|saida[14]~14 .lut_mask = 64'h0000000033333333;
+defparam \ULA|saida[14]~14 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[14]~14 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N48
+// Location: LABCELL_X17_Y2_N48
 cyclonev_lcell_comb \ULA|Add0~61 (
 // Equation(s):
 // \ULA|Add0~61_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~58  ))
 // \ULA|Add0~62  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~58  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2373,20 +2350,20 @@ cyclonev_lcell_comb \ULA|Add0~61 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~61 .extended_lut = "off";
-defparam \ULA|Add0~61 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~61 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~61 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y3_N45
+// Location: LABCELL_X16_Y2_N57
 cyclonev_lcell_comb \ULA|saida[15]~15 (
 // Equation(s):
-// \ULA|saida[15]~15_combout  = ( \ULA|Add0~61_sumout  & ( \ROM|memROM~2_combout  ) )
+// \ULA|saida[15]~15_combout  = ( \ROM|memROM~2_combout  & ( \ULA|Add0~61_sumout  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\ULA|Add0~61_sumout ),
 	.datad(gnd),
-	.datae(!\ULA|Add0~61_sumout ),
+	.datae(gnd),
 	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -2397,18 +2374,18 @@ cyclonev_lcell_comb \ULA|saida[15]~15 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[15]~15 .extended_lut = "off";
-defparam \ULA|saida[15]~15 .lut_mask = 64'h000000000000FFFF;
+defparam \ULA|saida[15]~15 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[15]~15 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N51
+// Location: LABCELL_X17_Y2_N51
 cyclonev_lcell_comb \ULA|Add0~65 (
 // Equation(s):
 // \ULA|Add0~65_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~62  ))
 // \ULA|Add0~66  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~62  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2422,20 +2399,20 @@ cyclonev_lcell_comb \ULA|Add0~65 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~65 .extended_lut = "off";
-defparam \ULA|Add0~65 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~65 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~65 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N27
+// Location: MLABCELL_X18_Y2_N27
 cyclonev_lcell_comb \ULA|saida[16]~16 (
 // Equation(s):
-// \ULA|saida[16]~16_combout  = ( \ROM|memROM~2_combout  & ( \ULA|Add0~65_sumout  ) )
+// \ULA|saida[16]~16_combout  = ( \ULA|Add0~65_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\ROM|memROM~2_combout ),
 	.datad(gnd),
-	.datae(!\ROM|memROM~2_combout ),
+	.datae(gnd),
 	.dataf(!\ULA|Add0~65_sumout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -2446,18 +2423,18 @@ cyclonev_lcell_comb \ULA|saida[16]~16 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[16]~16 .extended_lut = "off";
-defparam \ULA|saida[16]~16 .lut_mask = 64'h000000000000FFFF;
+defparam \ULA|saida[16]~16 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[16]~16 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N54
+// Location: LABCELL_X17_Y2_N54
 cyclonev_lcell_comb \ULA|Add0~69 (
 // Equation(s):
 // \ULA|Add0~69_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~66  ))
 // \ULA|Add0~70  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~66  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2471,18 +2448,18 @@ cyclonev_lcell_comb \ULA|Add0~69 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~69 .extended_lut = "off";
-defparam \ULA|Add0~69 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~69 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~69 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y3_N27
+// Location: MLABCELL_X18_Y2_N39
 cyclonev_lcell_comb \ULA|saida[17]~17 (
 // Equation(s):
 // \ULA|saida[17]~17_combout  = ( \ULA|Add0~69_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\ROM|memROM~2_combout ),
+	.datab(!\ROM|memROM~2_combout ),
+	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
 	.dataf(!\ULA|Add0~69_sumout ),
@@ -2495,18 +2472,18 @@ cyclonev_lcell_comb \ULA|saida[17]~17 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[17]~17 .extended_lut = "off";
-defparam \ULA|saida[17]~17 .lut_mask = 64'h000000000F0F0F0F;
+defparam \ULA|saida[17]~17 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[17]~17 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y3_N57
+// Location: LABCELL_X17_Y2_N57
 cyclonev_lcell_comb \ULA|Add0~73 (
 // Equation(s):
 // \ULA|Add0~73_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~70  ))
 // \ULA|Add0~74  = CARRY(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~70  ))
 
-	.dataa(gnd),
-	.datab(!\BancoRegistradores|registrador~1064_combout ),
+	.dataa(!\BancoRegistradores|registrador~1064_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -2520,11 +2497,11 @@ cyclonev_lcell_comb \ULA|Add0~73 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|Add0~73 .extended_lut = "off";
-defparam \ULA|Add0~73 .lut_mask = 64'h0000CCCC00000000;
+defparam \ULA|Add0~73 .lut_mask = 64'h0000AAAA00000000;
 defparam \ULA|Add0~73 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y3_N9
+// Location: MLABCELL_X18_Y2_N18
 cyclonev_lcell_comb \ULA|saida[18]~18 (
 // Equation(s):
 // \ULA|saida[18]~18_combout  = ( \ULA|Add0~73_sumout  & ( \ROM|memROM~2_combout  ) )
@@ -2548,7 +2525,7 @@ defparam \ULA|saida[18]~18 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[18]~18 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N0
+// Location: LABCELL_X17_Y1_N0
 cyclonev_lcell_comb \ULA|Add0~77 (
 // Equation(s):
 // \ULA|Add0~77_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~74  ))
@@ -2573,17 +2550,17 @@ defparam \ULA|Add0~77 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~77 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N57
+// Location: LABCELL_X17_Y1_N57
 cyclonev_lcell_comb \ULA|saida[19]~19 (
 // Equation(s):
-// \ULA|saida[19]~19_combout  = ( \ROM|memROM~2_combout  & ( \ULA|Add0~77_sumout  ) )
+// \ULA|saida[19]~19_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~77_sumout )
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
-	.datad(gnd),
-	.datae(!\ROM|memROM~2_combout ),
-	.dataf(!\ULA|Add0~77_sumout ),
+	.datad(!\ULA|Add0~77_sumout ),
+	.datae(gnd),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2593,11 +2570,11 @@ cyclonev_lcell_comb \ULA|saida[19]~19 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[19]~19 .extended_lut = "off";
-defparam \ULA|saida[19]~19 .lut_mask = 64'h000000000000FFFF;
+defparam \ULA|saida[19]~19 .lut_mask = 64'h0033003300330033;
 defparam \ULA|saida[19]~19 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N3
+// Location: LABCELL_X17_Y1_N3
 cyclonev_lcell_comb \ULA|Add0~81 (
 // Equation(s):
 // \ULA|Add0~81_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~78  ))
@@ -2622,13 +2599,13 @@ defparam \ULA|Add0~81 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~81 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N45
+// Location: LABCELL_X17_Y1_N51
 cyclonev_lcell_comb \ULA|saida[20]~20 (
 // Equation(s):
 // \ULA|saida[20]~20_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~81_sumout )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
 	.datad(!\ULA|Add0~81_sumout ),
 	.datae(gnd),
@@ -2642,11 +2619,11 @@ cyclonev_lcell_comb \ULA|saida[20]~20 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[20]~20 .extended_lut = "off";
-defparam \ULA|saida[20]~20 .lut_mask = 64'h0055005500550055;
+defparam \ULA|saida[20]~20 .lut_mask = 64'h0033003300330033;
 defparam \ULA|saida[20]~20 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N6
+// Location: LABCELL_X17_Y1_N6
 cyclonev_lcell_comb \ULA|Add0~85 (
 // Equation(s):
 // \ULA|Add0~85_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~82  ))
@@ -2671,17 +2648,17 @@ defparam \ULA|Add0~85 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~85 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N3
+// Location: MLABCELL_X18_Y1_N15
 cyclonev_lcell_comb \ULA|saida[21]~21 (
 // Equation(s):
 // \ULA|saida[21]~21_combout  = ( \ULA|Add0~85_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\ROM|memROM~2_combout ),
+	.datac(gnd),
 	.datad(gnd),
 	.datae(!\ULA|Add0~85_sumout ),
-	.dataf(gnd),
+	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2691,11 +2668,11 @@ cyclonev_lcell_comb \ULA|saida[21]~21 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[21]~21 .extended_lut = "off";
-defparam \ULA|saida[21]~21 .lut_mask = 64'h00000F0F00000F0F;
+defparam \ULA|saida[21]~21 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[21]~21 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N9
+// Location: LABCELL_X17_Y1_N9
 cyclonev_lcell_comb \ULA|Add0~89 (
 // Equation(s):
 // \ULA|Add0~89_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~86  ))
@@ -2720,7 +2697,7 @@ defparam \ULA|Add0~89 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~89 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N42
+// Location: MLABCELL_X18_Y1_N33
 cyclonev_lcell_comb \ULA|saida[22]~22 (
 // Equation(s):
 // \ULA|saida[22]~22_combout  = ( \ULA|Add0~89_sumout  & ( \ROM|memROM~2_combout  ) )
@@ -2744,7 +2721,7 @@ defparam \ULA|saida[22]~22 .lut_mask = 64'h0000000055555555;
 defparam \ULA|saida[22]~22 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N12
+// Location: LABCELL_X17_Y1_N12
 cyclonev_lcell_comb \ULA|Add0~93 (
 // Equation(s):
 // \ULA|Add0~93_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~90  ))
@@ -2769,17 +2746,17 @@ defparam \ULA|Add0~93 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~93 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N30
+// Location: LABCELL_X16_Y1_N39
 cyclonev_lcell_comb \ULA|saida[23]~23 (
 // Equation(s):
 // \ULA|saida[23]~23_combout  = ( \ULA|Add0~93_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(gnd),
-	.datab(!\ROM|memROM~2_combout ),
+	.dataa(!\ROM|memROM~2_combout ),
+	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
-	.datae(!\ULA|Add0~93_sumout ),
-	.dataf(gnd),
+	.datae(gnd),
+	.dataf(!\ULA|Add0~93_sumout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2789,11 +2766,11 @@ cyclonev_lcell_comb \ULA|saida[23]~23 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[23]~23 .extended_lut = "off";
-defparam \ULA|saida[23]~23 .lut_mask = 64'h0000333300003333;
+defparam \ULA|saida[23]~23 .lut_mask = 64'h0000000055555555;
 defparam \ULA|saida[23]~23 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N15
+// Location: LABCELL_X17_Y1_N15
 cyclonev_lcell_comb \ULA|Add0~97 (
 // Equation(s):
 // \ULA|Add0~97_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~94  ))
@@ -2818,14 +2795,14 @@ defparam \ULA|Add0~97 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~97 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N48
+// Location: MLABCELL_X18_Y1_N48
 cyclonev_lcell_comb \ULA|saida[24]~24 (
 // Equation(s):
 // \ULA|saida[24]~24_combout  = ( \ULA|Add0~97_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\ROM|memROM~2_combout ),
 	.datad(gnd),
 	.datae(gnd),
 	.dataf(!\ULA|Add0~97_sumout ),
@@ -2838,11 +2815,11 @@ cyclonev_lcell_comb \ULA|saida[24]~24 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[24]~24 .extended_lut = "off";
-defparam \ULA|saida[24]~24 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[24]~24 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[24]~24 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N18
+// Location: LABCELL_X17_Y1_N18
 cyclonev_lcell_comb \ULA|Add0~101 (
 // Equation(s):
 // \ULA|Add0~101_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~98  ))
@@ -2867,16 +2844,16 @@ defparam \ULA|Add0~101 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~101 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N15
+// Location: LABCELL_X17_Y1_N54
 cyclonev_lcell_comb \ULA|saida[25]~25 (
 // Equation(s):
-// \ULA|saida[25]~25_combout  = ( \ROM|memROM~2_combout  & ( \ULA|Add0~101_sumout  ) )
+// \ULA|saida[25]~25_combout  = ( \ULA|Add0~101_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
 	.datad(gnd),
-	.datae(!\ROM|memROM~2_combout ),
+	.datae(gnd),
 	.dataf(!\ULA|Add0~101_sumout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -2887,11 +2864,11 @@ cyclonev_lcell_comb \ULA|saida[25]~25 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[25]~25 .extended_lut = "off";
-defparam \ULA|saida[25]~25 .lut_mask = 64'h000000000000FFFF;
+defparam \ULA|saida[25]~25 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[25]~25 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N21
+// Location: LABCELL_X17_Y1_N21
 cyclonev_lcell_comb \ULA|Add0~105 (
 // Equation(s):
 // \ULA|Add0~105_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~102  ))
@@ -2916,16 +2893,16 @@ defparam \ULA|Add0~105 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~105 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N42
+// Location: LABCELL_X17_Y1_N48
 cyclonev_lcell_comb \ULA|saida[26]~26 (
 // Equation(s):
-// \ULA|saida[26]~26_combout  = ( \ULA|Add0~105_sumout  & ( \ROM|memROM~2_combout  ) )
+// \ULA|saida[26]~26_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~105_sumout )
 
 	.dataa(gnd),
 	.datab(!\ROM|memROM~2_combout ),
-	.datac(gnd),
+	.datac(!\ULA|Add0~105_sumout ),
 	.datad(gnd),
-	.datae(!\ULA|Add0~105_sumout ),
+	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
@@ -2936,11 +2913,11 @@ cyclonev_lcell_comb \ULA|saida[26]~26 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[26]~26 .extended_lut = "off";
-defparam \ULA|saida[26]~26 .lut_mask = 64'h0000333300003333;
+defparam \ULA|saida[26]~26 .lut_mask = 64'h0303030303030303;
 defparam \ULA|saida[26]~26 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N24
+// Location: LABCELL_X17_Y1_N24
 cyclonev_lcell_comb \ULA|Add0~109 (
 // Equation(s):
 // \ULA|Add0~109_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~106  ))
@@ -2965,16 +2942,16 @@ defparam \ULA|Add0~109 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~109 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N48
+// Location: MLABCELL_X18_Y1_N18
 cyclonev_lcell_comb \ULA|saida[27]~27 (
 // Equation(s):
-// \ULA|saida[27]~27_combout  = ( \ROM|memROM~2_combout  & ( \ULA|Add0~109_sumout  ) )
+// \ULA|saida[27]~27_combout  = ( \ULA|Add0~109_sumout  & ( \ROM|memROM~2_combout  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\ROM|memROM~2_combout ),
 	.datad(gnd),
-	.datae(!\ROM|memROM~2_combout ),
+	.datae(gnd),
 	.dataf(!\ULA|Add0~109_sumout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -2985,11 +2962,11 @@ cyclonev_lcell_comb \ULA|saida[27]~27 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[27]~27 .extended_lut = "off";
-defparam \ULA|saida[27]~27 .lut_mask = 64'h000000000000FFFF;
+defparam \ULA|saida[27]~27 .lut_mask = 64'h000000000F0F0F0F;
 defparam \ULA|saida[27]~27 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N27
+// Location: LABCELL_X17_Y1_N27
 cyclonev_lcell_comb \ULA|Add0~113 (
 // Equation(s):
 // \ULA|Add0~113_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~110  ))
@@ -3014,17 +2991,17 @@ defparam \ULA|Add0~113 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~113 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N51
+// Location: LABCELL_X16_Y1_N42
 cyclonev_lcell_comb \ULA|saida[28]~28 (
 // Equation(s):
-// \ULA|saida[28]~28_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~113_sumout )
+// \ULA|saida[28]~28_combout  = ( \ULA|Add0~113_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
+	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\ULA|Add0~113_sumout ),
-	.datae(gnd),
-	.dataf(gnd),
+	.datad(gnd),
+	.datae(!\ULA|Add0~113_sumout ),
+	.dataf(!\ROM|memROM~2_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -3034,11 +3011,11 @@ cyclonev_lcell_comb \ULA|saida[28]~28 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[28]~28 .extended_lut = "off";
-defparam \ULA|saida[28]~28 .lut_mask = 64'h0055005500550055;
+defparam \ULA|saida[28]~28 .lut_mask = 64'h000000000000FFFF;
 defparam \ULA|saida[28]~28 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N30
+// Location: LABCELL_X17_Y1_N30
 cyclonev_lcell_comb \ULA|Add0~117 (
 // Equation(s):
 // \ULA|Add0~117_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~114  ))
@@ -3063,13 +3040,13 @@ defparam \ULA|Add0~117 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~117 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N54
+// Location: LABCELL_X17_Y1_N45
 cyclonev_lcell_comb \ULA|saida[29]~29 (
 // Equation(s):
 // \ULA|saida[29]~29_combout  = ( \ULA|Add0~117_sumout  & ( \ROM|memROM~2_combout  ) )
 
-	.dataa(!\ROM|memROM~2_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(!\ROM|memROM~2_combout ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
@@ -3083,11 +3060,11 @@ cyclonev_lcell_comb \ULA|saida[29]~29 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[29]~29 .extended_lut = "off";
-defparam \ULA|saida[29]~29 .lut_mask = 64'h0000000055555555;
+defparam \ULA|saida[29]~29 .lut_mask = 64'h0000000033333333;
 defparam \ULA|saida[29]~29 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N33
+// Location: LABCELL_X17_Y1_N33
 cyclonev_lcell_comb \ULA|Add0~121 (
 // Equation(s):
 // \ULA|Add0~121_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~118  ))
@@ -3112,7 +3089,7 @@ defparam \ULA|Add0~121 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~121 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N57
+// Location: LABCELL_X16_Y1_N15
 cyclonev_lcell_comb \ULA|saida[30]~30 (
 // Equation(s):
 // \ULA|saida[30]~30_combout  = ( \ULA|Add0~121_sumout  & ( \ROM|memROM~2_combout  ) )
@@ -3136,7 +3113,7 @@ defparam \ULA|saida[30]~30 .lut_mask = 64'h0000000055555555;
 defparam \ULA|saida[30]~30 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X18_Y2_N36
+// Location: LABCELL_X17_Y1_N36
 cyclonev_lcell_comb \ULA|Add0~125 (
 // Equation(s):
 // \ULA|Add0~125_sumout  = SUM(( GND ) + ( \BancoRegistradores|registrador~1064_combout  ) + ( \ULA|Add0~122  ))
@@ -3160,17 +3137,17 @@ defparam \ULA|Add0~125 .lut_mask = 64'h0000CCCC00000000;
 defparam \ULA|Add0~125 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y2_N18
+// Location: LABCELL_X17_Y1_N42
 cyclonev_lcell_comb \ULA|saida[31]~31 (
 // Equation(s):
-// \ULA|saida[31]~31_combout  = ( \ROM|memROM~2_combout  & ( \ULA|Add0~125_sumout  ) )
+// \ULA|saida[31]~31_combout  = (\ROM|memROM~2_combout  & \ULA|Add0~125_sumout )
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
+	.datab(!\ROM|memROM~2_combout ),
+	.datac(!\ULA|Add0~125_sumout ),
 	.datad(gnd),
-	.datae(!\ROM|memROM~2_combout ),
-	.dataf(!\ULA|Add0~125_sumout ),
+	.datae(gnd),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -3180,11 +3157,11 @@ cyclonev_lcell_comb \ULA|saida[31]~31 (
 	.shareout());
 // synopsys translate_off
 defparam \ULA|saida[31]~31 .extended_lut = "off";
-defparam \ULA|saida[31]~31 .lut_mask = 64'h000000000000FFFF;
+defparam \ULA|saida[31]~31 .lut_mask = 64'h0303030303030303;
 defparam \ULA|saida[31]~31 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X49_Y8_N0
+// Location: LABCELL_X24_Y34_N3
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

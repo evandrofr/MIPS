@@ -21,10 +21,12 @@ entity FDMIPS is
 end entity;
 
 architecture comportamento of FDMIPS is
-	SIGNAL somaPCSignal, PCROMSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
+	SIGNAL somaPCSignal, PCROMSignal, muxPCSignal, somaSOMADORMUXSignal,SHIFTSOMADOR: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
 	SIGNAL BarramentoSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
 	SIGNAL ULARegsSignal   : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL RegAUlaASignal, RegBUlaBSignal: STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
+	SIGNAL muxBCREGsignal: STD_LOGIC_VECTOR(ADDR_WIDTH_REG-1 downto 0);
+	SIGNAL andCONTROLEZEROSignal, CONTROLEBC: STD_LOGIC;
 	
 	SIGNAL pontosDeControleSignal: STD_LOGIC_VECTOR(pontosDeControleWIDTH-1 downto 0);
 	
@@ -44,12 +46,41 @@ architecture comportamento of FDMIPS is
             larguraDados => ADDR_WIDTH_ROM
         )
         PORT MAP(
-            DIN    => somaPCSignal,
+            DIN    => muxPCSignal,
             DOUT   => PCROMSignal,
             ENABLE => '1',
             CLK    => clk,
             RST    => '0'
         );
+		 MUXFETCH: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => ADDR_WIDTH_ROM
+		  )
+		  PORT MAP(
+            entradaA_MUX => somaPCSignal,
+				entradaB_MUX => somaSOMADORMUXSignal,
+				seletor_MUX  => andCONTROLEZEROSignal,
+				saida_MUX    => muxPCSignal
+        );
+		  
+		  somaSHIFT : ENTITY work.somadorGenerico
+        PORT MAP(
+            entradaA => somaPCSignal,
+				entradaB => SHIFTSOMADOR,
+				saida    => somaSOMADORMUXSignal
+        );
+		  
+		  MUXBCREG3: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => ADDR_WIDTH_REG
+		  )
+		  PORT MAP(
+            entradaA_MUX => enderecoB,
+				entradaB_MUX => enderecoC,
+				seletor_MUX  => CONTROLEBC,
+				saida_MUX    => muxBCREGsignal
+        );
+		  
 		  
 		 ROM : ENTITY work.ROMMIPS
         GENERIC MAP(
@@ -81,7 +112,7 @@ architecture comportamento of FDMIPS is
             clk             => clk,
             enderecoA        => enderecoA,
 				enderecoB        => enderecoB,
-				enderecoC        => enderecoC,
+				enderecoC        => muxBCREGsignal,
             dadoEscritaC     => ULARegsSignal,
             escreveC         => escreveC,
             saidaA           => RegAUlaASignal,

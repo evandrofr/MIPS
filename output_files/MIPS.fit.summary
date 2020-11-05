@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Oct 30 12:26:27 2020
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fitter Status : Successful - Thu Nov 05 15:07:20 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : MIPS
 Top-level Entity Name : FDMIPS
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
 Logic utilization (in ALMs) : 46 / 18,480 ( < 1 % )
-Total registers : 13
+Total registers : 12
 Total pins : 33 / 224 ( 15 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
