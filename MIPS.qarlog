@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	/home/borg/Documents/MIPS/MIPS.qarlog
+
+Archive:	/home/borg/Documents/MIPS/MIPS.qar
+Date:		Fri Oct 30 12:29:38 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/borg/Documents/MIPS/DE0_CV_golden_top.v
+/home/borg/Documents/MIPS/FDMIPS.vhd
+/home/borg/Documents/MIPS/MIPS.qpf
+/home/borg/Documents/MIPS/MIPS.qsf
+/home/borg/Documents/MIPS/MIPS_assignment_defaults.qdf
+/home/borg/Documents/MIPS/RAMMIPS.vhd
+/home/borg/Documents/MIPS/ROMMIPS.vhd
+/home/borg/Documents/MIPS/UC.vhd
+/home/borg/Documents/MIPS/ULA.vhd
+/home/borg/Documents/MIPS/Waveform.vwf
+/home/borg/Documents/MIPS/bancoRegistradores.vhd
+/home/borg/Documents/MIPS/registradorGenerico.vhd
+/home/borg/Documents/MIPS/somaConstante.vhd
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -6,9 +6,13 @@ entity FDMIPS is
 	GENERIC (
 		DATA_WIDTH_ROM : NATURAL := 32;
 		ADDR_WIDTH_ROM : NATURAL := 32;
+		DATA_WIDTH_RAM : NATURAL := 32;
+		ADDR_WIDTH_RAM : NATURAL := 32;
 		DATA_WIDTH_REG : NATURAL := 32;
 		ADDR_WIDTH_REG : NATURAL := 5;
-		pontosDeControleWIDTH : NATURAL := 4
+		IMEDIATO_WIDTH : NATURAL := 16;
+		IMEDJMP_WIDTH  : NATURAL := 26;
+		pontosDeControleWIDTH : NATURAL := 11
 	);
      port
     (
@@ -21,24 +25,41 @@ entity FDMIPS is
 end entity;
 
 architecture comportamento of FDMIPS is
-	SIGNAL somaPCSignal, PCROMSignal, muxPCSignal, somaSOMADORMUXSignal,SHIFTSOMADOR: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
-	SIGNAL BarramentoSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
-	SIGNAL ULARegsSignal   : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
-	SIGNAL RegAUlaASignal, RegBUlaBSignal: STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
+	SIGNAL somaPCSignal, PCROMSignal, BeqFetchSignal,MuxPCSignal, somaSOMADORMUXSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
+	SIGNAL ULAMuxSignal,MuxRegsSignal  : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
+	SIGNAL RegAUlaASignal, RegBMuxSignal, MuxUlaBSiginal: STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL muxBCREGsignal: STD_LOGIC_VECTOR(ADDR_WIDTH_REG-1 downto 0);
-	SIGNAL andCONTROLEZEROSignal, CONTROLEBC: STD_LOGIC;
+	SIGNAL andCONTROLEZEROSignal,flagZeroUlaSignal: STD_LOGIC;
+	SIGNAL RAMOutSignal, OutMuxULARamSignal: STD_LOGIC_VECTOR(DATA_WIDTH_RAM-1 downto 0);
 	
 	SIGNAL pontosDeControleSignal: STD_LOGIC_VECTOR(pontosDeControleWIDTH-1 downto 0);
 	
-	ALIAS opCode   : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal(31 downto 26);
-	ALIAS enderecoA: STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(25 downto 21);
-	ALIAS enderecoB: STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(20 downto 16);
-	ALIAS enderecoC: STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(15 downto 11);
-	ALIAS shamt    : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(10 downto  6);
-	ALIAS funct    : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal( 5 downto  0);
+	SIGNAL imediatoEstendido     : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	
-	ALIAS escreveC: STD_LOGIC IS pontosDeControleSignal(3);
-	ALIAS operacoes: STD_LOGIC_VECTOR(2 downto 0) IS pontosDeControleSignal(2 downto 0);
+	SIGNAL concatenadoJMP        : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
+	
+	
+	SIGNAL BarramentoSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
+	ALIAS opCode    : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal(31 downto 26);
+	ALIAS opCodeJmp : STD_LOGIC_VECTOR(3 downto 0) IS BarramentoSignal(31 downto 28);
+	ALIAS enderecoA : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(25 downto 21);
+	ALIAS enderecoB : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(20 downto 16);
+	ALIAS enderecoC : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(15 downto 11);
+	ALIAS shamt     : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(10 downto  6);
+	ALIAS funct     : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal( 5 downto  0);
+	ALIAS imediato  : STD_LOGIC_VECTOR(IMEDIATO_WIDTH-1 downto 0) IS BarramentoSignal(IMEDIATO_WIDTH-1 downto 0);
+	ALIAS imedJmp   : STD_LOGIC_VECTOR(IMEDJMP_WIDTH -1 downto 0) IS BarramentoSignal(IMEDJMP_WIDTH -1 downto 0);
+	
+	
+   ALIAS selMuxFecth       : STD_LOGIC IS pontosDeControleSignal(10);
+   ALIAS BEQ               : STD_LOGIC IS pontosDeControleSignal(9);
+   ALIAS selUlaRam         : STD_LOGIC IS pontosDeControleSignal(8);
+   ALIAS selMuxRegImed     : STD_LOGIC IS pontosDeControleSignal(7);
+   ALIAS selMuxRegs        : STD_LOGIC IS pontosDeControleSignal(6);
+	ALIAS escreveC          : STD_LOGIC IS pontosDeControleSignal(5);
+	ALIAS operacoes         : STD_LOGIC_VECTOR(2 downto 0) IS pontosDeControleSignal(4 downto 2);
+	ALIAS wr                : STD_LOGIC IS pontosDeControleSignal(1);
+	ALIAS rd                : STD_LOGIC IS pontosDeControleSignal(0);
 
     BEGIN
 		 PC : ENTITY work.registradorGenerico
@@ -46,13 +67,13 @@ architecture comportamento of FDMIPS is
             larguraDados => ADDR_WIDTH_ROM
         )
         PORT MAP(
-            DIN    => muxPCSignal,
+            DIN    => MuxPCSignal,
             DOUT   => PCROMSignal,
             ENABLE => '1',
             CLK    => clk,
             RST    => '0'
         );
-		 MUXFETCH: ENTITY work.muxGenerico2x1
+		 MUXBEQ: ENTITY work.muxGenerico2x1
         GENERIC MAP(
 		  larguraDados => ADDR_WIDTH_ROM
 		  )
@@ -60,15 +81,20 @@ architecture comportamento of FDMIPS is
             entradaA_MUX => somaPCSignal,
 				entradaB_MUX => somaSOMADORMUXSignal,
 				seletor_MUX  => andCONTROLEZEROSignal,
-				saida_MUX    => muxPCSignal
+				saida_MUX    => BeqFetchSignal
         );
+		  andCONTROLEZEROSignal <= (flagZeroUlaSignal and BEQ);
 		  
 		  somaSHIFT : ENTITY work.somadorGenerico
+			GENERIC MAP(
+		  larguraDados => DATA_WIDTH_REG
+		  )
         PORT MAP(
             entradaA => somaPCSignal,
-				entradaB => SHIFTSOMADOR,
+				entradaB => imediatoEstendido(29 downto 0) & "00" ,
 				saida    => somaSOMADORMUXSignal
         );
+		  
 		  
 		  MUXBCREG3: ENTITY work.muxGenerico2x1
         GENERIC MAP(
@@ -77,7 +103,7 @@ architecture comportamento of FDMIPS is
 		  PORT MAP(
             entradaA_MUX => enderecoB,
 				entradaB_MUX => enderecoC,
-				seletor_MUX  => CONTROLEBC,
+				seletor_MUX  => selMuxRegs,
 				saida_MUX    => muxBCREGsignal
         );
 		  
@@ -93,15 +119,28 @@ architecture comportamento of FDMIPS is
           Dado     => BarramentoSignal
         );
 		  
-		somaUm : ENTITY work.somaConstante
+		somaQuatro : ENTITY work.somaConstante
 		  GENERIC MAP(
             larguraDados => ADDR_WIDTH_ROM,
-				constante => 1
+				constante    => 4
         )
         PORT MAP(
             entrada => PCROMSignal,
             saida   => somaPCSignal
         );
+		  
+		 MUXFETCH: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => ADDR_WIDTH_ROM
+		  )
+		  PORT MAP(
+            entradaA_MUX => BeqFetchSignal,
+				entradaB_MUX => concatenadoJMP, 
+				seletor_MUX  => selMuxFecth,
+				saida_MUX    => MuxPCSignal
+        );
+		  
+		  concatenadoJMP <= opCodeJmp & imedJmp & "00"; --Contatenad~ao tenebroso
 		  
 		 BancoRegistradores : ENTITY work.bancoRegistradores
         GENERIC MAP(
@@ -109,15 +148,26 @@ architecture comportamento of FDMIPS is
 		  larguraEndBancoRegs => ADDR_WIDTH_REG
 		  )
         PORT MAP(
-            clk             => clk,
+            clk              => clk,
             enderecoA        => enderecoA,
 				enderecoB        => enderecoB,
 				enderecoC        => muxBCREGsignal,
-            dadoEscritaC     => ULARegsSignal,
+            dadoEscritaC     => OutMuxULARamSignal,
             escreveC         => escreveC,
             saidaA           => RegAUlaASignal,
-				saidaB           => RegBUlaBSignal
+				saidaB           => RegBMuxSignal
 				);
+				
+		MUXRegImed: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => DATA_WIDTH_REG
+		  )
+		  PORT MAP(
+            entradaA_MUX => RegBMuxSignal,
+				entradaB_MUX => imediatoEstendido,
+				seletor_MUX  => selMuxRegImed,
+				saida_MUX    => MuxUlaBSiginal
+        );
 				
 		 ULA : ENTITY work.ULA
         GENERIC MAP(
@@ -125,20 +175,56 @@ architecture comportamento of FDMIPS is
         )
         PORT MAP(
             entradaA  => RegAUlaASignal,
-            entradaB  => RegBUlaBSignal,
-            saida     => ULARegsSignal,
-            seletor   => operacoes
+            entradaB  => MuxUlaBSiginal,
+            saida     => ULAMuxSignal,
+            seletor   => operacoes,
+				flagZero => flagZeroUlaSignal
         );
 		  
-	UC : ENTITY work.UC
-		PORT MAP(
-		opCode => opCode,
-		funct  => funct,
-		palavraControle => pontosDeControleSignal
-		);
+		MUXUlaRam: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => DATA_WIDTH_REG
+		  )
+		  PORT MAP(
+            entradaA_MUX => ULAMuxSignal,
+				entradaB_MUX => RAMOutSignal,
+				seletor_MUX  => selUlaRam,
+				saida_MUX    => OutMuxULARamSignal
+        );
+		  
+		 Extensor : ENTITY work.estendeSinal
+        GENERIC MAP(
+            larguraDadosIn  => IMEDIATO_WIDTH,
+				larguraDadosOut => DATA_WIDTH_REG
+        )
+        PORT MAP(
+            entrada   => imediato,
+            saida     => imediatoEstendido
+        );
+		  
+		  
+		UC : ENTITY work.UC
+			PORT MAP(
+				opCode => opCode,
+				funct  => funct,
+				palavraControle => pontosDeControleSignal
+			);
+			
+		 RAM : ENTITY work.RAMMIPS
+        GENERIC MAP(
+            dataWidth => DATA_WIDTH_RAM,
+				addrWidth => ADDR_WIDTH_RAM
+        )
+        PORT MAP(
+			 clk => clk,      
+          Endereco => ULAMuxSignal,
+          Dado_in     => RegBMuxSignal,
+			 Dado_out    => RAMOutSignal,
+			 we          => '0'
+        );
 
 		
-		  ULAout <= ULARegsSignal;
+		  ULAout <= ULAMuxSignal;
  
 		  
 END architecture;

@@ -1,6 +1,6 @@
 Analysis & Elaboration report for MIPS
-Thu Nov 05 16:20:57 2020
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Fri Nov  6 19:51:21 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -11,26 +11,34 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   3. Parallel Compilation
   4. Parameter Settings for User Entity Instance: Top-level Entity: |FDMIPS
   5. Parameter Settings for User Entity Instance: registradorGenerico:PC
-  6. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXFETCH
+  6. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBEQ
   7. Parameter Settings for User Entity Instance: somadorGenerico:somaSHIFT
   8. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBCREG3
   9. Parameter Settings for User Entity Instance: ROMMIPS:ROM
- 10. Parameter Settings for User Entity Instance: somaConstante:somaUm
- 11. Parameter Settings for User Entity Instance: bancoRegistradores:BancoRegistradores
- 12. Parameter Settings for User Entity Instance: ULA:ULA
- 13. Analysis & Elaboration Settings
- 14. Port Connectivity Checks: "ROMMIPS:ROM"
- 15. Port Connectivity Checks: "registradorGenerico:PC"
- 16. Analysis & Elaboration Messages
+ 10. Parameter Settings for User Entity Instance: somaConstante:somaQuatro
+ 11. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXFETCH
+ 12. Parameter Settings for User Entity Instance: bancoRegistradores:BancoRegistradores
+ 13. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXRegImed
+ 14. Parameter Settings for User Entity Instance: ULA:ULA
+ 15. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXUlaRam
+ 16. Parameter Settings for User Entity Instance: estendeSinal:Extensor
+ 17. Parameter Settings for User Entity Instance: RAMMIPS:RAM
+ 18. Analysis & Elaboration Settings
+ 19. Port Connectivity Checks: "RAMMIPS:RAM"
+ 20. Port Connectivity Checks: "UC:UC"
+ 21. Port Connectivity Checks: "muxGenerico2x1:MUXFETCH"
+ 22. Port Connectivity Checks: "somadorGenerico:somaSHIFT"
+ 23. Port Connectivity Checks: "registradorGenerico:PC"
+ 24. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -40,15 +48,16 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Nov 05 16:20:57 2020       ;
-; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Fri Nov  6 19:51:21 2020       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; MIPS                                        ;
 ; Top-level Entity Name         ; FDMIPS                                      ;
 ; Family                        ; Cyclone V                                   ;
@@ -85,9 +94,13 @@ refer to the applicable agreement for further details.
 +-----------------------+-------+----------------------------------------+
 ; DATA_WIDTH_ROM        ; 32    ; Signed Integer                         ;
 ; ADDR_WIDTH_ROM        ; 32    ; Signed Integer                         ;
+; DATA_WIDTH_RAM        ; 32    ; Signed Integer                         ;
+; ADDR_WIDTH_RAM        ; 32    ; Signed Integer                         ;
 ; DATA_WIDTH_REG        ; 32    ; Signed Integer                         ;
 ; ADDR_WIDTH_REG        ; 5     ; Signed Integer                         ;
-; pontosDeControleWIDTH ; 4     ; Signed Integer                         ;
+; IMEDIATO_WIDTH        ; 16    ; Signed Integer                         ;
+; IMEDJMP_WIDTH         ; 26    ; Signed Integer                         ;
+; pontosDeControleWIDTH ; 11    ; Signed Integer                         ;
 +-----------------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -102,13 +115,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxGenerico2x1:MUXFETCH ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; larguradados   ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBEQ ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -144,14 +157,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somaConstante:somaUm ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; larguradados   ; 32    ; Signed Integer                           ;
-; constante      ; 1     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somaConstante:somaQuatro ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                               ;
+; constante      ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUXFETCH ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -166,6 +189,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUXRegImed ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ULA:ULA ;
 +----------------+-------+-----------------------------+
@@ -173,6 +206,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------+
 ; larguradados   ; 32    ; Signed Integer              ;
 +----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUXUlaRam ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: estendeSinal:Extensor ;
++-----------------+-------+------------------------------------------+
+; Parameter Name  ; Value ; Type                                     ;
++-----------------+-------+------------------------------------------+
+; larguradadosin  ; 16    ; Signed Integer                           ;
+; larguradadosout ; 32    ; Signed Integer                           ;
++-----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMMIPS:RAM ;
++-----------------+-------+--------------------------------+
+; Parameter Name  ; Value ; Type                           ;
++-----------------+-------+--------------------------------+
+; datawidth       ; 32    ; Signed Integer                 ;
+; addrwidth       ; 32    ; Signed Integer                 ;
+; memoryaddrwidth ; 6     ; Signed Integer                 ;
++-----------------+-------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -188,7 +254,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
 ; Optimization Technique                                                          ; Speed              ; Balanced           ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
@@ -264,13 +330,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ROMMIPS:ROM"                                                                               ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; dado[10..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------+
+; Port Connectivity Checks: "RAMMIPS:RAM" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; we   ; Input ; Info     ; Stuck at GND  ;
++------+-------+----------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UC:UC"                                                                                               ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; palavracontrole[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "muxGenerico2x1:MUXFETCH"  ;
++--------------------+-------+----------+--------------+
+; Port               ; Type  ; Severity ; Details      ;
++--------------------+-------+----------+--------------+
+; entradab_mux[1..0] ; Input ; Info     ; Stuck at GND ;
++--------------------+-------+----------+--------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "somadorGenerico:somaSHIFT" ;
++----------------+-------+----------+-------------------+
+; Port           ; Type  ; Severity ; Details           ;
++----------------+-------+----------+-------------------+
+; entradab[1..0] ; Input ; Info     ; Stuck at GND      ;
++----------------+-------+----------+-------------------+
 
 
 +----------------------------------------------------+
@@ -288,60 +381,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 05 16:20:37 2020
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov  6 19:51:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file de0_cv_golden_top.v
-    Info (12023): Found entity 1: DE0_CV_golden_top File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/DE0_CV_golden_top.v Line: 54
-Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/bancoRegistradores.vhd Line: 30
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/bancoRegistradores.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file rommips.vhd
-    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/ROMMIPS.vhd Line: 16
-    Info (12023): Found entity 1: ROMMIPS File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/ROMMIPS.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file rammips.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/RAMMIPS.vhd Line: 19
-    Info (12023): Found entity 1: RAMMIPS File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/RAMMIPS.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/registradorGenerico.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/ULA.vhd Line: 18
-    Info (12023): Found entity 1: ULA File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/ULA.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file fdmips.vhd
-    Info (12022): Found design unit 1: FDMIPS-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 23
-    Info (12023): Found entity 1: FDMIPS File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/somaConstante.vhd Line: 16
-    Info (12023): Found entity 1: somaConstante File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/somaConstante.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: UC-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/UC.vhd Line: 14
-    Info (12023): Found entity 1: UC File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/UC.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/muxGenerico2x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file somadorgenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/somadorGenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/somadorGenerico.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file DE0_CV_golden_top.v
+    Info (12023): Found entity 1: DE0_CV_golden_top File: /home/borg/Documents/MIPS/DE0_CV_golden_top.v Line: 54
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/borg/Documents/MIPS/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: /home/borg/Documents/MIPS/bancoRegistradores.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file ROMMIPS.vhd
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: /home/borg/Documents/MIPS/ROMMIPS.vhd Line: 16
+    Info (12023): Found entity 1: ROMMIPS File: /home/borg/Documents/MIPS/ROMMIPS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file RAMMIPS.vhd
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/borg/Documents/MIPS/RAMMIPS.vhd Line: 19
+    Info (12023): Found entity 1: RAMMIPS File: /home/borg/Documents/MIPS/RAMMIPS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/borg/Documents/MIPS/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/borg/Documents/MIPS/registradorGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
+    Info (12022): Found design unit 1: ULA-comportamento File: /home/borg/Documents/MIPS/ULA.vhd Line: 19
+    Info (12023): Found entity 1: ULA File: /home/borg/Documents/MIPS/ULA.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file FDMIPS.vhd
+    Info (12022): Found design unit 1: FDMIPS-comportamento File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 27
+    Info (12023): Found entity 1: FDMIPS File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/borg/Documents/MIPS/somaConstante.vhd Line: 16
+    Info (12023): Found entity 1: somaConstante File: /home/borg/Documents/MIPS/somaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file UC.vhd
+    Info (12022): Found design unit 1: UC-comportamento File: /home/borg/Documents/MIPS/UC.vhd Line: 14
+    Info (12023): Found entity 1: UC File: /home/borg/Documents/MIPS/UC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/borg/Documents/MIPS/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/borg/Documents/MIPS/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/borg/Documents/MIPS/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/borg/Documents/MIPS/somadorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file estendeSinal.vhd
+    Info (12022): Found design unit 1: estendeSinal-comportamento File: /home/borg/Documents/MIPS/estendeSinal.vhd Line: 19
+    Info (12023): Found entity 1: estendeSinal File: /home/borg/Documents/MIPS/estendeSinal.vhd Line: 5
 Info (12127): Elaborating entity "FDMIPS" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at FDMIPS.vhd(24): used implicit default value for signal "SHIFTSOMADOR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 24
-Warning (10541): VHDL Signal Declaration warning at FDMIPS.vhd(29): used implicit default value for signal "andCONTROLEZEROSignal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 29
-Warning (10541): VHDL Signal Declaration warning at FDMIPS.vhd(29): used implicit default value for signal "CONTROLEBC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 29
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 44
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXFETCH" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 55
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 66
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 73
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 85
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaUm" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 96
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 106
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 122
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/FDMIPS.vhd Line: 133
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Thu Nov 05 16:20:57 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:40
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 65
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBEQ" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 76
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 88
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 99
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 111
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaQuatro" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 122
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 145
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 172
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 195
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 206
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: /home/borg/Documents/MIPS/FDMIPS.vhd Line: 213
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 819 megabytes
+    Info: Processing ended: Fri Nov  6 19:51:21 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 
