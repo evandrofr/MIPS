@@ -1,5 +1,5 @@
 Assembler report for MIPS
-Thu Nov 05 15:07:31 2020
+Thu Nov 12 15:49:30 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -10,8 +10,8 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/output_files/MIPS.sof
-  6. Assembler Device Options: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/output_files/MIPS.pof
+  5. Assembler Device Options: C:/Users/evand/OneDrive/Documents/MIPS/output_files/MIPS.sof
+  6. Assembler Device Options: C:/Users/evand/OneDrive/Documents/MIPS/output_files/MIPS.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Nov 05 15:07:31 2020 ;
+; Assembler Status      ; Successful - Thu Nov 12 15:49:30 2020 ;
 ; Revision Name         ; MIPS                                  ;
 ; Top-level Entity Name ; FDMIPS                                ;
 ; Family                ; Cyclone V                             ;
@@ -53,35 +53,35 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------+
-; Assembler Generated Files                                           ;
-+---------------------------------------------------------------------+
-; File Name                                                           ;
-+---------------------------------------------------------------------+
-; C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/output_files/MIPS.sof ;
-; C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/output_files/MIPS.pof ;
-+---------------------------------------------------------------------+
++--------------------------------------------------------------+
+; Assembler Generated Files                                    ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; C:/Users/evand/OneDrive/Documents/MIPS/output_files/MIPS.sof ;
+; C:/Users/evand/OneDrive/Documents/MIPS/output_files/MIPS.pof ;
++--------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/output_files/MIPS.sof ;
-+----------------+------------------------------------------------------------------------------+
-; Option         ; Setting                                                                      ;
-+----------------+------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x004F2609                                                                   ;
-; Checksum       ; 0x004F2609                                                                   ;
-+----------------+------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/evand/OneDrive/Documents/MIPS/output_files/MIPS.sof ;
++----------------+-----------------------------------------------------------------------+
+; Option         ; Setting                                                               ;
++----------------+-----------------------------------------------------------------------+
+; JTAG usercode  ; 0x0057B3CA                                                            ;
+; Checksum       ; 0x0057B3CA                                                            ;
++----------------+-----------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/rodri/OneDrive/햞ea de Trabalho/MIPS/output_files/MIPS.pof ;
-+--------------------+--------------------------------------------------------------------------+
-; Option             ; Setting                                                                  ;
-+--------------------+--------------------------------------------------------------------------+
-; JTAG usercode      ; 0x00000000                                                               ;
-; Checksum           ; 0x74B6233D                                                               ;
-; Compression Ratio  ; 3                                                                        ;
-+--------------------+--------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/evand/OneDrive/Documents/MIPS/output_files/MIPS.pof ;
++--------------------+-------------------------------------------------------------------+
+; Option             ; Setting                                                           ;
++--------------------+-------------------------------------------------------------------+
+; JTAG usercode      ; 0x00000000                                                        ;
+; Checksum           ; 0x74A68C7D                                                        ;
+; Compression Ratio  ; 3                                                                 ;
++--------------------+-------------------------------------------------------------------+
 
 
 +--------------------+
@@ -90,14 +90,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 05 15:07:23 2020
+    Info: Processing started: Thu Nov 12 15:49:21 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Thu Nov 05 15:07:31 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Thu Nov 12 15:49:30 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -1,6 +1,6 @@
--- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and any partner logic 
+-- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,8 +10,7 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
+-- refer to the applicable agreement for further details.
 
 -- *****************************************************************************
 -- This file contains a Vhdl test bench with test vectors .The test vectors     
@@ -19,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/30/2020 12:05:29"
+-- Generated on "11/13/2020 11:03:36"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FDMIPS
 -- 
@@ -34,11 +33,25 @@ END FDMIPS_vhd_vec_tst;
 ARCHITECTURE FDMIPS_arch OF FDMIPS_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL andOut : STD_LOGIC;
+SIGNAL BEQOut : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
+SIGNAL flagZeroOut : STD_LOGIC;
+SIGNAL MuxBEQout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL PCout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL UlaAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL UlaBOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FDMIPS
 	PORT (
+	andOut : OUT STD_LOGIC;
+	BEQOut : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
+	flagZeroOut : OUT STD_LOGIC;
+	MuxBEQout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	PCout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaBOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	ULAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
@@ -46,19 +59,28 @@ BEGIN
 	i1 : FDMIPS
 	PORT MAP (
 -- list connections between master ports and signals
+	andOut => andOut,
+	BEQOut => BEQOut,
 	clk => clk,
+	flagZeroOut => flagZeroOut,
+	MuxBEQout => MuxBEQout,
+	PCout => PCout,
+	UlaAout => UlaAout,
+	UlaBOut => UlaBOut,
 	ULAout => ULAout
 	);
 
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-LOOP
+	FOR i IN 1 TO 12
+	LOOP
+		clk <= '0';
+		WAIT FOR 40000 ps;
+		clk <= '1';
+		WAIT FOR 40000 ps;
+	END LOOP;
 	clk <= '0';
-	WAIT FOR 50000 ps;
-	clk <= '1';
-	WAIT FOR 50000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_clk;
 END FDMIPS_arch;

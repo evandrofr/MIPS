@@ -25,6 +25,7 @@ architecture comportamento of ULA is
    signal op_or :     STD_LOGIC_VECTOR((larguraDados-1) downto 0);
    signal op_xor :    STD_LOGIC_VECTOR((larguraDados-1) downto 0);
    signal op_not :    STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+	signal op_slt    : STD_LOGIC_VECTOR((larguraDados - 1) DOWNTO 0) := x"00000000";
 	
 	signal saidaSignal:STD_LOGIC_VECTOR((larguraDados-1) downto 0);
 
@@ -35,12 +36,13 @@ architecture comportamento of ULA is
       op_or     <= entradaA or entradaB;
       op_xor    <= entradaA xor entradaB;
       op_not    <= not entradaA;
+		op_slt(0) <= subtracao(31); --Ultimo bit para verificar se é negativo.
 
       saidaSignal <= soma when (seletor = "000") else
           subtracao when (seletor = "001") else
           entradaA when  (seletor = "010") else
           entradaB when  (seletor = "011") else
-          op_xor when    (seletor = "100") else
+          op_slt when    (seletor = "100") else
           op_not when    (seletor = "101") else
           op_and when    (seletor = "110") else
           op_or when     (seletor = "111") else

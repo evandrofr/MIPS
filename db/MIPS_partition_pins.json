@@ -132,6 +132,514 @@
 					"strict" : false
 				},
 				{
+					"name" : "PCout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[16]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[17]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[18]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[19]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[20]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[21]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[22]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[23]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[24]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[25]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[26]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[27]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[30]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "flagZeroOut",
+					"strict" : false
+				},
+				{
+					"name" : "BEQOut",
+					"strict" : false
+				},
+				{
+					"name" : "andOut",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[17]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[18]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[19]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[20]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[21]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[22]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[23]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[24]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[25]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[26]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[27]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[30]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaAout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[18]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[19]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[20]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[21]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[22]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[23]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[24]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[25]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[26]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[27]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[28]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[29]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[30]",
+					"strict" : false
+				},
+				{
+					"name" : "UlaBOut[31]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				}

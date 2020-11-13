@@ -1,6 +1,6 @@
--- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and any partner logic 
+-- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,8 +10,7 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
+-- refer to the applicable agreement for further details.
 
 -- *****************************************************************************
 -- This file contains a Vhdl test bench with test vectors .The test vectors     
@@ -19,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/30/2020 11:37:47"
+-- Generated on "11/12/2020 15:17:40"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FDMIPS
 -- 
@@ -39,7 +38,7 @@ SIGNAL ULAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FDMIPS
 	PORT (
 	clk : IN STD_LOGIC;
-	ULAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
+	ULAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -53,16 +52,12 @@ BEGIN
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-	FOR i IN 1 TO 16
-	LOOP
-		clk <= '0';
-		WAIT FOR 30000 ps;
-		clk <= '1';
-		WAIT FOR 30000 ps;
-	END LOOP;
+LOOP
 	clk <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 20000 ps;
 	clk <= '1';
-WAIT;
+	WAIT FOR 20000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
 END FDMIPS_arch;

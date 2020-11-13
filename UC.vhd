@@ -5,31 +5,23 @@ USE ieee.numeric_std.ALL; -- Biblioteca IEEE para funções aritméticas
 ENTITY UC IS
   PORT (
     opCode          : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
-    funct           : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
-    palavraControle : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
+    palavraControle : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 	 
   );
 END ENTITY;
 
 ARCHITECTURE comportamento OF UC IS
 
-  ALIAS selMuxFecth       : std_logic IS palavraControle(10);
-  ALIAS BEQ               : std_logic IS palavraControle(9);
-  ALIAS selUlaRam         : std_logic IS palavraControle(8);
-  ALIAS selMuxRegImed     : std_logic IS palavraControle(7);
-  ALIAS selMuxRegs        : std_logic IS palavraControle(6);
-  ALIAS escreveC          : std_logic IS palavraControle(5);
-  ALIAS operacoes         : std_logic_vector(2 DOWNTO 0) IS palavraControle(4 DOWNTO 2);
+  ALIAS selMuxFecth       : std_logic IS palavraControle(9);
+  ALIAS BEQ               : std_logic IS palavraControle(8);
+  ALIAS selUlaRam         : std_logic IS palavraControle(7);
+  ALIAS selMuxRegImed     : std_logic IS palavraControle(6);
+  ALIAS selMuxRegs        : std_logic IS palavraControle(5);
+  ALIAS escreveC          : std_logic IS palavraControle(4);
+  ALIAS ctrlUlaUC         : std_logic_vector(1 DOWNTO 0) IS palavraControle(3 DOWNTO 2);
   ALIAS rd                : std_logic IS palavraControle(1);
   ALIAS wr                : std_logic IS palavraControle(0);
     
-  
-  CONSTANT f_add : std_logic_vector(5 downto 0) := "100000";
-  CONSTANT f_sub : std_logic_vector(5 downto 0) := "100010";
-  CONSTANT f_and : std_logic_vector(5 downto 0) := "100100";
-  CONSTANT f_or  : std_logic_vector(5 downto 0) := "100101";
-  CONSTANT f_less: std_logic_vector(5 downto 0) := "101010";
-  
   
   CONSTANT o_load:  std_logic_vector(5 downto 0) := "100011";
   CONSTANT o_beq:   std_logic_vector(5 downto 0) := "000100";
@@ -47,7 +39,7 @@ ARCHITECTURE comportamento OF UC IS
   SIGNAL   ins_i : std_logic;
 
 BEGIN
-	ins_i <= '1' WHEN (opCode = o_beq OR opCode = o_load OR opCode = o_jmp OR 
+	ins_i <= '1' WHEN (opCode = o_load OR opCode = o_jmp OR 
                       opCode = o_addi OR opCode = o_ori OR opCode = o_andi OR
                       opCode = o_slti) ELSE '0';
 							 
@@ -57,12 +49,11 @@ BEGIN
 
   escreveC <= '1' WHEN (opCode = ins_r OR opCode = o_load) ELSE '0';
 
-  operacoes <= "000" WHEN opCode = ins_r AND funct = f_add  ELSE          -- add
-				   "001" WHEN opCode = ins_r AND funct = f_sub  ELSE          -- sub
-				   "010" WHEN opCode = ins_r AND funct = f_and  ELSE          -- and
-				   "011" WHEN opCode = ins_r AND funct = f_or   ELSE          -- or
-				   "100" WHEN opCode = ins_r AND funct = f_less ELSE          -- slt
-				   "111";
+  ctrlUlaUC <= "00" WHEN opCode = o_store ELSE
+    "00" WHEN opCode = o_load ELSE
+    "01" WHEN opcode = o_beq ELSE
+    "10" WHEN opcode = ins_r ELSE
+    "11";
 					
 					
 	wr <= '1' WHEN opCode = o_store ELSE
