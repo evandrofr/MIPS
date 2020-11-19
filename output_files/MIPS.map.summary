@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Nov 13 15:43:12 2020
+Analysis & Synthesis Status : Successful - Thu Nov 19 18:57:01 2020
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : MIPS
 Top-level Entity Name : FDMIPS
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 94
+Total registers : 286
 Total pins : 164
 Total virtual pins : 0
 Total block memory bits : 0

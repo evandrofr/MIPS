@@ -4,7 +4,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY ulaUC IS
   PORT (
-    ctrlUlaUC  : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    ctrlUlaUC  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     funct      : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     ulaOp      : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
   );
@@ -20,13 +20,17 @@ ARCHITECTURE comportamento OF ulaUC IS
   
 BEGIN
 
-  ulaOp <= "000" WHEN ctrlUlaUC = "00" ELSE
-    "000" WHEN ctrlUlaUC = "10" AND funct = f_add ELSE
-    "001" WHEN ctrlUlaUC = "01" ELSE
-    "001" WHEN ctrlUlaUC = "10" AND funct = f_sub ELSE
-    "110" WHEN ctrlUlaUC = "10" AND funct = f_and ELSE
-    "111" WHEN ctrlUlaUC = "10" AND funct = f_or ELSE
-    "100" WHEN ctrlUlaUC = "10" AND funct = f_slt ELSE
-    "111";
+  ulaOp <= "000" WHEN ctrlUlaUC = "000" ELSE --ADD
+			  "001" WHEN ctrlUlaUC = "001" ELSE --SUB
+           "000" WHEN ctrlUlaUC = "010" AND funct = f_add ELSE
+			  "001" WHEN ctrlUlaUC = "010" AND funct = f_sub ELSE
+		     "110" WHEN ctrlUlaUC = "010" AND funct = f_and ELSE
+			  "111" WHEN ctrlUlaUC = "010" AND funct = f_or ELSE
+			  "100" WHEN ctrlUlaUC = "010" AND funct = f_slt ELSE
+			  "111" WHEN ctrlUlaUC = "011" ELSE -- OR
+			  "100" WHEN ctrlUlaUC = "100" ELSE -- SLT
+			  "110" WHEN ctrlUlaUC = "101" ELSE -- AND
+			  "010" WHEN ctrlUlaUC = "110" ELSE -- 4SH
+			  "111";
 
 END ARCHITECTURE;

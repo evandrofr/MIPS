@@ -1,5 +1,5 @@
 Flow report for MIPS
-Fri Nov 13 15:43:56 2020
+Thu Nov 19 18:59:41 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 13 15:43:56 2020       ;
+; Flow Status                     ; Successful - Thu Nov 19 18:59:41 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; FDMIPS                                      ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 94                                          ;
+; Total registers                 ; 286                                         ;
 ; Total pins                      ; 164                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2020 15:42:54 ;
+; Start date & time ; 11/19/2020 18:56:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 136935936885058.160529297304996        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 136935936885058.160582299207904        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -111,10 +111,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4889 MB             ; 00:00:39                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4712 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4719 MB             ; 00:00:01                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4891 MB             ; 00:01:00                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4712 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4717 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4713 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4717 MB             ; 00:00:02                           ;
+; Total                ; 00:00:36     ; --                      ; --                  ; 00:01:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,6 +128,8 @@ refer to the applicable agreement for further details.
 ; Analysis & Synthesis ; LAPTOP-KTRST55N  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-KTRST55N  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-KTRST55N  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-KTRST55N  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-KTRST55N  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -133,7 +137,9 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/evand/OneDrive/Documents/MIPS/Waveform12.vwf --testbench_file=C:/Users/evand/OneDrive/Documents/MIPS/simulation/qsim/Waveform12.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/evand/OneDrive/Documents/MIPS/Waveform17.vwf --testbench_file=C:/Users/evand/OneDrive/Documents/MIPS/simulation/qsim/Waveform17.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/evand/OneDrive/Documents/MIPS/simulation/qsim/ MIPS -c MIPS
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/Users/evand/OneDrive/Documents/MIPS/Waveform17.vwf --testbench_file=C:/Users/evand/OneDrive/Documents/MIPS/simulation/qsim/Waveform17.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/evand/OneDrive/Documents/MIPS/simulation/qsim/ MIPS -c MIPS
 
 

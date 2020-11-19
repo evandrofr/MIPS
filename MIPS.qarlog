@@ -1,24 +1,35 @@
-Quartus Prime Archive log --	/home/borg/Documents/MIPS/MIPS.qarlog
+Quartus Prime Archive log --	C:/Users/evand/OneDrive/Documents/MIPS/MIPS.qarlog
 
-Archive:	/home/borg/Documents/MIPS/MIPS.qar
-Date:		Fri Oct 30 12:29:38 2020
-Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Archive:	C:/Users/evand/OneDrive/Documents/MIPS/MIPS.qar
+Date:		Fri Nov 13 19:29:49 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 	=========== Files Selected: ===========
-/home/borg/Documents/MIPS/DE0_CV_golden_top.v
-/home/borg/Documents/MIPS/FDMIPS.vhd
-/home/borg/Documents/MIPS/MIPS.qpf
-/home/borg/Documents/MIPS/MIPS.qsf
-/home/borg/Documents/MIPS/MIPS_assignment_defaults.qdf
-/home/borg/Documents/MIPS/RAMMIPS.vhd
-/home/borg/Documents/MIPS/ROMMIPS.vhd
-/home/borg/Documents/MIPS/UC.vhd
-/home/borg/Documents/MIPS/ULA.vhd
-/home/borg/Documents/MIPS/Waveform.vwf
-/home/borg/Documents/MIPS/bancoRegistradores.vhd
-/home/borg/Documents/MIPS/registradorGenerico.vhd
-/home/borg/Documents/MIPS/somaConstante.vhd
-	======= Total: 13 files to archive =======
+C:/Users/evand/OneDrive/Documents/MIPS/DE0_CV_golden_top.v
+C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/MIPS.qpf
+C:/Users/evand/OneDrive/Documents/MIPS/MIPS.qsf
+C:/Users/evand/OneDrive/Documents/MIPS/MIPS_assignment_defaults.qdf
+C:/Users/evand/OneDrive/Documents/MIPS/RAMMIPS.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/UC.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/ULA.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/Waveform1.vwf
+C:/Users/evand/OneDrive/Documents/MIPS/Waveform12.vwf
+C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/estendeSinal.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/muxGenerico2x1.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/registradorGenerico.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/somaConstante.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/somadorGenerico.vhd
+C:/Users/evand/OneDrive/Documents/MIPS/ulaUC.vhd
+	======= Total: 18 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Nov 13 19:30:29 2020
+Source archive file:	C:/Users/evand/OneDrive/Documents/MIPS/MIPS.qar
+Archive was extracted into	C:/Users/evand/OneDrive/Documents/MIPS/MIPS_restored/
+		 - successfully.

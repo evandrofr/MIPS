@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/13/2020 15:43:54"
+-- Generated on "11/19/2020 13:39:47"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FDMIPS
 -- 
@@ -44,15 +44,15 @@ SIGNAL UlaBOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FDMIPS
 	PORT (
-	andOut : OUT STD_LOGIC;
-	BEQOut : OUT STD_LOGIC;
+	andOut : BUFFER STD_LOGIC;
+	BEQOut : BUFFER STD_LOGIC;
 	clk : IN STD_LOGIC;
-	flagZeroOut : OUT STD_LOGIC;
-	MuxBEQout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	PCout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	UlaAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	UlaBOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	ULAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	flagZeroOut : BUFFER STD_LOGIC;
+	MuxBEQout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	PCout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaBOut : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ULAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN

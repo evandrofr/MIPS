@@ -1,6 +1,6 @@
 Archive Project report for MIPS
-Fri Oct 30 12:29:38 2020
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fri Nov 13 19:29:49 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -16,9 +16,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -28,15 +28,14 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Fri Oct 30 12:29:38 2020 ;
+; Archive Project Status ; Successful - Fri Nov 13 19:29:49 2020 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; FDMIPS                                ;
 ; Family                 ; Cyclone V                             ;
@@ -51,19 +50,19 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory /home/borg/Documents/MIPS/
+Info (13213): Using common directory C:/Users/evand/OneDrive/Documents/MIPS/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/borg/Documents/MIPS/MIPS.qar'
+Info: Generated archive 'C:/Users/evand/OneDrive/Documents/MIPS/MIPS.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
-Info (23030): Evaluation of Tcl script /home/borg/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 611 megabytes
-    Info: Processing ended: Fri Oct 30 12:29:38 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Fri Nov 13 19:29:49 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------+
@@ -73,17 +72,22 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 +------------------------------+
 ; bancoRegistradores.vhd       ;
 ; DE0_CV_golden_top.v          ;
+; estendeSinal.vhd             ;
 ; FDMIPS.vhd                   ;
 ; MIPS.qpf                     ;
 ; MIPS.qsf                     ;
 ; MIPS_assignment_defaults.qdf ;
+; muxGenerico2x1.vhd           ;
 ; RAMMIPS.vhd                  ;
 ; registradorGenerico.vhd      ;
 ; ROMMIPS.vhd                  ;
 ; somaConstante.vhd            ;
+; somadorGenerico.vhd          ;
 ; UC.vhd                       ;
 ; ULA.vhd                      ;
-; Waveform.vwf                 ;
+; ulaUC.vhd                    ;
+; Waveform1.vwf                ;
+; Waveform12.vwf               ;
 +------------------------------+
 
 
