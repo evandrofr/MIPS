@@ -132,6 +132,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "PCout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout[1]",
+					"strict" : false
+				},
+				{
 					"name" : "PCout[2]",
 					"strict" : false
 				},
@@ -249,6 +257,14 @@
 				},
 				{
 					"name" : "PCout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxBEQout[1]",
 					"strict" : false
 				},
 				{

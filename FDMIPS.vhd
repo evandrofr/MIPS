@@ -12,7 +12,7 @@ entity FDMIPS is
 		ADDR_WIDTH_REG : NATURAL := 5;
 		IMEDIATO_WIDTH : NATURAL := 16;
 		IMEDJMP_WIDTH  : NATURAL := 26;
-		pontosDeControleWIDTH : NATURAL := 12
+		pontosDeControleWIDTH : NATURAL := 13
 	);
      port
     (
@@ -30,11 +30,11 @@ entity FDMIPS is
 end entity;
 
 architecture comportamento of FDMIPS is
-	SIGNAL somaPCSignal, PCROMSignal, BeqFetchSignal,MuxPCSignal, somaSOMADORMUXSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
+	SIGNAL somaPCSignal, PCROMSignal, BeqFetchSignal,PCInSignal,normalPCSignal, somaSOMADORMUXSignal, dadoEscritaCSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
 	SIGNAL ULAMuxSignal,MuxRegsSignal  : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL RegAUlaASignal, RegBMuxSignal, MuxUlaBSiginal: STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL muxBCREGsignal: STD_LOGIC_VECTOR(ADDR_WIDTH_REG-1 downto 0);
-	SIGNAL seletorBranchSignal,flagZeroUlaSignal: STD_LOGIC;
+	SIGNAL seletorBranchSignal,flagZeroUlaSignal, seletorJMPRSignal: STD_LOGIC;
 	SIGNAL RAMOutSignal, OutMuxULARamSignal: STD_LOGIC_VECTOR(DATA_WIDTH_RAM-1 downto 0);
 	
 	SIGNAL pontosDeControleSignal: STD_LOGIC_VECTOR(pontosDeControleWIDTH-1 downto 0);
@@ -43,39 +43,62 @@ architecture comportamento of FDMIPS is
 	
 	SIGNAL concatenadoJMP        : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	
-	SIGNAL ulaOP                 : STD_LOGIC_VECTOR(2 downto 0);
+	SIGNAL ulaOP                 : STD_LOGIC_VECTOR(3 downto 0);
+	SIGNAL selJMPR               : STD_LOGIC;
 	
 	
 	SIGNAL BarramentoSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
-	ALIAS opCode    : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal(31 downto 26);
-	ALIAS opCodeJmp : STD_LOGIC_VECTOR(3 downto 0) IS BarramentoSignal(31 downto 28);
-	ALIAS enderecoA : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(25 downto 21);
-	ALIAS enderecoB : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(20 downto 16);
-	ALIAS enderecoC : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(15 downto 11);
-	ALIAS shamt     : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(10 downto  6);
-	ALIAS funct     : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal( 5 downto  0);
-	ALIAS imediato  : STD_LOGIC_VECTOR(IMEDIATO_WIDTH-1 downto 0) IS BarramentoSignal(IMEDIATO_WIDTH-1 downto 0);
-	ALIAS imedJmp   : STD_LOGIC_VECTOR(IMEDJMP_WIDTH -1 downto 0) IS BarramentoSignal(IMEDJMP_WIDTH -1 downto 0);
+	ALIAS opCode           : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal(31 downto 26);
+	ALIAS opCodeJmp        : STD_LOGIC_VECTOR(3 downto 0) IS BarramentoSignal(31 downto 28);
+	ALIAS enderecoA        : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(25 downto 21);
+	ALIAS enderecoB        : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(20 downto 16);
+	ALIAS enderecoC        : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(15 downto 11);
+	ALIAS shamt            : STD_LOGIC_VECTOR(4 downto 0) IS BarramentoSignal(10 downto  6);
+	ALIAS funct            : STD_LOGIC_VECTOR(5 downto 0) IS BarramentoSignal( 5 downto  0);
+	ALIAS imediato         : STD_LOGIC_VECTOR(IMEDIATO_WIDTH-1 downto 0) IS BarramentoSignal(IMEDIATO_WIDTH-1 downto 0);
+	ALIAS imedJmp          : STD_LOGIC_VECTOR(IMEDJMP_WIDTH -1 downto 0) IS BarramentoSignal(IMEDJMP_WIDTH -1 downto 0);
 	
-	
-   ALIAS selMuxFecth       : STD_LOGIC IS pontosDeControleSignal(11);
-	ALIAS BNE               : STD_LOGIC IS pontosDeControleSignal(10);
-   ALIAS BEQ               : STD_LOGIC IS pontosDeControleSignal(9);
-   ALIAS selUlaRam         : STD_LOGIC IS pontosDeControleSignal(8);
-   ALIAS selMuxRegImed     : STD_LOGIC IS pontosDeControleSignal(7);
-   ALIAS selMuxRegs        : STD_LOGIC IS pontosDeControleSignal(6);
-	ALIAS escreveC          : STD_LOGIC IS pontosDeControleSignal(5);
-	ALIAS ctrlUlaUC         : STD_LOGIC_VECTOR(2 downto 0) IS pontosDeControleSignal(4 downto 2);
-	ALIAS wr                : STD_LOGIC IS pontosDeControleSignal(1);
-	ALIAS rd                : STD_LOGIC IS pontosDeControleSignal(0);
+	ALIAS selJMPAL         : STD_LOGIC IS pontosDeControleSignal(12);
+   ALIAS selMuxFecth      : STD_LOGIC IS pontosDeControleSignal(11);
+	ALIAS BNE              : STD_LOGIC IS pontosDeControleSignal(10);
+   ALIAS BEQ              : STD_LOGIC IS pontosDeControleSignal(9);
+   ALIAS selUlaRam        : STD_LOGIC IS pontosDeControleSignal(8);
+   ALIAS selMuxRegImed    : STD_LOGIC IS pontosDeControleSignal(7);
+   ALIAS selMuxRegs       : STD_LOGIC IS pontosDeControleSignal(6);
+	ALIAS escreveC         : STD_LOGIC IS pontosDeControleSignal(5);
+	ALIAS ctrlUlaUC        : STD_LOGIC_VECTOR(2 downto 0) IS pontosDeControleSignal(4 downto 2);
+	ALIAS wr               : STD_LOGIC IS pontosDeControleSignal(1);
+	ALIAS rd               : STD_LOGIC IS pontosDeControleSignal(0);
 
     BEGIN
+	 	MUXJMPR: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => ADDR_WIDTH_ROM
+		  )
+		  PORT MAP(
+            entradaA_MUX => normalPCSignal,
+				entradaB_MUX => OutMuxULARamSignal,
+				seletor_MUX  => selJMPR,
+				saida_MUX    => PCInSignal
+        );
+	 
+	 
+	 	 MUXJMPAL: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => ADDR_WIDTH_ROM
+		  )
+		  PORT MAP(
+            entradaA_MUX => OutMuxULARamSignal,
+				entradaB_MUX => PCROMSignal,
+				seletor_MUX  => selJMPAL,
+				saida_MUX    => dadoEscritaCSignal
+        );
 		 PC : ENTITY work.registradorGenerico
         GENERIC MAP(
             larguraDados => ADDR_WIDTH_ROM
         )
         PORT MAP(
-            DIN    => MuxPCSignal,
+            DIN    => PCInSignal,
             DOUT   => PCROMSignal,
             ENABLE => '1',
             CLK    => clk,
@@ -147,7 +170,7 @@ architecture comportamento of FDMIPS is
             entradaA_MUX => BeqFetchSignal,
 				entradaB_MUX => concatenadoJMP, 
 				seletor_MUX  => selMuxFecth,
-				saida_MUX    => MuxPCSignal
+				saida_MUX    => normalPCSignal
         );
 		  
 		  concatenadoJMP <= opCodeJmp & imedJmp & "00"; --Contatenad~ao tenebroso
@@ -162,7 +185,7 @@ architecture comportamento of FDMIPS is
             enderecoA        => enderecoA,
 				enderecoB        => enderecoB,
 				enderecoC        => muxBCREGsignal,
-            dadoEscritaC     => OutMuxULARamSignal,
+            dadoEscritaC     => dadoEscritaCSignal,
             escreveC         => escreveC,
             saidaA           => RegAUlaASignal,
 				saidaB           => RegBMuxSignal
@@ -223,7 +246,8 @@ architecture comportamento of FDMIPS is
 			PORT MAP(
 				ctrlUlaUC => ctrlUlaUC,
 				funct => funct,
-				ulaOp => ulaOP
+				ulaOp => ulaOP,
+				selJMPR => selJMPR
 			);
 			
 		 RAM : ENTITY work.RAMMIPS

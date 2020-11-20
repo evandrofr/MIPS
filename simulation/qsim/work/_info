@@ -10,7 +10,7 @@ z2
 cModel Technology
 d/home/borg/intelFPGA_lite/20.1/Projetos/MIPS/simulation/qsim
 Efdmips
-Z0 w1605823181
+Z0 w1605914060
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 YZlobdkPHzE;N99jHfcMc3
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 WF17oJHHbo`b[5Bl5P6_h0
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 dfin^_@l97Ngz6cK0kjS62
@@ -29,9 +29,9 @@ VZAE>2BAO@CTR?zX9?[ZKO2
 !s100 j=HmX1Snf:4f`XX`lKZeF0
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1605823183
+Z14 !s110 1605914062
 !i10b 1
-Z15 !s108 1605823183.000000
+Z15 !s108 1605914062.000000
 Z16 !s90 -work|work|MIPS.vho|
 Z17 !s107 MIPS.vho|
 !i113 1
@@ -48,10 +48,10 @@ R7
 R8
 R9
 DEx4 work 6 fdmips 0 22 ZAE>2BAO@CTR?zX9?[ZKO2
-l2018
+l3023
 L52
-V>7fa27c<>iOIj`;2aXYSc2
-!s100 N?SRX82SO>2g38[f34Ce=0
+VKmjOUbDKAg1270lO4kMG13
+!s100 n?_RD<kj@fN2A9=agj>PX1
 R13
 32
 R14
@@ -63,41 +63,41 @@ R17
 R18
 R19
 Efdmips_vhd_vec_tst
-Z20 w1605823178
+Z20 w1605914058
 R7
 R8
 R10
-Z21 8Waveform17.vwf.vht
-Z22 FWaveform17.vwf.vht
+Z21 8Waveform26.vwf.vht
+Z22 FWaveform26.vwf.vht
 l0
 L31
 VXd<5iInnLh99_j8m_MN_`1
 !s100 Mk9DSjN_IP_@nZXQQ;4kC1
 R13
 32
-Z23 !s110 1605823184
+Z23 !s110 1605914063
 !i10b 1
-Z24 !s108 1605823184.000000
-Z25 !s90 -work|work|Waveform17.vwf.vht|
-Z26 !s107 Waveform17.vwf.vht|
+R15
+Z24 !s90 -work|work|Waveform26.vwf.vht|
+Z25 !s107 Waveform26.vwf.vht|
 !i113 1
 R18
 R19
 Afdmips_arch
 R7
 R8
-Z27 DEx4 work 18 fdmips_vhd_vec_tst 0 22 Xd<5iInnLh99_j8m_MN_`1
+Z26 DEx4 work 18 fdmips_vhd_vec_tst 0 22 Xd<5iInnLh99_j8m_MN_`1
 l58
 L33
-VM>12GPc?`[WZ]_3mT30LE1
-!s100 O[h5lakJ`I8oJB]MgfL5G1
+VEDLWD0ha=XzfB6kkBXbGL1
+!s100 CbEkj@I<eA;cJLl<@]F`z2
 R13
 32
 R23
 !i10b 1
+R15
 R24
 R25
-R26
 !i113 1
 R18
 R19

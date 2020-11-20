@@ -50,6 +50,10 @@ function initMemory
         tmp(11) := x"0000000C";
         tmp(12) := x"0000000D";
 		  tmp(13) := 32x"16";
+		  tmp(14) := x"0000000A";
+        tmp(15) := x"00000007";
+        tmp(16) := x"0000000C";
+        tmp(17) := x"0000000D";
         return tmp;
     end initMemory;
 

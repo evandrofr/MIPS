@@ -1,7 +1,7 @@
 onerror {exit -code 1}
 vlib work
 vcom -work work MIPS.vho
-vcom -work work Waveform17.vwf.vht
+vcom -work work Waveform26.vwf.vht
 vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FDMIPS_vhd_vec_tst
 vcd file -direction MIPS.msim.vcd
 vcd add -internal FDMIPS_vhd_vec_tst/*

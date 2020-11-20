@@ -5,13 +5,14 @@ USE ieee.numeric_std.ALL; -- Biblioteca IEEE para funções aritméticas
 ENTITY UC IS
   PORT (
     opCode          : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
-    palavraControle : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
+    palavraControle : OUT STD_LOGIC_VECTOR(12 DOWNTO 0)
 	 
   );
 END ENTITY;
 
 ARCHITECTURE comportamento OF UC IS
 
+  ALIAS selJMPAL          : std_logic IS palavraControle(12);
   ALIAS selMuxFecth       : std_logic IS palavraControle(11);
   ALIAS BNE               : std_logic IS palavraControle(10);
   ALIAS BEQ               : std_logic IS palavraControle(9);
@@ -35,6 +36,8 @@ ARCHITECTURE comportamento OF UC IS
   CONSTANT o_andi : std_logic_vector(5 downto 0) := "001100";
   CONSTANT o_slti : std_logic_vector(5 downto 0) := "001010";
   CONSTANT o_lui  : std_logic_vector(5 downto 0) := "001111";
+  
+  CONSTANT o_jal  : std_logic_vector(5 downto 0) := "000011";
 
   
   CONSTANT ins_r  : std_logic_vector(5 downto 0) := "000000";
@@ -42,12 +45,13 @@ ARCHITECTURE comportamento OF UC IS
   SIGNAL   ins_i  : std_logic;
 
 BEGIN
-	ins_i <= '1' WHEN (opCode = o_load OR
-							 opCode = o_jmp  OR 
-                      opCode = o_addi OR
-							 opCode = o_ori  OR
-							 opCode = o_andi OR
-                      opCode = o_slti OR
+	ins_i <= '1' WHEN (opCode = o_store OR
+                      opCode = o_load  OR
+							 opCode = o_jmp   OR 
+                      opCode = o_addi  OR
+							 opCode = o_ori   OR
+							 opCode = o_andi  OR
+                      opCode = o_slti  OR
 							 opCode = o_lui) ELSE '0';
 							 
 	selMuxRegs    <= not ins_i;
@@ -72,27 +76,30 @@ BEGIN
 					"100" WHEN opCode = o_slti  ELSE
 				   "101" WHEN opCode = o_andi  ELSE
 				   "110" WHEN opCode = o_lui   ELSE
-				   "011";
+					"111" WHEN opCode = o_jal   ELSE
+				   "111";
 					
 					
 	wr <= '1' WHEN opCode = o_store ELSE
    '0';
 	 
-	rd <= '1' WHEN opCode = o_load ELSE
+	rd <= '1' WHEN opCode = o_load  ELSE
    '0';
 	
-	BNE <= '1' WHEN opCode = o_bne ELSE
+	BNE <= '1' WHEN opCode = o_bne  ELSE
    '0';
 	
-   BEQ <= '1' WHEN opCode = o_beq ELSE
+   BEQ <= '1' WHEN opCode = o_beq  ELSE
    '0';
 	
 	selUlaRam <= '1' WHEN opCode = o_load ELSE
    '0';
 	
-	selMuxFecth <= '1' WHEN opCode = ins_j ELSE
+	selMuxFecth <= '1' WHEN opCode = ins_j oR opCode = o_jal ELSE
    '0';
-
+	
+   selJMPAL <= '1' WHEN opCode = o_jal ELSE
+	'0';
   
   
 END ARCHITECTURE;
