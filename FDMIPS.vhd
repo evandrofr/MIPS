@@ -12,7 +12,7 @@ entity FDMIPS is
 		ADDR_WIDTH_REG : NATURAL := 5;
 		IMEDIATO_WIDTH : NATURAL := 16;
 		IMEDJMP_WIDTH  : NATURAL := 26;
-		pontosDeControleWIDTH : NATURAL := 13
+		pontosDeControleWIDTH : NATURAL := 14
 	);
      port
     (
@@ -30,10 +30,10 @@ entity FDMIPS is
 end entity;
 
 architecture comportamento of FDMIPS is
-	SIGNAL somaPCSignal, PCROMSignal, BeqFetchSignal,PCInSignal,normalPCSignal, somaSOMADORMUXSignal, dadoEscritaCSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
+	SIGNAL somaPCSignal,somaOitoPCSignal, PCROMSignal, BeqFetchSignal,PCInSignal,normalPCSignal, somaSOMADORMUXSignal, dadoEscritaCSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
 	SIGNAL ULAMuxSignal,MuxRegsSignal  : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL RegAUlaASignal, RegBMuxSignal, MuxUlaBSiginal: STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
-	SIGNAL muxBCREGsignal: STD_LOGIC_VECTOR(ADDR_WIDTH_REG-1 downto 0);
+	SIGNAL muxBCREGsignal, mux31Out: STD_LOGIC_VECTOR(ADDR_WIDTH_REG-1 downto 0);
 	SIGNAL seletorBranchSignal,flagZeroUlaSignal, seletorJMPRSignal: STD_LOGIC;
 	SIGNAL RAMOutSignal, OutMuxULARamSignal: STD_LOGIC_VECTOR(DATA_WIDTH_RAM-1 downto 0);
 	
@@ -58,6 +58,8 @@ architecture comportamento of FDMIPS is
 	ALIAS imediato         : STD_LOGIC_VECTOR(IMEDIATO_WIDTH-1 downto 0) IS BarramentoSignal(IMEDIATO_WIDTH-1 downto 0);
 	ALIAS imedJmp          : STD_LOGIC_VECTOR(IMEDJMP_WIDTH -1 downto 0) IS BarramentoSignal(IMEDJMP_WIDTH -1 downto 0);
 	
+	
+	ALIAS selMux31         : STD_LOGIC IS pontosDeControleSignal(13);
 	ALIAS selJMPAL         : STD_LOGIC IS pontosDeControleSignal(12);
    ALIAS selMuxFecth      : STD_LOGIC IS pontosDeControleSignal(11);
 	ALIAS BNE              : STD_LOGIC IS pontosDeControleSignal(10);
@@ -82,6 +84,15 @@ architecture comportamento of FDMIPS is
 				saida_MUX    => PCInSignal
         );
 	 
+		somaOito : ENTITY work.somaConstante
+		  GENERIC MAP(
+            larguraDados => ADDR_WIDTH_ROM,
+				constante    => 4
+        )
+        PORT MAP(
+            entrada => PCROMSignal,
+            saida   => somaOitoPCSignal
+        );
 	 
 	 	 MUXJMPAL: ENTITY work.muxGenerico2x1
         GENERIC MAP(
@@ -89,7 +100,7 @@ architecture comportamento of FDMIPS is
 		  )
 		  PORT MAP(
             entradaA_MUX => OutMuxULARamSignal,
-				entradaB_MUX => PCROMSignal,
+				entradaB_MUX => somaOitoPCSignal,
 				seletor_MUX  => selJMPAL,
 				saida_MUX    => dadoEscritaCSignal
         );
@@ -140,6 +151,17 @@ architecture comportamento of FDMIPS is
 				saida_MUX    => muxBCREGsignal
         );
 		  
+		 MUX31: ENTITY work.muxGenerico2x1
+        GENERIC MAP(
+		  larguraDados => ADDR_WIDTH_REG
+		  )
+		  PORT MAP(
+            entradaA_MUX => muxBCREGsignal,
+				entradaB_MUX => "11111",
+				seletor_MUX  => selMux31,
+				saida_MUX    => mux31Out
+        );
+		  
 		  
 		 ROM : ENTITY work.ROMMIPS
         GENERIC MAP(
@@ -184,7 +206,7 @@ architecture comportamento of FDMIPS is
             clk              => clk,
             enderecoA        => enderecoA,
 				enderecoB        => enderecoB,
-				enderecoC        => muxBCREGsignal,
+				enderecoC        => mux31Out,
             dadoEscritaC     => dadoEscritaCSignal,
             escreveC         => escreveC,
             saidaA           => RegAUlaASignal,

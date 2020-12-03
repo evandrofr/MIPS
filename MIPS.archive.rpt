@@ -1,5 +1,5 @@
 Archive Project report for MIPS
-Fri Nov 13 19:29:49 2020
+Thu Dec 03 13:10:56 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Fri Nov 13 19:29:49 2020 ;
+; Archive Project Status ; Successful - Thu Dec 03 13:10:56 2020 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; FDMIPS                                ;
 ; Family                 ; Cyclone V                             ;
@@ -59,10 +59,10 @@ Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4833 megabytes
-    Info: Processing ended: Fri Nov 13 19:29:49 2020
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Thu Dec 03 13:10:56 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------+
@@ -86,8 +86,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; UC.vhd                       ;
 ; ULA.vhd                      ;
 ; ulaUC.vhd                    ;
-; Waveform1.vwf                ;
-; Waveform12.vwf               ;
+; Waveform.vwf                 ;
 +------------------------------+
 
 

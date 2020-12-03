@@ -37,6 +37,6 @@ BEGIN
 			  "1000" WHEN ctrlUlaUC = "111" ELSE -- ENTRADA A
 			  "0111";
 			  
-	selJMPR <= '1' WHEN funct = f_jr ELSE '0';
+	selJMPR <= '1' WHEN ctrlUlaUC = "010" AND funct = f_jr ELSE '0';
 
 END ARCHITECTURE;

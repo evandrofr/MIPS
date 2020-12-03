@@ -5,13 +5,14 @@ USE ieee.numeric_std.ALL; -- Biblioteca IEEE para funções aritméticas
 ENTITY UC IS
   PORT (
     opCode          : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
-    palavraControle : OUT STD_LOGIC_VECTOR(12 DOWNTO 0)
+    palavraControle : OUT STD_LOGIC_VECTOR(13 DOWNTO 0)
 	 
   );
 END ENTITY;
 
 ARCHITECTURE comportamento OF UC IS
 
+  ALIAS selMux31          : std_logic IS palavraControle(13);
   ALIAS selJMPAL          : std_logic IS palavraControle(12);
   ALIAS selMuxFecth       : std_logic IS palavraControle(11);
   ALIAS BNE               : std_logic IS palavraControle(10);
@@ -64,6 +65,7 @@ BEGIN
 								opCode = o_addi  OR
 								opCode = o_slti  OR
 								opCode = o_andi  OR
+								opCode = o_jal   OR
 								opCode = o_ori) ELSE '0';
 
   ctrlUlaUC <= "000" WHEN opCode = o_store ELSE
@@ -99,6 +101,9 @@ BEGIN
    '0';
 	
    selJMPAL <= '1' WHEN opCode = o_jal ELSE
+	'0';
+	
+	selMux31 <= '1' WHEN opCode = o_jal ELSE
 	'0';
   
   

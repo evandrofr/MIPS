@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Fri Nov 20 20:12:00 2020
+Thu Dec 03 13:07:05 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -19,28 +19,31 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: Top-level Entity: |FDMIPS
  13. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXJMPR
- 14. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXJMPAL
- 15. Parameter Settings for User Entity Instance: registradorGenerico:PC
- 16. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBEQ
- 17. Parameter Settings for User Entity Instance: somadorGenerico:somaSHIFT
- 18. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBCREG3
- 19. Parameter Settings for User Entity Instance: ROMMIPS:ROM
- 20. Parameter Settings for User Entity Instance: somaConstante:somaQuatro
- 21. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXFETCH
- 22. Parameter Settings for User Entity Instance: bancoRegistradores:BancoRegistradores
- 23. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXRegImed
- 24. Parameter Settings for User Entity Instance: ULA:ULA
- 25. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXUlaRam
- 26. Parameter Settings for User Entity Instance: estendeSinal:Extensor
- 27. Parameter Settings for User Entity Instance: RAMMIPS:RAM
- 28. Port Connectivity Checks: "RAMMIPS:RAM"
- 29. Port Connectivity Checks: "UC:UC"
- 30. Port Connectivity Checks: "muxGenerico2x1:MUXFETCH"
- 31. Port Connectivity Checks: "somadorGenerico:somaSHIFT"
- 32. Port Connectivity Checks: "registradorGenerico:PC"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: somaConstante:somaOito
+ 15. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXJMPAL
+ 16. Parameter Settings for User Entity Instance: registradorGenerico:PC
+ 17. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBEQ
+ 18. Parameter Settings for User Entity Instance: somadorGenerico:somaSHIFT
+ 19. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXBCREG3
+ 20. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX31
+ 21. Parameter Settings for User Entity Instance: ROMMIPS:ROM
+ 22. Parameter Settings for User Entity Instance: somaConstante:somaQuatro
+ 23. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXFETCH
+ 24. Parameter Settings for User Entity Instance: bancoRegistradores:BancoRegistradores
+ 25. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXRegImed
+ 26. Parameter Settings for User Entity Instance: ULA:ULA
+ 27. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXUlaRam
+ 28. Parameter Settings for User Entity Instance: estendeSinal:Extensor
+ 29. Parameter Settings for User Entity Instance: RAMMIPS:RAM
+ 30. Port Connectivity Checks: "RAMMIPS:RAM"
+ 31. Port Connectivity Checks: "UC:UC"
+ 32. Port Connectivity Checks: "muxGenerico2x1:MUXFETCH"
+ 33. Port Connectivity Checks: "muxGenerico2x1:MUX31"
+ 34. Port Connectivity Checks: "somadorGenerico:somaSHIFT"
+ 35. Port Connectivity Checks: "registradorGenerico:PC"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -66,13 +69,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 20 20:12:00 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 03 13:07:05 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; FDMIPS                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 544                                         ;
+; Total registers                 ; 672                                         ;
 ; Total pins                      ; 164                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -222,25 +225,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 648       ;
+; Estimate of Logic utilization (ALMs needed) ; 995       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 865       ;
-;     -- 7 input functions                    ; 144       ;
-;     -- 6 input functions                    ; 198       ;
-;     -- 5 input functions                    ; 82        ;
-;     -- 4 input functions                    ; 198       ;
-;     -- <=3 input functions                  ; 243       ;
+; Combinational ALUT usage for logic          ; 945       ;
+;     -- 7 input functions                    ; 65        ;
+;     -- 6 input functions                    ; 377       ;
+;     -- 5 input functions                    ; 187       ;
+;     -- 4 input functions                    ; 131       ;
+;     -- <=3 input functions                  ; 185       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 544       ;
+; Dedicated logic registers                   ; 672       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 164       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 544       ;
-; Total fan-out                               ; 5879      ;
-; Average fan-out                             ; 3.38      ;
+; Maximum fan-out                             ; 672       ;
+; Total fan-out                               ; 8239      ;
+; Average fan-out                             ; 4.24      ;
 +---------------------------------------------+-----------+
 
 
@@ -249,615 +252,438 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name         ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
-; |FDMIPS                                    ; 865 (1)             ; 544 (0)                   ; 0                 ; 0          ; 164  ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
-;    |ROMMIPS:ROM|                           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
+; |FDMIPS                                    ; 945 (1)             ; 672 (0)                   ; 0                 ; 0          ; 164  ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
+;    |ROMMIPS:ROM|                           ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
 ;    |UC:UC|                                 ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|UC:UC                                 ; UC                  ; work         ;
-;    |ULA:ULA|                               ; 203 (203)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
-;    |bancoRegistradores:BancoRegistradores| ; 410 (410)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
-;    |muxGenerico2x1:MUXBCREG3|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXBCREG3              ; muxGenerico2x1      ; work         ;
-;    |muxGenerico2x1:MUXJMPAL|               ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXJMPAL               ; muxGenerico2x1      ; work         ;
+;    |ULA:ULA|                               ; 209 (209)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
+;    |bancoRegistradores:BancoRegistradores| ; 496 (496)           ; 640 (640)                 ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
+;    |muxGenerico2x1:MUX31|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUX31                  ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUXJMPR|                ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXJMPR                ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUXRegImed|             ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXRegImed             ; muxGenerico2x1      ; work         ;
-;    |muxGenerico2x1:MUXUlaRam|              ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXUlaRam              ; muxGenerico2x1      ; work         ;
-;    |registradorGenerico:PC|                ; 4 (4)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC                ; registradorGenerico ; work         ;
-;    |somaConstante:somaQuatro|              ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaQuatro              ; somaConstante       ; work         ;
+;    |muxGenerico2x1:MUXUlaRam|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXUlaRam              ; muxGenerico2x1      ; work         ;
+;    |registradorGenerico:PC|                ; 5 (5)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC                ; registradorGenerico ; work         ;
+;    |somaConstante:somaQuatro|              ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaQuatro              ; somaConstante       ; work         ;
 ;    |somadorGenerico:somaSHIFT|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somadorGenerico:somaSHIFT             ; somadorGenerico     ; work         ;
-;    |ulaUC:ulaUC|                           ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ulaUC:ulaUC                           ; ulaUC               ; work         ;
+;    |ulaUC:ulaUC|                           ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ulaUC:ulaUC                           ; ulaUC               ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+-------------------------------------------------------+---------------------------------------------+
-; Register name                                         ; Reason for Removal                          ;
-+-------------------------------------------------------+---------------------------------------------+
-; bancoRegistradores:BancoRegistradores|registrador~582 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~646 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~550 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~614 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~838 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~902 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~806 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~870 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~583 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~647 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~551 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~615 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~839 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~903 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~807 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~871 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~584 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~648 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~552 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~616 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~840 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~904 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~808 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~872 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~585 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~649 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~553 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~617 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~841 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~905 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~809 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~873 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~586 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~650 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~554 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~618 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~842 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~906 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~810 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~874 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~587 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~651 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~555 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~619 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~843 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~907 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~811 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~875 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~588 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~652 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~556 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~620 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~844 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~908 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~812 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~876 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~589 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~653 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~557 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~621 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~845 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~909 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~813 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~877 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~590 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~654 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~558 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~622 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~846 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~910 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~814 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~878 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~591 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~655 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~559 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~623 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~847 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~911 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~815 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~879 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~592 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~656 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~560 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~624 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~848 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~912 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~816 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~880 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~593 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~657 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~561 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~625 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~849 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~913 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~817 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~881 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~594 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~658 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~562 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~626 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~850 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~914 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~818 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~882 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~595 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~659 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~563 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~627 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~851 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~915 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~819 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~883 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~596 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~660 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~564 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~628 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~852 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~916 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~820 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~884 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~597 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~661 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~565 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~629 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~853 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~917 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~821 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~885 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~598 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~662 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~566 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~630 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~854 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~918 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~822 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~886 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~599 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~663 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~567 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~631 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~855 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~919 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~823 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~887 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~600 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~664 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~568 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~632 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~856 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~920 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~824 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~888 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~601 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~665 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~569 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~633 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~857 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~921 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~825 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~889 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~602 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~666 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~570 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~634 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~858 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~922 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~826 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~890 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~603 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~667 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~571 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~635 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~859 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~923 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~827 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~891 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~604 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~668 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~572 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~636 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~860 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~924 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~828 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~892 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~605 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~669 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~573 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~637 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~861 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~925 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~829 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~893 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~606 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~670 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~574 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~638 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~862 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~926 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~830 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~894 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~607 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~671 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~575 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~639 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~863 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~927 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~831 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~895 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~608 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~672 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~576 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~640 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~864 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~928 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~832 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~896 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~609 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~673 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~577 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~641 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~865 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~929 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~833 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~897 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~610 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~674 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~578 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~642 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~866 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~930 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~834 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~898 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~611 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~675 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~579 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~643 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~867 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~931 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~835 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~899 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~612 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~676 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~580 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~644 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~868 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~932 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~836 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~900 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~613 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~677 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~581 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~645 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~869 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~933 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~837 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~901 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~454 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~422 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~518 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~486 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~198 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~166 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~262 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~230 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~455 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~199 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~423 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~167 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~519 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~263 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~487 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~231 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~456 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~424 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~520 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~488 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~200 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~168 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~264 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~232 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~457 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~201 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~425 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~169 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~521 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~265 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~489 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~233 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~458 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~426 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~522 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~490 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~202 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~170 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~266 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~234 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~459 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~203 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~427 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~171 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~523 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~267 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~491 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~235 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~460 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~428 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~524 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~492 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~204 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~172 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~268 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~236 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~461 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~205 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~429 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~173 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~525 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~269 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~493 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~237 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~462 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~430 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~526 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~494 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~206 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~174 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~270 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~238 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~463 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~207 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~431 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~175 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~527 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~271 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~495 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~239 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~464 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~432 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~528 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~496 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~208 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~176 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~272 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~240 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~465 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~209 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~433 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~177 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~529 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~273 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~497 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~241 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~466 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~434 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~530 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~498 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~210 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~178 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~274 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~242 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~467 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~211 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~435 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~179 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~531 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~275 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~499 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~243 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~468 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~436 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~532 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~500 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~212 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~180 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~276 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~244 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~469 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~213 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~437 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~181 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~533 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~277 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~501 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~245 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~470 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~438 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~534 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~502 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~214 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~182 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~278 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~246 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~471 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~215 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~439 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~183 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~535 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~279 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~503 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~247 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~472 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~440 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~536 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~504 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~216 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~184 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~280 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~248 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~473 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~217 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~441 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~185 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~537 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~281 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~505 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~249 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~474 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~442 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~538 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~506 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~218 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~186 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~282 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~250 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~475 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~219 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~443 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~187 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~539 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~283 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~507 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~251 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~476 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~444 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~540 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~508 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~220 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~188 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~284 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~252 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~477 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~221 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~445 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~189 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~541 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~285 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~509 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~253 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~478 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~446 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~542 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~510 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~222 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~190 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~286 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~254 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~479 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~223 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~447 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~191 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~543 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~287 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~511 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~255 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~480 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~448 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~544 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~512 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~224 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~192 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~288 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~256 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~481 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~225 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~449 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~193 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~545 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~289 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~513 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~257 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~482 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~450 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~546 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~514 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~226 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~194 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~290 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~258 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~483 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~227 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~451 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~195 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~547 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~291 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~515 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~259 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~484 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~452 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~548 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~516 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~228 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~196 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~292 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~260 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~485 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~229 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~453 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~197 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~549 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~293 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~517 ; Stuck at GND due to stuck port clock_enable ;
-; bancoRegistradores:BancoRegistradores|registrador~261 ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 512               ;                                             ;
-+-------------------------------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-------------------------------------------------------+--------------------------------------+
+; Register name                                         ; Reason for Removal                   ;
++-------------------------------------------------------+--------------------------------------+
+; bancoRegistradores:BancoRegistradores|registrador~582 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~646 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~550 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~614 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~838 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~902 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~806 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~870 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~583 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~647 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~551 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~615 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~839 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~903 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~807 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~871 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~584 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~648 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~552 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~616 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~840 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~904 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~808 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~872 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~585 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~649 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~553 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~617 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~841 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~905 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~809 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~873 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~586 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~650 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~554 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~618 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~842 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~906 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~810 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~874 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~587 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~651 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~555 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~619 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~843 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~907 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~811 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~875 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~588 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~652 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~556 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~620 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~844 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~908 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~812 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~876 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~589 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~653 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~557 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~621 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~845 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~909 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~813 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~877 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~590 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~654 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~558 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~622 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~846 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~910 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~814 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~878 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~591 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~655 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~559 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~623 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~847 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~911 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~815 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~879 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~592 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~656 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~560 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~624 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~848 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~912 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~816 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~880 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~593 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~657 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~561 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~625 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~849 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~913 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~817 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~881 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~594 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~658 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~562 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~626 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~850 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~914 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~818 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~882 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~595 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~659 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~563 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~627 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~851 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~915 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~819 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~883 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~596 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~660 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~564 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~628 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~852 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~916 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~820 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~884 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~597 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~661 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~565 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~629 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~853 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~917 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~821 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~885 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~598 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~662 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~566 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~630 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~854 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~918 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~822 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~886 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~599 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~663 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~567 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~631 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~855 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~919 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~823 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~887 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~600 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~664 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~568 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~632 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~856 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~920 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~824 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~888 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~601 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~665 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~569 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~633 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~857 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~921 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~825 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~889 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~602 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~666 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~570 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~634 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~858 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~922 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~826 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~890 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~603 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~667 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~571 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~635 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~859 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~923 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~827 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~891 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~604 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~668 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~572 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~636 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~860 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~924 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~828 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~892 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~605 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~669 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~573 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~637 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~861 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~925 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~829 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~893 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~606 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~670 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~574 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~638 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~862 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~926 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~830 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~894 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~607 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~671 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~575 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~639 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~863 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~927 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~831 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~895 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~608 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~672 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~576 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~640 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~864 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~928 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~832 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~896 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~609 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~673 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~577 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~641 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~865 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~929 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~833 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~897 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~610 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~674 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~578 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~642 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~866 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~930 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~834 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~898 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~611 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~675 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~579 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~643 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~867 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~931 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~835 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~899 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~612 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~676 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~580 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~644 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~868 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~932 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~836 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~900 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~613 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~677 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~581 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~645 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~869 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~933 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~837 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~901 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~390 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~134 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~518 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~262 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~391 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~135 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~519 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~263 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~392 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~136 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~520 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~264 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~393 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~137 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~521 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~265 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~394 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~138 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~522 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~266 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~395 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~139 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~523 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~267 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~396 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~140 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~524 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~268 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~397 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~141 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~525 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~269 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~398 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~142 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~526 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~270 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~399 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~143 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~527 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~271 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~400 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~144 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~528 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~272 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~401 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~145 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~529 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~273 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~402 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~146 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~530 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~274 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~403 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~147 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~531 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~275 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~404 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~148 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~532 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~276 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~405 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~149 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~533 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~277 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~406 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~150 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~534 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~278 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~407 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~151 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~535 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~279 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~408 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~152 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~536 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~280 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~409 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~153 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~537 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~281 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~410 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~154 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~538 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~282 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~411 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~155 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~539 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~283 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~412 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~156 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~540 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~284 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~413 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~157 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~541 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~285 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~414 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~158 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~542 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~286 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~415 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~159 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~543 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~287 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~416 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~160 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~544 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~288 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~417 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~161 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~545 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~289 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~418 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~162 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~546 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~290 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~419 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~163 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~547 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~291 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~420 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~164 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~548 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~292 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~421 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~165 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~549 ; Stuck at GND due to stuck port clock ;
+; bancoRegistradores:BancoRegistradores|registrador~293 ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 384               ;                                      ;
++-------------------------------------------------------+--------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                     ;
-+-------------------------------------------------------+--------------------------------+--------------------------------------------------------+
-; Register name                                         ; Reason for Removal             ; Registers Removed due to This Register                 ;
-+-------------------------------------------------------+--------------------------------+--------------------------------------------------------+
-; bancoRegistradores:BancoRegistradores|registrador~466 ; Stuck at GND                   ; bancoRegistradores:BancoRegistradores|registrador~467, ;
-;                                                       ; due to stuck port clock_enable ; bancoRegistradores:BancoRegistradores|registrador~211, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~435, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~179, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~531, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~275, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~499, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~243, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~468, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~436, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~532, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~500, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~212, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~180, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~276, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~244, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~469, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~213, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~437, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~181, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~533, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~277, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~501, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~245, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~470, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~438, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~534, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~502, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~214, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~182, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~278, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~246  ;
-; bancoRegistradores:BancoRegistradores|registrador~456 ; Stuck at GND                   ; bancoRegistradores:BancoRegistradores|registrador~457, ;
-;                                                       ; due to stuck port clock_enable ; bancoRegistradores:BancoRegistradores|registrador~201, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~425, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~169, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~521, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~265, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~489, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~233, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~458, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~426, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~522, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~490, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~202, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~170, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~266, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~234  ;
-; bancoRegistradores:BancoRegistradores|registrador~454 ; Stuck at GND                   ; bancoRegistradores:BancoRegistradores|registrador~455, ;
-;                                                       ; due to stuck port clock_enable ; bancoRegistradores:BancoRegistradores|registrador~199, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~423, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~167, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~519, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~263, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~487, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~231  ;
-; bancoRegistradores:BancoRegistradores|registrador~459 ; Stuck at GND                   ; bancoRegistradores:BancoRegistradores|registrador~460, ;
-;                                                       ; due to stuck port clock_enable ; bancoRegistradores:BancoRegistradores|registrador~428, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~524, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~492, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~204, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~172, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~268, ;
-;                                                       ;                                ; bancoRegistradores:BancoRegistradores|registrador~236  ;
-+-------------------------------------------------------+--------------------------------+--------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                              ;
++-------------------------------------------------------+-------------------------+--------------------------------------------------------+
+; Register name                                         ; Reason for Removal      ; Registers Removed due to This Register                 ;
++-------------------------------------------------------+-------------------------+--------------------------------------------------------+
+; bancoRegistradores:BancoRegistradores|registrador~582 ; Stuck at GND            ; bancoRegistradores:BancoRegistradores|registrador~583, ;
+;                                                       ; due to stuck port clock ; bancoRegistradores:BancoRegistradores|registrador~647, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~551, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~615, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~839, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~903, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~807, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~871, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~391, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~135, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~519, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~263  ;
+; bancoRegistradores:BancoRegistradores|registrador~518 ; Stuck at GND            ; bancoRegistradores:BancoRegistradores|registrador~392, ;
+;                                                       ; due to stuck port clock ; bancoRegistradores:BancoRegistradores|registrador~136, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~520, ;
+;                                                       ;                         ; bancoRegistradores:BancoRegistradores|registrador~264  ;
++-------------------------------------------------------+-------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -865,12 +691,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 544   ;
+; Total registers                              ; 672   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 640   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 514   ;
+; Number of registers using Clock Enable       ; 642   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -883,7 +709,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[0]          ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[30]         ;
 ; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[18]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUXRegImed|saida_MUX[18] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUXRegImed|saida_MUX[13] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUX31|saida_MUX[2]       ;
 ; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ULA:ULA|saida[4]                        ;
 ; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ULA:ULA|saida[31]                       ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ulaUC:ulaUC|ulaOp[2]                    ;
@@ -903,7 +730,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADDR_WIDTH_REG        ; 5     ; Signed Integer                         ;
 ; IMEDIATO_WIDTH        ; 16    ; Signed Integer                         ;
 ; IMEDJMP_WIDTH         ; 26    ; Signed Integer                         ;
-; pontosDeControleWIDTH ; 13    ; Signed Integer                         ;
+; pontosDeControleWIDTH ; 14    ; Signed Integer                         ;
 +-----------------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -914,6 +741,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                       ;
 +----------------+-------+--------------------------------------------+
 ; larguradados   ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somaConstante:somaOito ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                             ;
+; constante      ; 4     ; Signed Integer                             ;
 +----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -965,6 +803,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------+
 ; larguradados   ; 5     ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX31 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; larguradados   ; 5     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1092,6 +940,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+----------+--------------+
 
 
++--------------------------------------------------+
+; Port Connectivity Checks: "muxGenerico2x1:MUX31" ;
++--------------+-------+----------+----------------+
+; Port         ; Type  ; Severity ; Details        ;
++--------------+-------+----------+----------------+
+; entradab_mux ; Input ; Info     ; Stuck at VCC   ;
++--------------+-------+----------+----------------+
+
+
 +-------------------------------------------------------+
 ; Port Connectivity Checks: "somadorGenerico:somaSHIFT" ;
 +----------------+-------+----------+-------------------+
@@ -1116,29 +973,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 544                         ;
-;     ENA               ; 514                         ;
+; arriav_ff             ; 672                         ;
+;     ENA               ; 2                           ;
+;     ENA SLD           ; 640                         ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 867                         ;
+; arriav_lcell_comb     ; 946                         ;
 ;     arith             ; 125                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 30                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 29                          ;
 ;         5 data inputs ; 64                          ;
-;     extend            ; 144                         ;
-;         7 data inputs ; 144                         ;
-;     normal            ; 598                         ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 143                         ;
-;         3 data inputs ; 52                          ;
-;         4 data inputs ; 169                         ;
-;         5 data inputs ; 18                          ;
-;         6 data inputs ; 198                         ;
+;     extend            ; 65                          ;
+;         7 data inputs ; 65                          ;
+;     normal            ; 756                         ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 111                         ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 102                         ;
+;         5 data inputs ; 123                         ;
+;         6 data inputs ; 377                         ;
 ; boundary_port         ; 164                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.30                       ;
-; Average LUT depth     ; 10.24                       ;
+; Max LUT depth         ; 13.50                       ;
+; Average LUT depth     ; 10.54                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1147,7 +1005,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1157,7 +1015,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 20 20:11:37 2020
+    Info: Processing started: Thu Dec 03 13:06:45 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1167,8 +1025,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file bancore
     Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd Line: 30
     Info (12023): Found entity 1: bancoRegistradores File: C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file rommips.vhd
-    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 16
-    Info (12023): Found entity 1: ROMMIPS File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 6
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 15
+    Info (12023): Found entity 1: ROMMIPS File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rammips.vhd
     Info (12022): Found design unit 1: RAMMIPS-assincrona File: C:/Users/evand/OneDrive/Documents/MIPS/RAMMIPS.vhd Line: 19
     Info (12023): Found entity 1: RAMMIPS File: C:/Users/evand/OneDrive/Documents/MIPS/RAMMIPS.vhd Line: 6
@@ -1200,34 +1058,37 @@ Info (12021): Found 2 design units, including 1 entities, in source file ulauc.v
     Info (12022): Found design unit 1: ulaUC-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/ulaUC.vhd Line: 14
     Info (12023): Found entity 1: ulaUC File: C:/Users/evand/OneDrive/Documents/MIPS/ulaUC.vhd Line: 5
 Info (12127): Elaborating entity "FDMIPS" for the top level hierarchy
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXJMPR" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 74
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 96
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 121
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 132
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 144
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaQuatro" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 155
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 178
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 205
-Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 228
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 239
-Info (12128): Elaborating entity "ulaUC" for hierarchy "ulaUC:ulaUC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 245
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 253
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXJMPR" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 76
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaOito" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 87
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 107
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 132
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 143
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 166
+Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(18): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 18
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 200
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 227
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 250
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 261
+Info (12128): Elaborating entity "ulaUC" for hierarchy "ulaUC:ulaUC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 267
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 275
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "bancoRegistradores:BancoRegistradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd Line: 61
-    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 77
+    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 18
+Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: C:/Users/evand/OneDrive/Documents/MIPS/ROMcontent.mif Line: 1
+    Warning (113026): Memory Initialization File Address 16 is not initialized File: C:/Users/evand/OneDrive/Documents/MIPS/ROMcontent.mif Line: 1
+    Warning (113027): Addresses ranging from 18 to 30 are not initialized File: C:/Users/evand/OneDrive/Documents/MIPS/ROMcontent.mif Line: 1
+    Warning (113027): Addresses ranging from 32 to 63 are not initialized File: C:/Users/evand/OneDrive/Documents/MIPS/ROMcontent.mif Line: 1
 Info (286030): Timing-Driven Synthesis is running
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "bancoRegistradores:BancoRegistradores|registrador~1062" File: C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd Line: 61
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1526 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1746 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 163 output pins
-    Info (21061): Implemented 1362 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4893 megabytes
-    Info: Processing ended: Fri Nov 20 20:12:00 2020
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:44
+    Info (21061): Implemented 1582 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Thu Dec 03 13:07:05 2020
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:37
 
 
