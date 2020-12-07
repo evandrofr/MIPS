@@ -18,6 +18,7 @@ entity FDMIPS is
     (
 		  -------------IN-------------
 		  CLOCK_50   :  IN STD_LOGIC;
+		  SW         :  IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		  -------------OUT------------
 		  ULAout           : out STD_LOGIC_VECTOR(DATA_WIDTH_REG - 1 downto 0);
 		  PCout            : out STD_LOGIC_VECTOR(ADDR_WIDTH_ROM - 1 downto 0); 
@@ -304,7 +305,8 @@ architecture comportamento of FDMIPS is
 		  UlaAout <= RegAUlaASignal;
 		  UlaBout <= MuxUlaBSiginal;
 		  
-		  displaySignal <= PCROMSignal(23 downto 0);
+		  displaySignal <= PCROMSignal(23 downto 0) WHEN SW = "00" ELSE
+		  ULAMuxSignal(23 downto 0);
 		  
         DISPLAY0 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(3 downto 0),   saida7seg => HEX0);
         DISPLAY1 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(7 downto 4),   saida7seg => HEX1);

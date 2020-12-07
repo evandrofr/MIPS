@@ -1,5 +1,7 @@
 |FDMIPS
 CLOCK_50 => scale_clock:CLOCK.clk_50Mhz
+SW[0] => Equal0.IN1
+SW[1] => Equal0.IN0
 ULAout[0] <= ula:ULA.saida[0]
 ULAout[1] <= ula:ULA.saida[1]
 ULAout[2] <= ula:ULA.saida[2]
