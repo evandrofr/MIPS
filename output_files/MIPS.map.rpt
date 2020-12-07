@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Thu Dec 03 13:07:05 2020
+Mon Dec 07 12:48:32 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,15 +35,22 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  27. Parameter Settings for User Entity Instance: muxGenerico2x1:MUXUlaRam
  28. Parameter Settings for User Entity Instance: estendeSinal:Extensor
  29. Parameter Settings for User Entity Instance: RAMMIPS:RAM
- 30. Port Connectivity Checks: "RAMMIPS:RAM"
- 31. Port Connectivity Checks: "UC:UC"
- 32. Port Connectivity Checks: "muxGenerico2x1:MUXFETCH"
- 33. Port Connectivity Checks: "muxGenerico2x1:MUX31"
- 34. Port Connectivity Checks: "somadorGenerico:somaSHIFT"
- 35. Port Connectivity Checks: "registradorGenerico:PC"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 30. Port Connectivity Checks: "conversorHex7Seg:DISPLAY5"
+ 31. Port Connectivity Checks: "conversorHex7Seg:DISPLAY4"
+ 32. Port Connectivity Checks: "conversorHex7Seg:DISPLAY3"
+ 33. Port Connectivity Checks: "conversorHex7Seg:DISPLAY2"
+ 34. Port Connectivity Checks: "conversorHex7Seg:DISPLAY1"
+ 35. Port Connectivity Checks: "conversorHex7Seg:DISPLAY0"
+ 36. Port Connectivity Checks: "RAMMIPS:RAM"
+ 37. Port Connectivity Checks: "UC:UC"
+ 38. Port Connectivity Checks: "muxGenerico2x1:MUXFETCH"
+ 39. Port Connectivity Checks: "muxGenerico2x1:MUX31"
+ 40. Port Connectivity Checks: "somadorGenerico:somaSHIFT"
+ 41. Port Connectivity Checks: "registradorGenerico:PC"
+ 42. Port Connectivity Checks: "scale_clock:CLOCK"
+ 43. Post-Synthesis Netlist Statistics for Top Partition
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -69,14 +76,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 03 13:07:05 2020       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 07 12:48:32 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; FDMIPS                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 672                                         ;
-; Total pins                      ; 164                                         ;
+; Total registers                 ; 697                                         ;
+; Total pins                      ; 171                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -217,34 +224,36 @@ refer to the applicable agreement for further details.
 ; somadorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/evand/OneDrive/Documents/MIPS/somadorGenerico.vhd     ;         ;
 ; estendeSinal.vhd                 ; yes             ; User VHDL File  ; C:/Users/evand/OneDrive/Documents/MIPS/estendeSinal.vhd        ;         ;
 ; ulaUC.vhd                        ; yes             ; User VHDL File  ; C:/Users/evand/OneDrive/Documents/MIPS/ulaUC.vhd               ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/evand/OneDrive/Documents/MIPS/conversorHex7Seg.vhd    ;         ;
+; scale_clock.vhd                  ; yes             ; User VHDL File  ; C:/Users/evand/OneDrive/Documents/MIPS/scale_clock.vhd         ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 995       ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 945       ;
-;     -- 7 input functions                    ; 65        ;
-;     -- 6 input functions                    ; 377       ;
-;     -- 5 input functions                    ; 187       ;
-;     -- 4 input functions                    ; 131       ;
-;     -- <=3 input functions                  ; 185       ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 672       ;
-;                                             ;           ;
-; I/O pins                                    ; 164       ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 672       ;
-; Total fan-out                               ; 8239      ;
-; Average fan-out                             ; 4.24      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1025                        ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 1005                        ;
+;     -- 7 input functions                    ; 65                          ;
+;     -- 6 input functions                    ; 377                         ;
+;     -- 5 input functions                    ; 185                         ;
+;     -- 4 input functions                    ; 157                         ;
+;     -- <=3 input functions                  ; 221                         ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 697                         ;
+;                                             ;                             ;
+; I/O pins                                    ; 171                         ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; scale_clock:CLOCK|clk_2Hz_i ;
+; Maximum fan-out                             ; 673                         ;
+; Total fan-out                               ; 8489                        ;
+; Average fan-out                             ; 4.15                        ;
++---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -252,17 +261,24 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name         ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
-; |FDMIPS                                    ; 945 (1)             ; 672 (0)                   ; 0                 ; 0          ; 164  ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
+; |FDMIPS                                    ; 1005 (2)            ; 697 (0)                   ; 0                 ; 0          ; 171  ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
 ;    |ROMMIPS:ROM|                           ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
-;    |UC:UC|                                 ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|UC:UC                                 ; UC                  ; work         ;
-;    |ULA:ULA|                               ; 209 (209)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
-;    |bancoRegistradores:BancoRegistradores| ; 496 (496)           ; 640 (640)                 ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
+;    |UC:UC|                                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|UC:UC                                 ; UC                  ; work         ;
+;    |ULA:ULA|                               ; 198 (198)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
+;    |bancoRegistradores:BancoRegistradores| ; 495 (495)           ; 640 (640)                 ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
+;    |conversorHex7Seg:DISPLAY0|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY0             ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY1|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY1             ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY2|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY2             ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY3|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY3             ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY4|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY4             ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY5|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY5             ; conversorHex7Seg    ; work         ;
 ;    |muxGenerico2x1:MUX31|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUX31                  ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUXJMPR|                ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXJMPR                ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUXRegImed|             ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXRegImed             ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUXUlaRam|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|muxGenerico2x1:MUXUlaRam              ; muxGenerico2x1      ; work         ;
 ;    |registradorGenerico:PC|                ; 5 (5)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|registradorGenerico:PC                ; registradorGenerico ; work         ;
-;    |somaConstante:somaQuatro|              ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaQuatro              ; somaConstante       ; work         ;
+;    |scale_clock:CLOCK|                     ; 30 (30)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|scale_clock:CLOCK                     ; scale_clock         ; work         ;
+;    |somaConstante:somaOito|                ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somaConstante:somaOito                ; somaConstante       ; work         ;
 ;    |somadorGenerico:somaSHIFT|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|somadorGenerico:somaSHIFT             ; somadorGenerico     ; work         ;
 ;    |ulaUC:ulaUC|                           ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ulaUC:ulaUC                           ; ulaUC               ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
@@ -691,8 +707,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 672   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 697   ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 640   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -708,12 +724,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[0]          ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[30]         ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[18]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUXRegImed|saida_MUX[13] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUX31|saida_MUX[2]       ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |FDMIPS|registradorGenerico:PC|DOUT[27]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUXRegImed|saida_MUX[20] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FDMIPS|muxGenerico2x1:MUX31|saida_MUX[3]       ;
 ; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ULA:ULA|saida[4]                        ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ULA:ULA|saida[31]                       ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ulaUC:ulaUC|ulaOp[2]                    ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ULA:ULA|saida[26]                       ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FDMIPS|ulaUC:ulaUC|ulaOp[0]                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -913,6 +929,72 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY5" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY1" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY0" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
 +-----------------------------------------+
 ; Port Connectivity Checks: "RAMMIPS:RAM" ;
 +------+-------+----------+---------------+
@@ -968,35 +1050,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+------------------------+
 
 
++-----------------------------------------------+
+; Port Connectivity Checks: "scale_clock:CLOCK" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; rst  ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 672                         ;
+; arriav_ff             ; 697                         ;
 ;     ENA               ; 2                           ;
 ;     ENA SLD           ; 640                         ;
-;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 946                         ;
-;     arith             ; 125                         ;
+;     SCLR              ; 24                          ;
+;     plain             ; 31                          ;
+; arriav_lcell_comb     ; 1006                        ;
+;     arith             ; 149                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 30                          ;
+;         1 data inputs ; 54                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 29                          ;
 ;         5 data inputs ; 64                          ;
 ;     extend            ; 65                          ;
 ;         7 data inputs ; 65                          ;
-;     normal            ; 756                         ;
+;     normal            ; 792                         ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 111                         ;
-;         3 data inputs ; 26                          ;
-;         4 data inputs ; 102                         ;
-;         5 data inputs ; 123                         ;
+;         2 data inputs ; 126                         ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 128                         ;
+;         5 data inputs ; 121                         ;
 ;         6 data inputs ; 377                         ;
-; boundary_port         ; 164                         ;
+; boundary_port         ; 171                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.50                       ;
-; Average LUT depth     ; 10.54                       ;
+; Max LUT depth         ; 13.60                       ;
+; Average LUT depth     ; 9.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1005,7 +1097,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1015,7 +1107,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Dec 03 13:06:45 2020
+    Info: Processing started: Mon Dec 07 12:48:10 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1037,7 +1129,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/ULA.vhd Line: 19
     Info (12023): Found entity 1: ULA File: C:/Users/evand/OneDrive/Documents/MIPS/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fdmips.vhd
-    Info (12022): Found design unit 1: FDMIPS-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 32
+    Info (12022): Found design unit 1: FDMIPS-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 31
     Info (12023): Found entity 1: FDMIPS File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
     Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/somaConstante.vhd Line: 16
@@ -1057,20 +1149,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file estende
 Info (12021): Found 2 design units, including 1 entities, in source file ulauc.vhd
     Info (12022): Found design unit 1: ulaUC-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/ulaUC.vhd Line: 14
     Info (12023): Found entity 1: ulaUC File: C:/Users/evand/OneDrive/Documents/MIPS/ulaUC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/conversorHex7Seg.vhd Line: 16
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/evand/OneDrive/Documents/MIPS/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file scale_clock.vhd
+    Info (12022): Found design unit 1: scale_clock-Behavioral File: C:/Users/evand/OneDrive/Documents/MIPS/scale_clock.vhd Line: 15
+    Info (12023): Found entity 1: scale_clock File: C:/Users/evand/OneDrive/Documents/MIPS/scale_clock.vhd Line: 8
 Info (12127): Elaborating entity "FDMIPS" for the top level hierarchy
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXJMPR" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 76
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaOito" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 87
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 107
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 132
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 143
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 166
+Info (12128): Elaborating entity "scale_clock" for hierarchy "scale_clock:CLOCK" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 78
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXJMPR" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 89
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaOito" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 100
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 120
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 145
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 156
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 179
 Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(18): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 18
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 200
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 227
-Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 250
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 261
-Info (12128): Elaborating entity "ulaUC" for hierarchy "ulaUC:ulaUC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 267
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 275
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 213
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 240
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 263
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 274
+Info (12128): Elaborating entity "ulaUC" for hierarchy "ulaUC:ulaUC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 280
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 288
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DISPLAY0" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 309
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "bancoRegistradores:BancoRegistradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd Line: 61
     Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 18
@@ -1081,14 +1181,14 @@ Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime so
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1746 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1813 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 163 output pins
-    Info (21061): Implemented 1582 logic cells
+    Info (21059): Implemented 170 output pins
+    Info (21061): Implemented 1642 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4890 megabytes
-    Info: Processing ended: Thu Dec 03 13:07:05 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Mon Dec 07 12:48:32 2020
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:40
 
 

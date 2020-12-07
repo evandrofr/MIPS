@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/12/2020 15:17:40"
+-- Generated on "12/07/2020 12:21:39"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FDMIPS
 -- 
@@ -34,11 +34,29 @@ ARCHITECTURE FDMIPS_arch OF FDMIPS_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
+SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL PCout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL UlaAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL UlaBOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FDMIPS
 	PORT (
 	clk : IN STD_LOGIC;
-	ULAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	HEX0 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	PCout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaBOut : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ULAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -46,6 +64,15 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
+	HEX0 => HEX0,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	HEX5 => HEX5,
+	PCout => PCout,
+	UlaAout => UlaAout,
+	UlaBOut => UlaBOut,
 	ULAout => ULAout
 	);
 
@@ -57,7 +84,7 @@ LOOP
 	WAIT FOR 20000 ps;
 	clk <= '1';
 	WAIT FOR 20000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 END FDMIPS_arch;

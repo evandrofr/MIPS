@@ -17,24 +17,23 @@ entity FDMIPS is
      port
     (
 		  -------------IN-------------
-		  clk              : in  STD_LOGIC;
+		  CLOCK_50   :  IN STD_LOGIC;
 		  -------------OUT------------
 		  ULAout           : out STD_LOGIC_VECTOR(DATA_WIDTH_REG - 1 downto 0);
 		  PCout            : out STD_LOGIC_VECTOR(ADDR_WIDTH_ROM - 1 downto 0); 
- 		  MuxBEQout        : out STD_LOGIC_VECTOR(ADDR_WIDTH_ROM - 1 downto 0);
-		  flagZeroOut      : out STD_LOGIC;
-		  BEQOut           : out STD_LOGIC;
-		  andOut           : out STD_LOGIC;
-		  UlaAout, UlaBOut : out STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0)
+		  UlaAout, UlaBOut : out STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
+		  
+		  
+		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
     );
 end entity;
 
 architecture comportamento of FDMIPS is
 	SIGNAL somaPCSignal,somaOitoPCSignal, PCROMSignal, BeqFetchSignal,PCInSignal,normalPCSignal, somaSOMADORMUXSignal, dadoEscritaCSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
-	SIGNAL ULAMuxSignal,MuxRegsSignal  : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
+	SIGNAL ULAMuxSignal : STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL RegAUlaASignal, RegBMuxSignal, MuxUlaBSiginal: STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 	SIGNAL muxBCREGsignal, mux31Out: STD_LOGIC_VECTOR(ADDR_WIDTH_REG-1 downto 0);
-	SIGNAL seletorBranchSignal,flagZeroUlaSignal, seletorJMPRSignal: STD_LOGIC;
+	SIGNAL seletorBranchSignal,flagZeroUlaSignal: STD_LOGIC;
 	SIGNAL RAMOutSignal, OutMuxULARamSignal: STD_LOGIC_VECTOR(DATA_WIDTH_RAM-1 downto 0);
 	
 	SIGNAL pontosDeControleSignal: STD_LOGIC_VECTOR(pontosDeControleWIDTH-1 downto 0);
@@ -45,6 +44,9 @@ architecture comportamento of FDMIPS is
 	
 	SIGNAL ulaOP                 : STD_LOGIC_VECTOR(3 downto 0);
 	SIGNAL selJMPR               : STD_LOGIC;
+	
+	SIGNAL displaySignal         : STD_LOGIC_VECTOR(23 DOWNTO 0);
+	SIGNAL clkSignal: STD_LOGIC;
 	
 	
 	SIGNAL BarramentoSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
@@ -73,6 +75,17 @@ architecture comportamento of FDMIPS is
 	ALIAS rd               : STD_LOGIC IS pontosDeControleSignal(0);
 
     BEGIN
+	 	CLOCK : ENTITY work.scale_clock
+			PORT MAP(
+				 clk_50Mhz  => CLOCK_50,
+				 rst        => '0',
+				 clk_2Hz    => clkSignal
+			);
+	 
+	 
+	 
+	 
+	 
 	 	MUXJMPR: ENTITY work.muxGenerico2x1
         GENERIC MAP(
 		  larguraDados => ADDR_WIDTH_ROM
@@ -112,7 +125,7 @@ architecture comportamento of FDMIPS is
             DIN    => PCInSignal,
             DOUT   => PCROMSignal,
             ENABLE => '1',
-            CLK    => clk,
+            CLK    => clkSignal,
             RST    => '0'
         );
 		 MUXBEQ: ENTITY work.muxGenerico2x1
@@ -169,7 +182,7 @@ architecture comportamento of FDMIPS is
 				addrWidth => ADDR_WIDTH_ROM
         )
         PORT MAP(
-			 clk => clk,      
+			 clk => clkSignal,      
           Endereco => PCROMSignal,
           Dado     => BarramentoSignal
         );
@@ -203,7 +216,7 @@ architecture comportamento of FDMIPS is
 		  larguraEndBancoRegs => ADDR_WIDTH_REG
 		  )
         PORT MAP(
-            clk              => clk,
+            clk              => clkSignal,
             enderecoA        => enderecoA,
 				enderecoB        => enderecoB,
 				enderecoC        => mux31Out,
@@ -278,7 +291,7 @@ architecture comportamento of FDMIPS is
 				addrWidth => ADDR_WIDTH_RAM
         )
         PORT MAP(
-			 clk => clk,      
+			 clk => clkSignal,      
           Endereco => ULAMuxSignal,
           Dado_in     => RegBMuxSignal,
 			 Dado_out    => RAMOutSignal,
@@ -288,11 +301,16 @@ architecture comportamento of FDMIPS is
 		
 		  ULAout <= ULAMuxSignal;
 		  PCout  <= PCROMSignal;
-		  MuxBEQout <= somaSOMADORMUXSignal;
-		  flagZeroOut <= flagZeroUlaSignal;
-		  BEQOut    <= BEQ;
-		  andOut    <= seletorBranchSignal;
 		  UlaAout <= RegAUlaASignal;
 		  UlaBout <= MuxUlaBSiginal;
+		  
+		  displaySignal <= PCROMSignal(23 downto 0);
+		  
+        DISPLAY0 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(3 downto 0),   saida7seg => HEX0);
+        DISPLAY1 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(7 downto 4),   saida7seg => HEX1);
+        DISPLAY2 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(11 downto 8),  saida7seg => HEX2);
+        DISPLAY3 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(15 downto 12), saida7seg => HEX3);
+        DISPLAY4 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(19 downto 16), saida7seg => HEX4);
+        DISPLAY5 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(23 downto 20), saida7seg => HEX5);
 		  
 END architecture;
