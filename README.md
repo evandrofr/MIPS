@@ -15,6 +15,12 @@ Para testes, o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (S
 
 ### Instruções:
 
+#### Formato:
+
+<p align="center">
+  <img src="ji.png" width="1000" title="RTL">
+</p>
+
 #### Grupo A
 
 ##### As instruções de referência à memória:
