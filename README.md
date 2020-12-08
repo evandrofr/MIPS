@@ -4,7 +4,7 @@
 
 Este projeto é um processador RISC de 32 bits, compatível com o MIPS DLX. </br>
 
-Para teste o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (Selecionado através do SWITCH 0).
+Para testes, o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (Selecionado através do SWITCH 0).
 
 
 ### Switches
