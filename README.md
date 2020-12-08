@@ -20,63 +20,63 @@ Para teste o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (Sel
 ##### As instruções de referência à memória:
 <ul>
 
-<li> Carrega palavra (load word: lw); </li>
+<li> lw - Carrega palavra ; </li>
 
-<li> Armazena palavra (store word: sw). </li>
-
-</ul>
-
-##### As instruções lógico-aritméticas:
-<ul>
-
-<li> Soma (add); </li> 
-
-<li> Subtração (sub); </li> 
-
-<li> E lógico (AND); </li> 
-
-<li> OU lógico (OR); </li> 
-
-<li> Comparação menor que (set if less than: slt). </li> 
+<li> sw - Armazena palavra. </li>
 
 </ul>
 
-
-##### As instruções de desvio:
+##### Instruções lógico-aritméticas:
 <ul>
-<li> Desvio se igual (branch equal: beq); </li>
 
-<li> Salto incondicional (jump: j). </li>
+<li> add - Soma; </li> 
+
+<li> sub - Subtração; </li> 
+
+<li> AND - E lógico; </li> 
+
+<li> OR - OU lógico; </li> 
+
+<li> slt - Comparação menor que. </li> 
+
+</ul>
+
+
+##### Instruções de desvio:
+<ul>
+<li> beq - Desvio se igual; </li>
+
+<li> j - Salto incondicional. </li>
 </ul> 
 
 #### Grupo B
 
-##### A instrução de carga:
+##### Instrução de carga:
 <ul>
 
-<li> Carrega imediato para 16 bits MSB (load upper immediate: lui). </li> 
+<li> lui - Carrega imediato para 16 bits MSB. </li> 
 </ul>
 
-#### As instruções lógico-aritméticas:
+#### Instruções lógico-aritméticas:
 <ul>
 
-<li> Soma com imediato (addi); </li> 
+<li> addi - Soma com imediato; </li> 
 
-<li> E lógico com imediato (ANDI); </li> 
+<li> ANDI - E lógico com imediato; </li> 
 
-<li> OU lógico com imediato (ORI); </li> 
+<li> ORI - OU lógico com imediato; </li> 
 
-<li> Comparação menor que imediato (set if less than: slti). </li> 
+<li> slti - Comparação menor que imediato. </li> 
 </ul>
 
-##### As instruções de desvio:
+##### Instruções de desvio:
 <ul>
 
-<li> Desvio se não igual (branch not equal: bne); </li> 
+<li> bne - Desvio se não igual; </li> 
 
-<li> Salto e conecta (jump and link: jal); </li> 
+<li> jal - Salto e conecta; </li> 
 
-<li> Salto por registrador (jump register: jr). </li> 
+<li> jr - Salto por registrador. </li> 
 
 </ul>
 
