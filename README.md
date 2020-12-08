@@ -40,7 +40,8 @@ Para teste o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (Sel
 <li> Desvio se igual (branch equal: beq); </li>
 
 <li> Salto incondicional (jump: j). </li>
-</ul>
+</ul> 
+
 #### Grupo B
 
 ##### A instrução de carga:
