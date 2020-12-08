@@ -9,7 +9,7 @@ Para testes, o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (S
 
 ### Switches
 <ul>
-  <li>SW 0: Seleciona o que é mostrado no display de 7 segmentos (ULA quando 0 / PC quando 1) </li>
+  <li>SW 0: Seleciona o que é mostrado no display de 7 segmentos (PC quando 0 / ULA quando 1) </li>
 </ul>
 
 
