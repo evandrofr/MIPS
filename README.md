@@ -82,5 +82,5 @@ Para testes, o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (S
 
 
 <p align="center">
-  <img src="MIPSRTL.png" width="1000" title="RTL">
+  <img src="MIPSRTL-1.png" width="1000" title="RTL">
 </p>
