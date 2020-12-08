@@ -18,12 +18,11 @@ entity FDMIPS is
     (
 		  -------------IN-------------
 		  CLOCK_50   :  IN STD_LOGIC;
-		  SW         :  IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		  SW         :  IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 		  -------------OUT------------
-		  ULAout           : out STD_LOGIC_VECTOR(DATA_WIDTH_REG - 1 downto 0);
-		  PCout            : out STD_LOGIC_VECTOR(ADDR_WIDTH_ROM - 1 downto 0); 
-		  UlaAout, UlaBOut : out STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
-		  
+		  ULAout           : OUT STD_LOGIC_VECTOR(DATA_WIDTH_REG - 1 downto 0);
+		  PCout            : OUT STD_LOGIC_VECTOR(ADDR_WIDTH_ROM - 1 downto 0); 
+		  UlaAout, UlaBOut : OUT STD_LOGIC_VECTOR(DATA_WIDTH_REG-1 downto 0);
 		  
 		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
     );
@@ -47,7 +46,7 @@ architecture comportamento of FDMIPS is
 	SIGNAL selJMPR               : STD_LOGIC;
 	
 	SIGNAL displaySignal         : STD_LOGIC_VECTOR(23 DOWNTO 0);
-	SIGNAL clkSignal: STD_LOGIC;
+	SIGNAL clkSignal             : STD_LOGIC;
 	
 	
 	SIGNAL BarramentoSignal: STD_LOGIC_VECTOR(ADDR_WIDTH_ROM-1 downto 0);
@@ -126,7 +125,7 @@ architecture comportamento of FDMIPS is
             DIN    => PCInSignal,
             DOUT   => PCROMSignal,
             ENABLE => '1',
-            CLK    => clkSignal,
+            CLK    => clkSignal, --CLOCK_50,
             RST    => '0'
         );
 		 MUXBEQ: ENTITY work.muxGenerico2x1
@@ -183,7 +182,7 @@ architecture comportamento of FDMIPS is
 				addrWidth => ADDR_WIDTH_ROM
         )
         PORT MAP(
-			 clk => clkSignal,      
+			 clk => clkSignal, --CLOCK_50,      
           Endereco => PCROMSignal,
           Dado     => BarramentoSignal
         );
@@ -217,7 +216,7 @@ architecture comportamento of FDMIPS is
 		  larguraEndBancoRegs => ADDR_WIDTH_REG
 		  )
         PORT MAP(
-            clk              => clkSignal,
+            clk              => clkSignal, --CLOCK_50,
             enderecoA        => enderecoA,
 				enderecoB        => enderecoB,
 				enderecoC        => mux31Out,
@@ -292,7 +291,7 @@ architecture comportamento of FDMIPS is
 				addrWidth => ADDR_WIDTH_RAM
         )
         PORT MAP(
-			 clk => clkSignal,      
+			 clk => clkSignal, --CLOCK_50      
           Endereco => ULAMuxSignal,
           Dado_in     => RegBMuxSignal,
 			 Dado_out    => RAMOutSignal,
@@ -300,12 +299,12 @@ architecture comportamento of FDMIPS is
         );
 
 		
-		  ULAout <= ULAMuxSignal;
-		  PCout  <= PCROMSignal;
+		  ULAout  <= ULAMuxSignal;
+		  PCout   <= PCROMSignal;
 		  UlaAout <= RegAUlaASignal;
 		  UlaBout <= MuxUlaBSiginal;
 		  
-		  displaySignal <= PCROMSignal(23 downto 0) WHEN SW = "00" ELSE
+		  displaySignal <= PCROMSignal(23 downto 0) WHEN SW = "0" ELSE
 		  ULAMuxSignal(23 downto 0);
 		  
         DISPLAY0 : ENTITY work.conversorHex7Seg PORT MAP(dadoHex => displaySignal(3 downto 0),   saida7seg => HEX0);

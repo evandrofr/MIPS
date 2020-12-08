@@ -1,5 +1,5 @@
 Archive Project report for MIPS
-Thu Dec 03 13:10:56 2020
+Tue Dec 08 15:14:29 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Thu Dec 03 13:10:56 2020 ;
+; Archive Project Status ; Successful - Tue Dec 08 15:14:29 2020 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; FDMIPS                                ;
 ; Family                 ; Cyclone V                             ;
@@ -59,9 +59,9 @@ Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Thu Dec 03 13:10:56 2020
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Tue Dec 08 15:14:29 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
@@ -71,6 +71,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; File Name                    ;
 +------------------------------+
 ; bancoRegistradores.vhd       ;
+; conversorHex7Seg.vhd         ;
 ; DE0_CV_golden_top.v          ;
 ; estendeSinal.vhd             ;
 ; FDMIPS.vhd                   ;
@@ -81,6 +82,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; RAMMIPS.vhd                  ;
 ; registradorGenerico.vhd      ;
 ; ROMMIPS.vhd                  ;
+; scale_clock.vhd              ;
 ; somaConstante.vhd            ;
 ; somadorGenerico.vhd          ;
 ; UC.vhd                       ;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Mon Dec 07 13:02:30 2020
+Tue Dec 08 15:08:34 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -76,14 +76,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 07 13:02:30 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 08 15:08:33 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; FDMIPS                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 697                                         ;
-; Total pins                      ; 173                                         ;
+; Total pins                      ; 172                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -234,25 +234,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1073                        ;
+; Estimate of Logic utilization (ALMs needed) ; 1080                        ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 1048                        ;
-;     -- 7 input functions                    ; 65                          ;
-;     -- 6 input functions                    ; 431                         ;
-;     -- 5 input functions                    ; 196                         ;
-;     -- 4 input functions                    ; 138                         ;
-;     -- <=3 input functions                  ; 218                         ;
+; Combinational ALUT usage for logic          ; 1053                        ;
+;     -- 7 input functions                    ; 79                          ;
+;     -- 6 input functions                    ; 425                         ;
+;     -- 5 input functions                    ; 191                         ;
+;     -- 4 input functions                    ; 144                         ;
+;     -- <=3 input functions                  ; 214                         ;
 ;                                             ;                             ;
 ; Dedicated logic registers                   ; 697                         ;
 ;                                             ;                             ;
-; I/O pins                                    ; 173                         ;
+; I/O pins                                    ; 172                         ;
 ;                                             ;                             ;
 ; Total DSP Blocks                            ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; scale_clock:CLOCK|clk_2Hz_i ;
 ; Maximum fan-out                             ; 673                         ;
-; Total fan-out                               ; 8802                        ;
-; Average fan-out                             ; 4.21                        ;
+; Total fan-out                               ; 8841                        ;
+; Average fan-out                             ; 4.22                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -261,10 +261,10 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name         ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------------+--------------+
-; |FDMIPS                                    ; 1048 (27)           ; 697 (0)                   ; 0                 ; 0          ; 173  ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
+; |FDMIPS                                    ; 1053 (46)           ; 697 (0)                   ; 0                 ; 0          ; 172  ; 0            ; |FDMIPS                                       ; FDMIPS              ; work         ;
 ;    |ROMMIPS:ROM|                           ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ROMMIPS:ROM                           ; ROMMIPS             ; work         ;
 ;    |UC:UC|                                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|UC:UC                                 ; UC                  ; work         ;
-;    |ULA:ULA|                               ; 216 (216)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
+;    |ULA:ULA|                               ; 202 (202)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|ULA:ULA                               ; ULA                 ; work         ;
 ;    |bancoRegistradores:BancoRegistradores| ; 495 (495)           ; 640 (640)                 ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|bancoRegistradores:BancoRegistradores ; bancoRegistradores  ; work         ;
 ;    |conversorHex7Seg:DISPLAY0|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY0             ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:DISPLAY1|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FDMIPS|conversorHex7Seg:DISPLAY1             ; conversorHex7Seg    ; work         ;
@@ -1069,26 +1069,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 640                         ;
 ;     SCLR              ; 24                          ;
 ;     plain             ; 31                          ;
-; arriav_lcell_comb     ; 1049                        ;
+; arriav_lcell_comb     ; 1054                        ;
 ;     arith             ; 149                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 54                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 29                          ;
 ;         5 data inputs ; 64                          ;
-;     extend            ; 65                          ;
-;         7 data inputs ; 65                          ;
-;     normal            ; 835                         ;
+;     extend            ; 79                          ;
+;         7 data inputs ; 79                          ;
+;     normal            ; 826                         ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 109                         ;
-;         3 data inputs ; 37                          ;
-;         4 data inputs ; 109                         ;
-;         5 data inputs ; 132                         ;
-;         6 data inputs ; 431                         ;
-; boundary_port         ; 173                         ;
+;         2 data inputs ; 118                         ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 115                         ;
+;         5 data inputs ; 127                         ;
+;         6 data inputs ; 425                         ;
+; boundary_port         ; 172                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 13.60                       ;
-; Average LUT depth     ; 10.19                       ;
+; Average LUT depth     ; 10.13                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1097,7 +1097,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1107,7 +1107,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Dec 07 13:02:03 2020
+    Info: Processing started: Tue Dec 08 15:08:10 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1129,7 +1129,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/ULA.vhd Line: 19
     Info (12023): Found entity 1: ULA File: C:/Users/evand/OneDrive/Documents/MIPS/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fdmips.vhd
-    Info (12022): Found design unit 1: FDMIPS-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 32
+    Info (12022): Found design unit 1: FDMIPS-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 31
     Info (12023): Found entity 1: FDMIPS File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
     Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/evand/OneDrive/Documents/MIPS/somaConstante.vhd Line: 16
@@ -1156,21 +1156,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file scale_c
     Info (12022): Found design unit 1: scale_clock-Behavioral File: C:/Users/evand/OneDrive/Documents/MIPS/scale_clock.vhd Line: 15
     Info (12023): Found entity 1: scale_clock File: C:/Users/evand/OneDrive/Documents/MIPS/scale_clock.vhd Line: 8
 Info (12127): Elaborating entity "FDMIPS" for the top level hierarchy
-Info (12128): Elaborating entity "scale_clock" for hierarchy "scale_clock:CLOCK" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 79
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXJMPR" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 90
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaOito" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 101
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 121
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 146
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 157
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 180
+Info (12128): Elaborating entity "scale_clock" for hierarchy "scale_clock:CLOCK" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 78
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXJMPR" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 89
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somaOito" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 100
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 120
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somaSHIFT" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 145
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUXBCREG3" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 156
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 179
 Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(18): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 18
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 214
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 241
-Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 264
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 275
-Info (12128): Elaborating entity "ulaUC" for hierarchy "ulaUC:ulaUC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 281
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 289
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DISPLAY0" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 311
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BancoRegistradores" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 213
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 240
+Info (12128): Elaborating entity "estendeSinal" for hierarchy "estendeSinal:Extensor" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 263
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 274
+Info (12128): Elaborating entity "ulaUC" for hierarchy "ulaUC:ulaUC" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 280
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 288
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DISPLAY0" File: C:/Users/evand/OneDrive/Documents/MIPS/FDMIPS.vhd Line: 310
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "bancoRegistradores:BancoRegistradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/evand/OneDrive/Documents/MIPS/bancoRegistradores.vhd Line: 61
     Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/evand/OneDrive/Documents/MIPS/ROMMIPS.vhd Line: 18
@@ -1181,14 +1181,14 @@ Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime so
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1858 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 1862 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 170 output pins
-    Info (21061): Implemented 1685 logic cells
+    Info (21061): Implemented 1690 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4889 megabytes
-    Info: Processing ended: Mon Dec 07 13:02:31 2020
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 4894 megabytes
+    Info: Processing ended: Tue Dec 08 15:08:34 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:43
 
 

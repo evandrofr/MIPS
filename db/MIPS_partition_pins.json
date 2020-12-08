@@ -688,10 +688,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
-					"strict" : false
-				},
-				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				}

@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/03/2020 13:09:53"
+-- Generated on "12/08/2020 15:05:43"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FDMIPS
 -- 
@@ -33,54 +33,70 @@ END FDMIPS_vhd_vec_tst;
 ARCHITECTURE FDMIPS_arch OF FDMIPS_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL andOut : STD_LOGIC;
-SIGNAL BEQOut : STD_LOGIC;
-SIGNAL clk : STD_LOGIC;
-SIGNAL flagZeroOut : STD_LOGIC;
-SIGNAL MuxBEQout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL PCout : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL SW : STD_LOGIC_VECTOR(0 DOWNTO 0);
 SIGNAL UlaAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL UlaBOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULAout : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FDMIPS
 	PORT (
-	andOut : BUFFER STD_LOGIC;
-	BEQOut : BUFFER STD_LOGIC;
-	clk : IN STD_LOGIC;
-	flagZeroOut : BUFFER STD_LOGIC;
-	MuxBEQout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	PCout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	UlaAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	UlaBOut : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	ULAout : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
+	CLOCK_50 : IN STD_LOGIC;
+	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	PCout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+	UlaAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	UlaBOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ULAout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
 	i1 : FDMIPS
 	PORT MAP (
 -- list connections between master ports and signals
-	andOut => andOut,
-	BEQOut => BEQOut,
-	clk => clk,
-	flagZeroOut => flagZeroOut,
-	MuxBEQout => MuxBEQout,
+	CLOCK_50 => CLOCK_50,
+	HEX0 => HEX0,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	HEX5 => HEX5,
 	PCout => PCout,
+	SW => SW,
 	UlaAout => UlaAout,
 	UlaBOut => UlaBOut,
 	ULAout => ULAout
 	);
 
--- clk
-t_prcs_clk: PROCESS
+-- CLOCK_50
+t_prcs_CLOCK_50: PROCESS
 BEGIN
-	FOR i IN 1 TO 33
-	LOOP
-		clk <= '0';
-		WAIT FOR 30000 ps;
-		clk <= '1';
-		WAIT FOR 30000 ps;
-	END LOOP;
-	clk <= '0';
+LOOP
+	CLOCK_50 <= '0';
+	WAIT FOR 20000 ps;
+	CLOCK_50 <= '1';
+	WAIT FOR 20000 ps;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_CLOCK_50;
+
+-- SW[0]
+t_prcs_SW_0: PROCESS
+BEGIN
+	SW(0) <= '0';
+	WAIT FOR 900000 ps;
+	SW(0) <= '1';
 WAIT;
-END PROCESS t_prcs_clk;
+END PROCESS t_prcs_SW_0;
 END FDMIPS_arch;
