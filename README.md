@@ -18,7 +18,7 @@ Para testes, o display de 7 segmentos mostra o valor do PC, ou o valor da ULA (S
 #### Formato:
 
 <p align="center">
-  <img src="ji.png" width="1000" title="RTL">
+  <img src="ji.png" width="600" title="RTL">
 </p>
 
 #### Grupo A
